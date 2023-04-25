@@ -1,0 +1,901 @@
+.dark-mode {
+  background-color: black;
+  /* leftSide End */
+  /* id Section End */
+  /* mess end */
+  /* ann ection end */
+  /* nav */
+  /* remind */
+  /* info */
+  /* act */
+}
+
+.dark-mode .banner {
+  border: 2px solid #232428;
+  background: #232428;
+}
+
+.dark-mode .left-side {
+  background-color: #232428;
+  color: white !important;
+}
+
+.dark-mode .left-side h6 {
+  color: white !important;
+}
+
+.dark-mode .left-side .profile {
+  border: 12px solid #232428;
+  background: #232428;
+}
+
+.dark-mode .main .id {
+  background-color: #232428;
+  color: white !important;
+}
+
+.dark-mode .main .mess {
+  background-color: #232428;
+  color: white !important;
+  border: #232428;
+}
+
+.dark-mode .main .mess p {
+  color: white !important;
+}
+
+.dark-mode .main .mess .time15 {
+  background-color: transparent !important;
+  color: white;
+  border: 1px solid #FFFFFf;
+}
+
+.dark-mode .main .mess .time15:hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.dark-mode .main .mess .time15 .glare15 {
+  background-color: transparent !important;
+  opacity: 0 !important;
+}
+
+.dark-mode .main .mess .readmore {
+  background-color: #323334 !important;
+  color: white !important;
+  border: #232428 !important;
+}
+
+.dark-mode .main .mess .time16 {
+  background-color: #323334;
+  color: white !important;
+  border: #323334;
+}
+
+.dark-mode .main .mess .abc {
+  background-color: #323334;
+  color: white !important;
+}
+
+.dark-mode .main .mess .abc:hover .abc {
+  background-color: #323334;
+  color: white;
+}
+
+.dark-mode .main .mess .time32 {
+  background-color: transparent !important;
+  border: 1px solid #FFFFFf !important;
+  color: white !important;
+}
+
+.dark-mode .main .mess .time32 .glare31 {
+  background-color: transparent !important;
+  opacity: 0 !important;
+}
+
+.dark-mode .ann .time11 {
+  background-color: #323334;
+  border: #323334;
+  color: white;
+}
+
+.dark-mode .glare11 {
+  opacity: 0.6 !important;
+}
+
+.dark-mode .pt2 {
+  background-color: #232428 !important;
+}
+
+.dark-mode .scroll {
+  background-color: #232428;
+  color: white;
+}
+
+.dark-mode .scroll .cp {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.dark-mode .scroll .cp .emojiPickerIcon {
+  position: absolute;
+  top: 0px;
+  right: -60px;
+}
+
+.dark-mode .scroll .cp .rounded-circle {
+  position: absolute;
+  left: 31px;
+}
+
+.dark-mode .scroll .date p {
+  color: white !important;
+}
+
+.dark-mode .scroll .comment1 {
+  background-color: #323334;
+  color: white !important;
+}
+
+.dark-mode .scroll .sec {
+  border: 0px solid #232428;
+  margin: 0px;
+}
+
+.dark-mode .scroll .sec img {
+  border: 2px solid #232428;
+}
+
+.dark-mode .scroll .hor {
+  border-bottom: 2px solid white !important;
+}
+
+.dark-mode .scroll .ann-logo {
+  width: 250px !important;
+  padding-left: 0px !important;
+}
+
+.dark-mode .scroll .date p {
+  padding-right: 2px !important;
+}
+
+.dark-mode .scroll .emojiPickerIconWrap input {
+  width: 100% !important;
+  background-color: #323334 !important;
+  color: white !important;
+  border: #232428 !important;
+  outline: #232428 !important;
+  margin-left: -31px;
+}
+
+.dark-mode .scroll .emojiPickerIconWrap input::-webkit-input-placeholder {
+  color: white !important;
+}
+
+.dark-mode .scroll .emojiPickerIconWrap input:-ms-input-placeholder {
+  color: white !important;
+}
+
+.dark-mode .scroll .emojiPickerIconWrap input::-ms-input-placeholder {
+  color: white !important;
+}
+
+.dark-mode .scroll .emojiPickerIconWrap input::placeholder {
+  color: white !important;
+}
+
+.dark-mode .scroll .emojiPickerIcon {
+  height: 37 !important;
+  width: 39 !important;
+  background-color: #323334 !important;
+}
+
+.dark-mode .scroll .cp button {
+  background-color: #323334 !important;
+  color: white !important;
+  width: 65%;
+  position: absolute;
+  left: -19px;
+  top: 0px;
+}
+
+.dark-mode .scroll .vc {
+  color: white !important;
+  position: absolute;
+  top: -36px;
+  left: 40px;
+}
+
+.dark-mode .scroll .contr2 {
+  display: block;
+  width: 96.5%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white !important;
+  background-color: #323334 !important;
+  background-clip: padding-box;
+  border: 1px solid #232428 !important;
+  border-radius: .25rem;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  margin-left: 16px;
+}
+
+.dark-mode .scroll .contr2::-webkit-input-placeholder {
+  color: white !important;
+}
+
+.dark-mode .scroll .contr2:-ms-input-placeholder {
+  color: white !important;
+}
+
+.dark-mode .scroll .contr2::-ms-input-placeholder {
+  color: white !important;
+}
+
+.dark-mode .scroll .contr2::placeholder {
+  color: white !important;
+}
+
+.dark-mode .scroll .vc2 {
+  color: white !important;
+  position: absolute;
+  top: -8px;
+  left: 51px;
+}
+
+.dark-mode .main .row1 {
+  background-color: #232428;
+}
+
+.dark-mode .main .row1 .time {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid #FFFFFf;
+}
+
+.dark-mode .main .row1 .time:hover {
+  background-color: #323334 !important;
+  color: white !important;
+  border: #232428 !important;
+}
+
+.dark-mode .main .row1 .time:hover .abc {
+  background-color: #323334 !important;
+  color: white !important;
+}
+
+.dark-mode .main .row1 .abc {
+  color: white !important;
+}
+
+.dark-mode .nav1 {
+  background-color: #232428 !important;
+  color: white !important;
+}
+
+.dark-mode .remind {
+  background-color: #232428;
+}
+
+.dark-mode .time2 {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid #FFFFFf !important;
+}
+
+.dark-mode .time2 .abc {
+  color: white !important;
+}
+
+.dark-mode .time2:hover {
+  background-color: #323334 !important;
+  color: white !important;
+  border: #232428 !important;
+}
+
+.dark-mode .info {
+  background-color: #232428 !important;
+  border: #232428 !important;
+}
+
+.dark-mode .info .time13 {
+  background-color: transparent !important;
+  border: 1px solid #FFFFFf !important;
+}
+
+.dark-mode .info .time13 .abc {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.dark-mode .info .time13:hover {
+  background-color: #323334 !important;
+  border: #232428 !important;
+}
+
+.dark-mode .info .time3 {
+  background-color: #323334 !important;
+  border: #232428 !important;
+}
+
+.dark-mode .info .time3 .abc {
+  background-color: #323334 !important;
+  color: white !important;
+}
+
+.dark-mode .info .glare3 {
+  opacity: 0.6 !important;
+}
+
+.dark-mode .act {
+  background-color: #232428 !important;
+  border: #232428 !important;
+}
+
+.dark-mode .act .time4 {
+  background-color: #323334 !important;
+  color: white !important;
+}
+
+.dark-mode .act .glare4 {
+  opacity: 0.6 !important;
+}
+
+.dark-mode .act .time5 {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid #FFFFFf !important;
+}
+
+.dark-mode .act .time5 .abc {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.dark-mode .act .time6 {
+  border: #232428 !important;
+  background-color: #232428 !important;
+}
+
+.dark-mode .act .time6 .abc {
+  background-color: #323334 !important;
+  color: white !important;
+}
+
+.dark-mode .act .aqua5 {
+  background-color: transparent !important;
+}
+
+.dark-mode .act .aqua5:hover {
+  background-color: #323334 !important;
+  border: #232428 !important;
+}
+
+.dark-mode .act .dropdown1 {
+  background-color: #323334 !important;
+  border: #232428 !important;
+}
+
+.dark-mode .act .dropdown1 .dropdown-content {
+  background-color: #323334 !important;
+}
+
+.dark-mode .act .dropdown1 .dropdown-content a {
+  background-color: #323334 !important;
+  color: white !important;
+}
+
+.dark-mode .sal {
+  background-color: #232428 !important;
+}
+
+.dark-mode .sal .table {
+  color: white !important;
+}
+
+.dark-mode .sal .table thead tr {
+  background-color: transparent !important;
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+.dark-mode .sal .table tr .attt {
+  background-color: #232428 !important;
+  color: white !important;
+}
+
+.dark-mode .sal .time7 {
+  background-color: #323334 !important;
+  color: white !important;
+}
+
+.dark-mode .sal .glare7 {
+  opacity: 0.6 !important;
+}
+
+.dark-mode .sal .time18 {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid #FFFFFf !important;
+}
+
+.dark-mode .sal .time18 .abc {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.dark-mode .sal .time18:hover {
+  background-color: #323334 !important;
+  border: #232428 !important;
+}
+
+.dark-mode .work {
+  background-color: #232428 !important;
+  color: white !important;
+}
+
+.dark-mode .work .time8 {
+  color: white;
+  background-color: #323334 !important;
+}
+
+.dark-mode .work .glare8 {
+  opacity: 0.6 !important;
+}
+
+.dark-mode .work .time9 {
+  background-color: transparent !important;
+  border: 1px solid #FFFFFf !important;
+}
+
+.dark-mode .work .time9 .abc {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.dark-mode .work .time9:hover {
+  background-color: #323334 !important;
+  border: #232428 !important;
+}
+
+.dark-mode .train .time6 {
+  background-color: #232428 !important;
+  color: white;
+  border: 1px solid #232428 !important;
+}
+
+.dark-mode .train .time6 .dropdown-content {
+  background-color: #232428 !important;
+  color: white !important;
+}
+
+.dark-mode .glare5 {
+  opacity: 0.6 !important;
+}
+
+.dark-mode .time31 {
+  background-color: #232428 !important;
+  color: white !important;
+  border: 1px solid #232428 !important;
+}
+
+.dark-mode .time31 .abc {
+  text-decoration: none !important;
+}
+
+.dark-mode .glare31 {
+  opacity: 0.6 !important;
+}
+
+.dark-mode .slider {
+  background-color: #232428 !important;
+  color: white !important;
+}
+
+.dark-mode .slider .time17 {
+  background-color: #323334 !important;
+  color: white !important;
+}
+
+.dark-mode .slider .glare17 {
+  opacity: 0.6 !important;
+}
+
+.dark-mode .slider .time18 {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid #FFFFFf !important;
+}
+
+.dark-mode .slider .time18 .abc {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.dark-mode .slider .time18:hover {
+  background-color: #323334 !important;
+  border: #232428 !important;
+}
+
+.dark-mode .bio {
+  background-color: #232428 !important;
+  color: white !important;
+}
+
+.dark-mode .biotable {
+  background-color: #232428 !important;
+}
+
+.dark-mode .bio table tr td {
+  color: white !important;
+}
+
+.dark-mode .bio table h6 {
+  font-size: 11px !important;
+}
+
+.dark-mode .bio table img {
+  width: 65px !important;
+  height: 65px !important;
+  border-radius: 50% !important;
+}
+
+.dark-mode .bio .table td, .dark-mode .bio .table th {
+  border-top: 1px solid #232428 !important;
+}
+
+.dark-mode .bio tbody tr {
+  border-bottom: 1px solid #323334 !important;
+}
+
+.dark-mode footer {
+  background-color: #232428 !important;
+  color: white !important;
+}
+
+.dark-mode .scroll2 .ann-logo {
+  width: 200px !important;
+  padding-left: 0px !important;
+  margin-top: 8px;
+}
+
+.dark-mode .scroll2 .date p {
+  font-size: 11px;
+  padding-right: 0px;
+}
+
+.dark-mode .scroll2 h4 {
+  padding-left: 0px !important;
+  font-size: 20px;
+}
+
+.dark-mode .scroll2 p {
+  padding-left: 0px !important;
+}
+
+.dark-mode .scroll2 .sec img {
+  width: 100% !important;
+  border: 0px solid #232428 !important;
+  border: 0px solid #232428;
+  margin: 0px !important;
+}
+
+.dark-mode .scroll2 .emojiPickerIconWrap input {
+  width: 91% !important;
+}
+
+.dark-mode .scroll2 .emojiPickerIconWrap input::-webkit-input-placeholder {
+  font-size: 12px !important;
+}
+
+.dark-mode .scroll2 .emojiPickerIconWrap input:-ms-input-placeholder {
+  font-size: 12px !important;
+}
+
+.dark-mode .scroll2 .emojiPickerIconWrap input::-ms-input-placeholder {
+  font-size: 12px !important;
+}
+
+.dark-mode .scroll2 .emojiPickerIconWrap input::placeholder {
+  font-size: 12px !important;
+}
+
+.dark-mode .scroll2 .emojiPickerIcon {
+  position: relative;
+  right: -176px !important;
+  top: -38px !important;
+}
+
+.dark-mode .scroll2 .BA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dark-mode .scroll2 .BA button {
+  position: absolute;
+  height: 38px !important;
+  width: 40px;
+  left: 12px;
+  background-color: #323334 !important;
+  border: #232428 !important;
+  border-radius: 4px;
+  color: white !important;
+  outline: none;
+}
+
+.dark-mode .scroll2 .BA .rounded-circle {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  left: 32px;
+}
+
+.dark-mode .modal-content {
+  background-color: #232428 !important;
+  color: white !important;
+}
+
+.dark-mode .modal-body .scroll1 .comment1 {
+  background-color: #323334 !important;
+  color: white !important;
+}
+
+.dark-mode .modal-header button {
+  color: white !important;
+}
+
+.dark-mode .mod-inp {
+  background: #323334;
+  color: #FFFFFf;
+  outline: none;
+}
+
+.dark-mode .mod-inp:focus {
+  background: #323334;
+  color: white;
+  outline: none;
+}
+
+.dark-mode #announcement {
+  text-align: center;
+}
+
+.dark-mode #announcement tbody {
+  color: white;
+}
+
+.dark-mode #announcement thead {
+  color: white;
+}
+
+.dark-mode #announcement .dropdown-item {
+  color: white;
+}
+
+.dark-mode #announcement .dropdown-item:hover {
+  background: transparent;
+}
+
+.dark-mode #announcement .dropdown-item i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.dark-mode .fa-eye:before {
+  content: "\f06e";
+  margin-right: 10px;
+}
+
+.dark-mode .submit-section {
+  text-align: center;
+}
+
+.dark-mode .submit-section button {
+  background: #323334;
+  color: white;
+  border: 1px solid #FFFFFf;
+  outline: none;
+  width: 10%;
+}
+
+.dark-mode #complain .modal-content {
+  text-align: center;
+}
+.emojiPickerIconWrap input{
+  font-size: 12px;
+}
+@media only screen and (max-width: 1200px) {
+  .bio1 {
+    height: 540px !important;
+  }
+  .dark-mode .scroll2 .emojiPickerIconWrap input {
+    width: 106% !important;
+    position: relative !important;
+    left: 70px !important;
+    top: 0px !important;
+  }
+  .dark-mode .scroll2 .BA button {
+    left: 73px !important;
+    top: 0px !important;
+  }
+  .dark-mode .scroll .vc {
+    color: white !important;
+    position: absolute;
+    top: -36px;
+    left: 34px;
+    white-space: nowrap;
+  }
+  .dark-mode .scroll .vc2 {
+    color: white !important;
+    position: absolute;
+    top: -8px;
+    left: 46px;
+  }
+  .dark-mode .scroll2 .ann-logo {
+    width: 150px !important;
+    padding-left: 0px !important;
+    margin-top: 3px;
+  }
+  .dark-mode .scroll2 .date p {
+    font-size: 9px;
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .bio1 {
+    height: 582px !important;
+  }
+  .scroll .emojiPickerIconWrap input {
+    width: 100% !important;
+  }
+  .dark-mode .scroll2 .BA .rounded-circle {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    
+  }
+  .dark-mode .scroll2 .emojiPickerIconWrap input {
+    width: 91% !important;
+    position: relative !important;
+    left: 65px !important;
+    top: 0px !important;
+  }
+  .dark-mode .scroll2 .BA button {
+    left: 23px !important;
+    top: 0px !important;
+  }
+  .dark-mode .scroll .vc {
+    left: 30px;
+    white-space: nowrap !important;
+  }
+  .dark-mode .scroll2 .ann-logo {
+    width: 152px !important;
+    padding-left: 0px !important;
+    margin-top: 4px;
+  }
+  .dark-mode .BA .emojiPickerIcon {
+    right: -146px !important;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .dark-mode .scroll2 .emojiPickerIcon {
+    position: relative;
+    right: -188px !important;
+  }
+  .dark-mode .scroll2 .emojiPickerIconWrap input {
+    width: 114% !important;
+    position: relative;
+    left: 23px;
+  }
+  .dark-mode .scroll2 .BA button {
+    left: 64px !important;
+  }
+  .dark-mode .scroll2 .ann-logo {
+    width: 171px !important;
+    padding-left: 0px !important;
+    margin-top: 2px;
+  }
+  .dark-mode .scroll2 .date p {
+    font-size: 9px;
+    padding-right: 0px;
+    /* text-align: right; */
+  }
+}
+
+@media only screen and (min-width: 1333px) {
+  .bio1 {
+    height: 600px !important;
+  }
+  .dark-mode .scroll2 .BA button {
+    left: 57px;
+  }
+  .dark-mode .scroll2 .emojiPickerIconWrap input {
+    width: 122% !important;
+    position: relative;
+    left: 23px;
+  }
+}
+
+@media only screen and (min-width: 1340px) {
+  .bio1 {
+    height: 636px !important;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .bio1 {
+    height: 657px !important;
+  }
+  .dark-mode .scroll2 .BA button {
+    left: 89px !important;
+  }
+  .dark-mode .scroll2 .emojiPickerIconWrap input {
+    width: 130% !important;
+    position: relative;
+    left: 23px;
+  }
+  .dark-mode .scroll2 .emojiPickerIcon {
+    position: relative;
+    right: -213px !important;
+  }
+  .dark-mode .scroll2 .date p {
+    font-size: 9px;
+    padding-right: 0px;
+    /* text-align: right; */
+    padding-top: 2px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .bio1 {
+    height: 678px !important;
+  }
+  .dark-mode .scroll .vc2 {
+    color: white !important;
+    position: absolute;
+    top: -8px;
+    left: 68px;
+  }
+  .dark-mode .scroll .emojiPickerIconWrap input {
+    width: 108% !important;
+  }
+  .dark-mode .scroll .cp .emojiPickerIcon {
+    position: absolute;
+    top: 0px;
+    right: -81px;
+  }
+  .dark-mode .scroll2 .BA button {
+    left: 111px !important;
+  }
+  .dark-mode .scroll2 .emojiPickerIconWrap input {
+    width: 142% !important;
+  }
+  .dark-mode .scroll2 .emojiPickerIcon {
+    position: relative;
+    right: -234px !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .dark-mode .scroll2 .BA button {
+    left: 138px !important;
+  }
+  .dark-mode .scroll2 .emojiPickerIconWrap input {
+    width: 160% !important;
+  }
+  .dark-mode .scroll2 .emojiPickerIcon {
+    position: relative;
+    right: -261px !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */

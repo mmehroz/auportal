@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: myFirstFont;
+        src: url('./fonts/Roboto-Bold.ttf');
+    }
+    @font-face {
+        font-family: mySecondFont;
+        src: url('./fonts/AlexBrush-Regular.ttf');
+    }
+    @font-face {
+        font-family: myThirdFont;
+        src: url('./fonts/Elsie-Regular.otf');
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: myFirstFont;
+        /* overflow: hidden; */
+        height: 100vh;
+    }
+    .main-section {
+        /* background-image: url('./Images/1.jpg');
+        background-position: center;
+        background-size: cover; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        z-index: -10;
+    }
+    .content{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .quote {
+       width: 40%;
+       margin: 40px;
+    }
+
+    .quote h2 {
+        text-align: center;
+        font-size: 80px;
+        font-family: mySecondFont !important;
+        /* margin: 30px; */
+    }
+    .quote h1 {
+        font-size: 90px;
+        font-family: mySecondFont !important;
+        letter-spacing: 4px;
+        text-align: center;
+        /* margin: 30px; */
+    }
+
+    .quote h2 span {
+        color: #FAA91C;
+        font-family: myFirstFont;
+    }
+    .quote p{
+        font-size: 20px;
+        text-align: center !important;
+        line-height: 40px;
+        letter-spacing: 1px;
+        /* font-family: myThirdFont; */
+        color: grey;
+    }
+    .image {
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
+    .back {
+        width: 250px;
+        height: 40vh;
+        background-color: #89162D;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: rotate(-10deg);
+    }
+    .user_image {
+        width: 250px;
+        height: 34vh;
+        position: relative;
+    }
+    .main_container {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -10;
+    }
+    .user_image h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        height: 40px;
+        font-family: myThirdFont;
+        letter-spacing: 2px;
+        margin-top: -4px;
+    }
+</style>
+
+<body>
+    <img src="./Images/1.jpg" class="main_container" alt="">
+    <section class="main-section">
+        <div class="content">
+            <div class="quote">
+                <h2> Happy <span>Work</span></h2>
+                <h1>Anniversary</h1>
+                <p>
+                    This is to remind you that you have come a long way and your contributions have continued to inspire
+                    us. Wish you a very
+                    Happy Work Anniversary!
+                </p>
+            </div>
+            <div class="image">
+                <div class="back">
+
+                </div>
+                <div class="user_image">
+                    <img src="./Images/2.jpg" width="100%" height="100%" alt="">
+                    <h1>M.MEHROZ</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

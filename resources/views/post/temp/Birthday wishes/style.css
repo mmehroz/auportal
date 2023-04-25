@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:ital,wght@0,600;1,100&family=Raleway+Dots&family=Raleway:wght@100&family=Titillium+Web:wght@600&display=swap');
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('./New\ folder/FFF_Tusj.ttf');
+  }
+  @font-face {
+    font-family: mySecondFont;
+    src: url('./New\ folder/Raleway-Bold.ttf');
+  }
+  @font-face {
+    font-family: myThirdFont;
+    src: url('./New\ folder/Raleway-Regular.ttf');
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("./Images/1.png");
+    /* height: 1080px;
+    width: 1920px; */
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    /* background-position: center;  */
+    background-repeat: no-repeat;
+    font-family: mySecondFont;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden ;
+}
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    position: absolute;
+    top: 50px;
+    /* margin: 60px 0px; */
+}
+/* .first img{
+    width: 280px;
+}
+.first{
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 200px;
+} */
+.second{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100% !important;
+    margin-top: 160px;
+}
+.phrase{
+    width: 40%;
+}
+.phrase p {
+    font-size: 20px;
+    /* width: 50%; */
+    font-weight:  100px;
+    font-family: myThirdFont;
+    line-height: 30px;
+}
+.phrase h1{
+    font-family: myFirstFont;
+    font-size: 80px;
+    margin: 20px 0px;
+}
+.phrase h1 span{
+    color: #F89D24;
+    font-weight: bold;
+    display: block;
+}
+.phrase h3{
+    background-color: #92172D;
+    height: 80px;
+    width:460px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+}
+.one{
+    width: 500px;
+    height: auto;
+}
+.two{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
+
+.three{
+    width: 600px;
+    height: auto;
+    top: 530px;
+    right: 0px;
+    position: absolute;
+}
+@media screen and (max-width: 840px) {
+    .phrase{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .two{
+        display: none;
+    }
+    .three{
+        display: none;
+    }
+    .one{
+        width: 200px;
+    }
+}

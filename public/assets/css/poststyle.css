@@ -1,0 +1,68 @@
+<style>
+    @font-face {
+        font-family: 'MyWebFont';
+        src: url('WebFont.eot');
+        src: url('WebFont.eot?iefix') format('eot'), url('WebFont.woff') format('woff'), url('WebFont.ttf') format('truetype'), url('WebFont.svg#webfont') format('svg');
+    }
+    
+    @font-face {
+        font-family: FFF Tusj Bold;
+        src: url('./font/FFF_Tusj.ttf');
+    }
+    
+    .main {
+        background: url('{!! asset('public/BDPost/1.png') !!}');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .heading h1 {
+        font-family: FFF Tusj Bold;
+        font-size: 5rem;
+        padding-top: 100px;
+        padding-right: 70px;
+        color: #000000;
+        font-weight: 700;
+    }
+    
+    .heading .yellow {
+        color: #ed8b09;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        line-height: 30px;
+    }
+    
+    .head {
+        background-color: #91182b;
+        width: 80%;
+        padding-left: 10px;
+        color: white;
+        letter-spacing: 5px;
+        font-family: monospace;
+        height: 55px;
+        padding-top: 5px;
+    }
+    
+    .head h2 {
+        font-size: 2.5rem;
+    }
+    /* main-img */
+    
+    .main-img {
+        position: relative;
+        padding-top: 110px;
+    }
+    
+    .sec-img {
+        position: absolute;
+        transform: translate(233%, -122%);
+    }
+    
+    .thr-img {
+        position: absolute;
+        transform: translate(10%, -45%);
+    }
+</style>
