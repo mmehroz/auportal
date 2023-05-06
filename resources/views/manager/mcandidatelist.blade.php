@@ -93,7 +93,6 @@
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -119,10 +118,9 @@
 										</td>
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<td>{{$datas->log_email}}</td>
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<td>{{$datas->dept_name}}</td>
-										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
+									<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 									</tr>
 								@endforeach
 							</tbody>
@@ -147,7 +145,6 @@
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -164,9 +161,8 @@
 										</td>
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<td>{{$datas->log_email}}</td>
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<td>{{$datas->dept_name}}</td>
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 									</tr>
 								@endforeach
@@ -191,7 +187,6 @@
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -217,9 +212,8 @@
 										</td>
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<td>{{$datas->log_email}}</td>
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<td>{{$datas->dept_name}}</td>
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 									</tr>
 								@endforeach
@@ -245,7 +239,6 @@
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -262,9 +255,8 @@
 										</td>
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i>Download</a></td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<td>{{$datas->log_email}}</td>
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<td>{{$datas->dept_name}}</td>
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 									</tr>
 								@endforeach

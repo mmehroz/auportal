@@ -7,9 +7,9 @@
 		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
         <meta name="robots" content="noindex, nofollow">
         <title>EMPLOYMENT APPLICATION FORM - HRMS</title>
-		
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500&family=Raleway:wght@500&display=swap" rel="stylesheet">
 		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/assets/img/favicon.png') !!}">
+        <link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/favicon/favicon.png') !!}" />
 		
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap.min.css') !!}">
@@ -42,66 +42,213 @@
 			.profile-img-wrap {
 			    overflow: inherit;
 			}
+			.card{
+				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+				margin: 35px 72px;
+    border-radius: 15px !important;
+	border: none;
+			}
+			select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 2px);
+    height: 55px;
+    font-family: 'Raleway', sans-serif;
+	
+}
+
+.form-check-label {
+    font-size: 16px;
+    color: #121212;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+.card-body{
+	background: #edf2f5;
+}
+.card-header {
+    background-color: #ebebeb;
+    text-align: center;
+    border-radius: 5px !important;
+ 
+}
+.card-header h4{
+	font-family: 'Raleway', sans-serif;
+    color: #000;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+	letter-spacing: 2px;
+}
+			.form-control {
+    /* border-color: #0f1431; */
+    border: none;
+    border-radius: 5px;
+    color: #121212;
+    background-color: white;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 400;
+    height: 55px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.col-form-label {
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+    color: #4c4c4c;
+    font-size: 15px;
+    
+    font-family: 'Raleway', sans-serif;
+    /* font-family: poppins; */
+    /* font-weight: 500; */
+}
+.form-check-label{
+	font-size: 16px;
+    color: #121212;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+button.btn.mybtn {
+    background: #5069e7;
+    COLOR: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+input[type="file"] {
+    height: 65px;
+    padding-top: 18px;
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: #fff;
+    opacity: 1;
+}
+.submitbtn{
+	background-color: #5069e7;
+    color: #fff;
+    width: 15%;
+    height: 50px;
+    margin-top: 25px;
+}
+.table {
+    color: #4c4c4c;
+    text-transform: capitalize;
+	font-family: 'Raleway', sans-serif;
+}
+.tablep{
+	color: #121212;
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.page-title-box {
+ text-align: center !important;
+ float: none !important;
+}
+.headerheading{
+	text-align: center !important;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	padding-top:5px
+}
+.mainheader{
+	background-image: linear-gradient(to right bottom, #6416ec, #33e0e0) !important;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+	z-index: 999;
+}
+.maincontainer{
+	margin-top: 20px;
+}
+.logo img{
+	width:35%
+}
+.logouttext{
+	font-size: 17px;
+						
+						font-family: 'Raleway', sans-serif;
+}
+@media only screen and (max-width: 720px) {
+	.maincontainer{
+	margin-top: 0px;
+}
+.card{
+				
+				margin: 5px 2px;
+	
+}
+.headerheading{
+	font-size: 14px;
+	margin-top: 15px;
+	text-align: left !important;
+    font-weight: bold;
+}
+.logo img{
+	width:30%
+}
+.logouttext{
+	font-size: 15px;
+	font-weight: bold;
+}
+.logoutcolum{
+	margin-top: 12px;
+}
+.submitbtn {
+    width: 100%;
+}
+.tablep{
+	font-size: 12px;
+}
+}
 		</style>
-		<style>
-		
-		.form-control{
-			
-			padding-top: 0.00001px;
-			padding-bottom: 0.00001px;
-			font-size: 12px;
-			height: 30px;
-			color:black;
-		}
-		
-		.row{
-			padding-top : 1px;
-			padding-bottom:1px;
-		}
-		
-		.card-body{
-			padding-bottom:1px;
-			padding-top:1px;
-		}
-		
-		</style>
+
     </head>
     <body>	
 		<!-- Main Wrapper -->
         <div class="main-wrapper">		
 			<!-- Header -->
-            <div class="header">			
-				<!-- Logo -->
-                <div class="header-left">
-                    <a href="#"class="logo">
-						<img src="{!! asset('public/assets/img/logo_white_header.svg') !!}" width="120" height="60" alt="">
-					</a>
-                </div>
-				<!-- /Logo -->				
-				<!-- Header Title -->
-                <div class="page-title-box float-left">
-					<h3>Human Resource Management</h3>
-                </div>
-				<!-- /Header Title -->				
-				<!-- Header Menu -->
-				<ul class="nav user-menu">				
-					<!-- Search -->					
-					<!-- /Search -->				
-					<!-- Flag -->					
-					<!-- /Flag -->					
+			<div class="mainheader">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-3 col-12">
+							<a href="{{url('/canLogin')}}" class="logo">
+								<img src="{!! asset('public/images/logo.svg') !!}">
+							</a>
+						</div>
+						<div class="col-lg-6 col-9 pt-1">
+							<h3 class="headerheading">PRE EMPLOYMENT APPLICATION FORM</h3>
+						</div>
+						<!-- <div class="col-lg-3 text-right col-3 pt-1 logoutcolum">
+							<a class="text-white logouttext" href="{{url('/canLogin')}}">Logout</a>
+						</div> -->
+					</div>
 					
-				</ul>
+				</div>
+				<!-- Logo -->
+			
+				<!-- /Logo -->
+				<!-- Header Title -->
+		
+			
+				<!-- /Header Title -->
+				<!-- Header Menu -->
+				
 				<!-- /Header Menu -->
 				<!-- Mobile Menu -->
-				
-				<!-- /Mobile Menu -->				
-            </div>
+		
+				<!-- /Mobile Menu -->
+			</div>
 			<!-- /Header -->			
             <div class="content container-fluid">
             	<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title" style="padding-top: 70px; font-size: 36px; font-weight: 900; text-align: center;">AU Telecom</h3>
+						
 							
 							@if(session('message'))
 								<div class="alert alert-success" ><h4>{!!session('message')!!}</h4></div> 
@@ -126,12 +273,13 @@
 					<div class="col-md-12">
 						<div class="card flex-fill" style="margin-bottom: 0px;">
 							<div class="card-header">
-								<h3 class="card-title mb-0 text-center">EMPLOYMENT APPLICATION FORM</h3>
+								<h4 class="card-title mb-0 text-center">Initial Information</h4>
 							</div>
 							<div class="card-body" style="padding-bottom: 4.5rem;">
+
 								<div class="row">
 									<input type="hidden" name="can_id" value="{{ $data['userdata']->jobapplicant_id }}" />
-									<div class="col-md-3">
+									<div class="col-lg-4">
 										<div class="form-group">
 											<label class="col-form-label">Position Applied For</label>
 											<input type="text" class="form-control" name="can_postionapppliedform" value="{{old('can_postionapppliedform', @$data['userdata']->jobapplicant_postionapppliedform)  }}" required />
@@ -156,7 +304,7 @@
 											</select> -->
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-lg-4">
 										<div class="form-group">
 											<label class="col-form-label">Career Level</label>
 											<select class="form-control selectpicker form-control" placeholder="Select Store Name" data-live-search ="true"  name="carlev"  readonly >
@@ -171,7 +319,7 @@
 											</select> 
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-lg-4">
 										<div class="form-group">
 											<label class="col-form-label">Department</label>
 											   <select class="form-control selectpicker form-control" onChange="getedit(this.value);" placeholder="Select Store Name" data-live-search ="true"  name="deptname"  required >
@@ -183,38 +331,21 @@
 											
 										</div>
 									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<div class='form-group' id="p">
-
-											</div>
-										</div>
-									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-3">
+									<div class="col-lg-4">
 										<div class="form-group">
 											<label class="col-form-label">Current  Salary RS.</label>
 											<input type="number"  min='1' class="form-control" name="can_currentsalary" value="{{old('can_currentsalary', @$data['userdata']->jobapplicant_currentsalary)  }}" readonly />
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-lg-4">
 										<div class="form-group">
 											<label class="col-form-label">Monthly Expected Salary RS.</label>
 											<input type="number"  min='1' class="form-control" name="can_monthlyexpectedsalary" value="{{old('can_monthlyexpectedsalary', @$data['userdata']->jobapplicant_monthlyexpectedsalary)  }}" readonly />
 										</div>
 									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-										<label class="col-form-label">Select Condition.</label>
-											<div class="col-lg-9">
-												
-												{{ $data['userdata']->jobapplicant_negotiablesalary }}
-														
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3">
+									<div class="col-lg-4">
 										<div class="form-group">
 											<label class="col-form-label">Reason To Left Last Job.</label>
 												<input type="text" class="form-control" name="can_reasonofleave" value="{{old('can_reasonofleave', @$data['userdata']->jobapplicant_reasonofleave)  }}" readonly />
@@ -222,49 +353,80 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-lg-4">
 										<div class="form-group">
 											<label class="col-form-label">Current Benefits.</label>
 											<input type="text" class="form-control" name="can_remarksofleave" value="{{old('can_remarksofleave', @$data['userdata']->jobapplicant_remarksofleave)  }}" readonly />
 										</div>
 									</div>
-								    <div class="col-md-4">
-										<div class="form-group">
-											<label class=" col-form-label">Comfortable / Agreed for Night Shift?</label>
-											<div class="col-lg-9">
-												<div class="form-check form-check-inline">
-													
-												<p style="color:black;">{{ $data['userdata']->jobapplicant_nightshift }} </p>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<label class=" col-form-label">Communication Skills</label>
-											<div class="col-lg-12">
-												<p style="color:black;">{{ $data['userdata']->jobapplicant_communicationskills }} </p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="row">	
-									<div class="col-md-4">
+									<div class="col-lg-4">
 										<div class="form-group">
 											<label class="col-form-label">Period Required For Joining</label>
 											<input type="text" class="form-control"  value="{{old('can_periodjoining', @$data['userdata']->jobapplicant_periodjoining ) }}" readonly />
 										</div>
 									</div>
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label class="col-form-label">Select Condition.</label>
+												<div class="col-lg-9">
+													
+													
+													<div class="col-lg-9">
+														<div class="form-check form-check-inline form-check-label">
+															
+														<p>{{ $data['userdata']->jobapplicant_negotiablesalary }} </p>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label class=" col-form-label">Comfortable / Agreed for Night Shift?</label>
+											<div class="col-lg-9">
+												<div class="form-check form-check-inline form-check-label">
+													
+												<p>{{ $data['userdata']->jobapplicant_nightshift }} </p>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form-group">
+											<label class=" col-form-label">Communication Skills</label>
+											<div class="col-lg-9">
+												<div class="form-check form-check-inline form-check-label">
+													<p>{{ $data['userdata']->jobapplicant_communicationskills }} </p>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form-group">
+											<div class='form-group' id="p">
+
+											</div>
+										</div>
+									</div>
+								</div>
+						
+
+								<div class="row">	
+							
 									<div class="col-md-4">
 										<label class="col-form-label">Candidate C.V</label><br/>
 										<a href="{{ URL::to('public/file/')}}/{{$data['userdata']->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a>
 									</div>
 									<div class="col-md-4">
 										<label class="col-form-label">Candidate Picture</label><br/>
-										<div class="profile-img-wrap">
-											<div class="profile-img">
-												<img style="width: 80px; height: 40px" src="{{ URL::to('public/img/')}}/{{$data['userdata']->jobapplicant_picture}}" />
+										<div class="">
+											<div class="">
+												<img style="width: 60px; height: 60px;border-radius: 50px;" src="{{ URL::to('public/img/')}}/{{$data['userdata']->jobapplicant_picture}}" />
 											</div>
 										</div>
 									</div>
@@ -279,7 +441,7 @@
 					<div class="col-md-12">
 						<div class="card mb-0">
 							<div class="card-header">
-								<h4 class="card-title mb-0">EDUCATIONAL RECORD</h4>
+								<h4 class="card-title mb-0">Educational Record</h4>
 							</div>
 							<div class="card-body">
 								<div id="msg5">
@@ -289,7 +451,7 @@
 								<div class="table-responsive">
 						            <table class="table table-bordered" id="preempform">
 						                <thead>
-				            			<p>EDUCATIONAL / PROFESSIONAL QUALIFICATIONS: (LIST THE LAST ONE FIRST)</p>
+				            			<p class="tablep">EDUCATIONAL / PROFESSIONAL QUALIFICATIONS: (LIST THE LAST ONE FIRST)</p>
 						                  <tr>
 						                    <th  style="white-space: nowrap;">S.NO.</th>
 						                    <th  style="white-space: nowrap;">CERTIFICATE/DEGREE</th>
@@ -365,7 +527,7 @@
 					<div class="col-md-12">
 						<div class="card mb-0">
 							<div class="card-header">
-								<h4 class="card-title mb-0">EMPLOYMENT RECORD</h4>
+								<h4 class="card-title mb-0">Employment Record</h4>
 							</div>
 							<div class="card-body">
 								<div id="msg5">
@@ -375,7 +537,7 @@
 								<div class="table-responsive">
 						             <table class="table table-bordered" id="preempformj">
 						                <thead>
-				            			<p>(LIST THE LAST ONE FIRST)</p>
+				            			<p class="tablep">(LIST THE LAST ONE FIRST)</p>
 						                  <tr>
 						                    <th  style="white-space: nowrap;">S.NO.</th>
 						                    <th  style="white-space: nowrap;">NAME OF ORGANIZATION</th>
@@ -480,6 +642,116 @@
 										</div>
 									</div>
 								</div>
+
+<div class="row">
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">MOBILE #</label>
+			<input type="tel" class="form-control" minlength="11" maxlength="11" min="0"  value="{{old('can_mobileno', @$data['userdata']->jobapplicant_contact ) }}" readonly />
+	
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">RES/OFFICE #</label>
+			<input type="tel" class="form-control" minlength="11" maxlength="11" min="0"  value="{{old('can_officeno', @$data['userdata']->jobapplicant_officeno ) }}" readonly />
+	
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">DATE OF BIRTH</label>
+			<input class="form-control " type="date"  value="{{old('can_dob', @$data['userdata']->jobapplicant_dob ) }}" readonly >
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">AGE</label>
+			<input class="form-control " type="number" min="1"  value="{{old('can_age', @$data['userdata']->jobapplicant_age ) }}" readonly >
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">PLACE OF BIRTH</label>
+			<input class="form-control " type="text"  value="{{old('can_placeob', @$data['userdata']->jobapplicant_placeob ) }}" readonly >
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">EMAIL</label>
+			<input class="form-control " type="email"  value="{{old('can_email', @$data['userdata']->log_email ) }}" readonly   >
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">N.I.C NO</label>
+			<input class="form-control " type="number" minlength="13" maxlength="13" min="13"  value="{{old('can_nic', @$data['userdata']->jobapplicant_cnic ) }}" readonly>
+		
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">Reference</label>
+			<input class="form-control" type="text"  value="{{old('can_nationality', @$data['userdata']->jobapplicant_reference  ) }}" readonly >
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">NATIONALITY</label>
+			<input class="form-control" type="text"  value="{{old('can_nationality', @$data['userdata']->jobapplicant_nationality  ) }}" readonly >
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">RELIGION</label> 
+			<input class="form-control" type="text" value="{{old('can_religion', @$data['userdata']->jobapplicant_religion)  }}" readonly >
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">MARITAL STATUS</label>
+			<input class="form-control" type="text"  value="{{old('can_martialstatus', @$data['userdata']->jobapplicant_martialstatus ) }}" readonly >
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">OCCUPATION</label>
+			<input type="text" class="form-control"  value="{{old('can_occupation', @$data['userdata']->jobapplicant_occupation ) }}" readonly >
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-4">
+		<div class="form-group">
+			<label class="col-form-label">Action</label>
+			<select class="form-control selectpicker form-control" placeholder="Select Store Name" data-live-search ="true" id="storeId" name="actionname"  required >
+			<option value="inexperience" @if( $data['userdata']->jobapplicant_status == "inexperience") {{ "selected"}} @endif >Inexperience</option>
+			<option value="Screening" @if( $data['userdata']->jobapplicant_status == "Screening") {{ "selected"}} @endif >Screening</option>
+			<option value="candidatelist" @if( $data['userdata']->jobapplicant_status == "candidatelist") {{ "selected"}} @endif >Candidate List</option>
+			<option value="Irrelevent" @if( $data['userdata']->jobapplicant_status == "Irrelevent") {{ "selected"}} @endif >Irrelevent</option>
+			<option value="attend" @if( $data['userdata']->jobapplicant_status == "attend") {{ "selected"}} @endif >Attend Interview</option>
+			</select> 
+		</div>
+	</div>
+</div>
+
+
+
+								
+								
+							
+
+
+
+
+					
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
@@ -491,114 +763,17 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
-											<label class="col-form-label">ADDRESS (Temporary)</label>
-											<input type="text" class="form-control"  value="{{old('can_addresstemporaray', @$data['userdata']->jobapplicant_addresstemporaray)  }}" readonly />
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">MOBILE #</label>
-											<input type="tel" class="form-control" minlength="11" maxlength="11" min="0"  value="{{old('can_mobileno', @$data['userdata']->jobapplicant_contact ) }}" readonly />
-											<span class="form-text text-muted">e.g(03001234567)</span>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">RES/OFFICE #</label>
-											<input type="tel" class="form-control" minlength="11" maxlength="11" min="0"  value="{{old('can_officeno', @$data['userdata']->jobapplicant_officeno ) }}" readonly />
-											<span class="form-text text-muted">e.g(02131234567)</span>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">DATE OF BIRTH</label>
-											<input class="form-control " type="date"  value="{{old('can_dob', @$data['userdata']->jobapplicant_dob ) }}" readonly >
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">AGE</label>
-											<input class="form-control " type="number" min="1"  value="{{old('can_age', @$data['userdata']->jobapplicant_age ) }}" readonly >
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-2">
-										<div class="form-group">
-											<label class="col-form-label">PLACE OF BIRTH</label>
-											<input class="form-control " type="text"  value="{{old('can_placeob', @$data['userdata']->jobapplicant_placeob ) }}" readonly >
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group">
-											<label class="col-form-label">N.I.C NO</label>
-											<input class="form-control " type="number" minlength="13" maxlength="13" min="13"  value="{{old('can_nic', @$data['userdata']->jobapplicant_cnic ) }}" readonly>
-											<span class="form-text text-muted">e.g(4210112345671)</span>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">EMAIL</label>
-											<input class="form-control " type="email"  value="{{old('can_email', @$data['userdata']->log_email ) }}" readonly   >
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">Reference</label>
-											<input class="form-control" type="text"  value="{{old('can_nationality', @$data['userdata']->jobapplicant_reference  ) }}" readonly >
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-2">
-										<div class="form-group">
-											<label class="col-form-label">NATIONALITY</label>
-											<input class="form-control" type="text"  value="{{old('can_nationality', @$data['userdata']->jobapplicant_nationality  ) }}" readonly >
-										</div>
-									</div>
-									<div class="col-md-2">
-										<div class="form-group">
-											<label class="col-form-label">RELIGION</label> 
-											<input class="form-control" type="text" value="{{old('can_religion', @$data['userdata']->jobapplicant_religion)  }}" readonly >
-										</div>
-									</div>
-									<div class="col-md-2">
-										<div class="form-group">
-											<label class="col-form-label">MARITAL STATUS</label>
-											<input class="form-control" type="text"  value="{{old('can_martialstatus', @$data['userdata']->jobapplicant_martialstatus ) }}" readonly >
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">OCCUPATION</label>
-											<input type="text" class="form-control"  value="{{old('can_occupation', @$data['userdata']->jobapplicant_occupation ) }}" readonly >
-										</div>
-									</div>
-									
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">Action</label>
-											<select class="form-control selectpicker form-control" placeholder="Select Store Name" data-live-search ="true" id="storeId" name="actionname"  required >
-											<option value="inexperience" @if( $data['userdata']->jobapplicant_status == "inexperience") {{ "selected"}} @endif >Inexperience</option>
-											<option value="Screening" @if( $data['userdata']->jobapplicant_status == "Screening") {{ "selected"}} @endif >Screening</option>
-											<option value="candidatelist" @if( $data['userdata']->jobapplicant_status == "candidatelist") {{ "selected"}} @endif >Candidate List</option>
-											<option value="Irrelevent" @if( $data['userdata']->jobapplicant_status == "Irrelevent") {{ "selected"}} @endif >Irrelevent</option>
-											<option value="attend" @if( $data['userdata']->jobapplicant_status == "attend") {{ "selected"}} @endif >Attend Interview</option>
-											</select> 
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
 											<label class="col-form-label">Social Media Links</label>
 											<input type="text" class="form-control"  value="{{old('jobapplicant_socialmedialinks', @$data['userdata']->jobapplicant_socialmedialinks ) }}" readonly >
 										</div>
 									</div>
-									<div class="text-center">
-										<button type="submit" class="btn btn-primary" style="margin-left: 700px;">Submit</button>
+								
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="">
+											<button type="submit" class="btn submitbtn">Submit</button>
+										</div>
 									</div>
 								</div>
 							</div>

@@ -8,6 +8,9 @@ Route::get('/cc', function() {
 Route::get('/keypress',function(){
 	return view('keypress');
 });
+Route::get('/thankyou',function(){
+	return view('thankyou');
+});
 Route::get('/outofservice',function(){
 	return view('outofservice');
 });
@@ -128,7 +131,7 @@ Route::any('submitmarkattendance','attendanceController@submitmarkattendance');
 
 
 Route::any('/mylogin','hrmcontroller@hrmlogin');
-Route::get('/canLogin','hrmcontroller@canlopage');
+Route::get('/careers','hrmcontroller@canlopage');
 Route::any('/candidatelogin','hrmcontroller@hrmcandatelogin');
 Route::get('/newempform','hrmcontroller@newpreemployeeform');
 Route::any('/submitjobapplicant','hrmcontroller@submitjobapplicant');

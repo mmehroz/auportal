@@ -48,7 +48,7 @@
 						<div class="account-wrapper">
 							<!-- start preheader -->
 							<div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-							Interview Invitation | AU Telecom
+							Invitation to Interview - Arc Inventador
 							</div>
 							<!-- end preheader -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -58,8 +58,8 @@
 							        	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 								          	<tr>
 								            	<td align="center" valign="top" style="padding: 20px 150px;position: absolute;">
-								            		<a href="https://autelecom.net/" target="_blank" style="display: inline-block;">
-								                		<img src="http://209.182.216.71/public/assets/img/logo22.png" alt="BWC" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
+								            		<a href="https://www.arcinventador.com/" target="_blank" style="display: inline-block;">
+								                		<img src="https://avidhaus.com/images/arclogo.png" alt="" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
 								            		</a>
 								            	</td>
 								          	</tr>
@@ -87,34 +87,21 @@
 							          <!-- start copy -->
 							          <tr>
 							            <td align="left" bgcolor="#ffffff" style="padding: 24px;  padding-bottom:0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">Thank you for your application for the position of <b>{{$datas['candidatedata']->jobapplicant_postionapppliedform }}</b> at AU Telecom. I would like to invite you to a face-to-face interview at our office.
-During the interview, you will have the chance to learn more about the role and to develop a deeper understanding of our company’s objectives. On our end, we want to understand your career goals and professional experience more so.</p>
+							              <p style="margin: 0; color: #000;">We are pleased to inform you that your application for the <b>{{$datas['candidatedata']->jobapplicant_postionapppliedform }}.</b> position at Arc Inventador has been reviewed, and we are impressed with your qualifications and experience. As a result, we would like to invite you for an interview with our team.<br><br>
+											The interview is scheduled for <b>{{$datas['request']->interTime }}.</b>, and it will take place at 3rd Floor, Building B&H House Gulshan e Iqbal Block 15 Karachi. Please arrive at least 10 minutes before the scheduled time to allow for parking and check-in procedures.
+											<br><br>
+											During the interview, you will have the opportunity to meet with members of our hiring team and discuss your skills, experience, and qualifications in further detail. You will also have the opportunity to learn more about Arc Inventador and the role that you have applied for.
+											<br><br>
+											To confirm your attendance at the interview, please reply to this email with your availability for the given date and time. We would appreciate it if you could respond within 24 hours to confirm your attendance.
+											<br><br>
+											If the provided date and time are not suitable, please let us know, and we will try our best to accommodate your schedule.
+											<br><br>
+											We are looking forward to meeting you in person and learning more about your qualifications and experience.
+											<br><br>
+											Thank you for considering Arc Inventador as your potential employer, and we look forward to hearing back from you soon.
+											</p>
 							            </td>
 							          </tr>
-							          <!-- end copy -->
-							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px; padding-top:20px;  padding-bottom:0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">
-							              	Our office is located at PLOT #2, STREET #5, Block 6 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh 75300 at sharp <b>{{$datas['request']->interTime }}.</b></p>
-							            </td>
-							          </tr>
-							          <!-- start button -->
-							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px; padding-top:20px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">
-							              	Please bring a copy of your resume to the interview, Looking forward to meeting you.</p>
-							            </td>
-							          </tr>
-							          <!-- end button -->
-							          <!-- start copy -->
-							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-							              <p style="margin: 0;"><b>Human Resources Manager</b></p>
-							              <p style="margin: 0;"><b>Rafia Naz</b></p>
-							              <p style="margin: 0;"><b>Bizz Wolrd Communications</b></p>
-							            </td>
-							          </tr>
-							          <!-- end copy -->
 							        </table>
 							      </td>
 							    </tr>
@@ -127,7 +114,7 @@ During the interview, you will have the chance to learn more about the role and 
 							          <tr>
 							            <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
 							              <!-- <p style="margin: 0;">To stop receiving these emails, you can <a href="https://sendgrid.com" target="_blank">unsubscribe</a> at any time.</p> -->
-							              <p style="margin: 0;">&copy; <b>AU Telecom</b> 2021. All Right Reserved. </p>
+							              <p style="margin: 0;">&copy; <b>Arc-Inventador</b> <?php echo(date('Y'))?>. All Right Reserved. </p>
 							            </td>
 							          </tr>
 							          <!-- end unsubscribe -->

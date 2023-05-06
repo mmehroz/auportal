@@ -609,8 +609,6 @@
 
 .dark-mode .scroll2 .emojiPickerIcon {
   position: relative;
-  right: -176px !important;
-  top: -38px !important;
 }
 
 .dark-mode .scroll2 .BA {
@@ -764,9 +762,8 @@
     
   }
   .dark-mode .scroll2 .emojiPickerIconWrap input {
-    width: 91% !important;
+    width: 100% !important;
     position: relative !important;
-    left: 65px !important;
     top: 0px !important;
   }
   .dark-mode .scroll2 .BA button {
@@ -891,7 +888,7 @@
     left: 138px !important;
   }
   .dark-mode .scroll2 .emojiPickerIconWrap input {
-    width: 160% !important;
+    width: 100% !important;
   }
   .dark-mode .scroll2 .emojiPickerIcon {
     position: relative;

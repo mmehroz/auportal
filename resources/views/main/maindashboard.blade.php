@@ -5,12 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AU Telecom</title>
+    <title>Arc Inventador</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/favicon/favicon.png') !!}" />
+    <link rel="shortcut icon" type="image/x-icon" href="/public/favicon/favicon.png" />
      <style>
+        .dark-mode .scroll .emojiPickerIconWrap input {
+    height: 45px;
+}
+        .dark-mode .emojiPickerIconWrap .black {
+    width: 65px !important;
+    background-size: 40% !important;
+    background-color: rgb(238, 238, 238) !important;
+    height: 45px !important;
+    border-radius: 5px;
+    left: -6px;
+    background-color: rgb(238, 238, 238);
+}
+.dark-mode .scroll2 .emojiPickerIconWrap input {
+ height: 45px;
+}
+        .emojiPickerIconWrap{
+            margin-left: 10px;
+        }
+
+        .scroll2 .emojiPickerIconWrap input{
+            height: 45px;
+        }
+        .scroll .emojiPickerIconWrap input{
+            height: 45px;
+        }
+        @media only screen and (min-width: 1201px){
+.dark-mode .scroll2 .emojiPickerIconWrap input {
+    width: 91% !important;
+    position: relative !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+        }
 #container {
   height: 458px;
   border-radius: 6px;
@@ -98,7 +131,7 @@ background-color:#000 !important;
 
 .reply__text{
     cursor: pointer;
-    color: #40c4f1;
+    color: #0f5298;
     font-size: 11px;
     font-weight: bold;
     font-size: 13px;
@@ -111,7 +144,7 @@ background-color:#000 !important;
 
 .view__reply{
     cursor: pointer;
-    color: #40c4f1;
+    color: #0f5298;
     font-size: 11px;
     font-weight: bold;
     display: block;
@@ -124,7 +157,7 @@ background-color:#000 !important;
 
 .reply__btn{
     cursor: pointer;
-    background-color: #40c4f1;
+    background-color: #0f5298;
     color: white;
     font-size: 10px;
     padding: 10px 15px;
@@ -267,17 +300,17 @@ width: 99%;
     }
     .comment:hover{
         background-color: white;
-        color: #40c4f1;
-        border: 1px solid #40c4f1;
+        color: #0f5298;
+        border: 1px solid #0f5298;
         font-weight: 700;
     }
     .aqua51{
         background-color: rgba(100, 13, 29, 1);
     background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from (rgba(56, 0, 0, 1)), to (rgba(100, 13, 29, 1)));
     border-top-color: #963d44;
-    border-right-color: #40c4f1;
+    border-right-color: #0f5298;
     border-bottom-color: #30080881;
-    border-left-color: #40c4f1;
+    border-left-color: #0f5298;
     }
     .time51{
         /* width: 85px; */
@@ -333,7 +366,7 @@ width: 99%;
     top: -112px !important;
     left: 263px !important;
     height: 38px !important;
-    background-color: #40c4f1!important;
+    background-color: #0f5298!important;
     color: white !important;
     border-radius: 5px;
 }
@@ -343,19 +376,18 @@ width: 99%;
     width: 38px;
     background-color: rgb(238, 238, 238);
     position: relative;
-    right: -218px;
     top: -74px;
     }
     @media screen and (min-width: 1201px){
         .cp .emojiPickerIconWrap input{
         position: relative;
-    left: 64px !important;
+
     background: rgb(238, 238, 238) !important;
     border: 1px solid rgb(238, 238, 238) !important;
     width: 108% !important;
     }
     .scroll .cp button {
-    background-color: #40c4f1!important;
+    background-color: #0f5298!important;
     color: white !important;
    
 }
@@ -366,7 +398,7 @@ width: 99%;
     color: black !important;
 }
 .scroll .vc2 {
-    color: #40c4f1!important;
+    color: #0f5298!important;
     position: absolute;
     top: -8px;
     left: 43px;
@@ -376,7 +408,7 @@ width: 99%;
     top: -112px !important;
     left: 234px !important;
     height: 38px !important;
-    background-color: #40c4f1!important;
+    background-color: #0f5298!important;
     color: white !important;
     border-radius: 5px;
     width: 44px;
@@ -390,7 +422,7 @@ width: 99%;
     width: 40px;
     height: 40px;
     position: relative;
-  
+    margin-top: 3px;
 }
     .cp .emojiPickerIconWrap input{
         position: relative;
@@ -408,7 +440,7 @@ width: 99%;
     .cp button {
     top: -2px;
     width: 55px;
-    background-color: #40c4f1;
+    background-color: #0f5298;
     color: white;
     height: 40px;
     border-radius: 6px;
@@ -424,7 +456,7 @@ width: 99%;
 @media screen and (max-width: 1259px){
     .cp button {
     width: 51px;
-    background-color: #40c4f1;
+    background-color: #0f5298;
     color: white;
     height: 40px;
     border-radius: 6px;
@@ -439,7 +471,6 @@ width: 99%;
     border-radius: 4px;
     background-color: #f3f3f3;
     position: relative;
-    left: 16px;
                 }
                 .rounded-circle{
                     width: 40px;
@@ -452,13 +483,12 @@ width: 99%;
 @media screen and (max-width: 1200px){
     .cp .emojiPickerIconWrap input{
         position: relative;
-    left: 59px;
     background: rgb(238, 238, 238) !important;
     border: 1px solid rgb(238, 238, 238) !important;
     width: 108% !important;
     }
     .scroll .cp button {
-    background-color: #40c4f1!important;
+    background-color: #0f5298!important;
     color: white !important;
 
 }
@@ -471,7 +501,7 @@ width: 99%;
 }
 @media screen and (max-width: 1000px){
 .scroll .cp button {
-    background-color: #40c4f1!important;
+    background-color: #0f5298!important;
     color: white !important;
 
 }
@@ -485,11 +515,11 @@ width: 99%;
     width: 108% !important;
     }
     .scroll .cp button {
-    background-color: #40c4f1!important;
+    background-color: #0f5298!important;
     color: white !important;
 
 }.scroll .vc2 {
-    color: #40c4f1!important;
+    color: #0f5298!important;
     position: absolute;
     top: -8px;
     left: 43px;
@@ -501,7 +531,7 @@ width: 99%;
   
 
     .scroll .vc2 {
-        color: #40c4f1!important;
+        color: #0f5298!important;
         position: absolute;
         top: -8px;
         left: 52px;
@@ -513,13 +543,13 @@ width: 99%;
 @media screen and (min-width: 1500px){
 
     .scroll .cp button {
-    background-color: #40c4f1!important;
+    background-color: #0f5298!important;
     color: white !important;
  
 }
 
 .scroll .vc2 {
-    color: #40c4f1!important;
+    color: #0f5298!important;
     position: absolute;
     top: -8px;
     left: 52px;
@@ -530,7 +560,7 @@ width: 99%;
 }
 /* @media screen and (min-width: 1500px){
     .scroll .cp button {
-    background-color: #40c4f1!important;
+    background-color: #0f5298!important;
     color: white !important;
     width: 65%;
     position: absolute;
@@ -560,13 +590,13 @@ width: 99%;
     top: -110px;
     left: 263px;
     height: 38px;
-    background-color: #40c4f1!important;
+    background-color: #0f5298!important;
     color: white !important;
     border-radius: 5px;
 } */
 .scroll .vc {
     cursor: pointer;
-    color: #40c4f1!important;
+    color: #0f5298!important;
     font-weight: bold !important;
     
 }
@@ -587,22 +617,9 @@ width: 99%;
     padding-top: 7px;
     font-family: 'Raleway', sans-serif;
 }
-.dropdown-menu{
-    position: absolute;
-    transform: translate3d(-59px, 60px, 0px);
-    top: 0px !important;
-    left: 0px;
-    will-change: transform;
-}
-.dropdown-item{
-    font-size: 12px !important;
-    color: #212529 !important;
-    font-weight: 200;
-    font-family: 'Open Sans', sans-serif !important;
-}
-.navbar ul li a i {
-    font-size: 13px !important;
-    margin-top: 2px;
+
+.dark-mode .desc li{
+    color: #fff;
 }
 
 @media screen and (min-width: 1600px){
@@ -665,12 +682,12 @@ top: 99% !important;
             <nav class="navbar navbar-expand-lg">
                 @if($data->roleid <= 2)
                 <a href="{{URL::to('adminDashboard')}}">
-                <img src="{!! asset('public/bizzmain/logo-nav.png') !!}"  class="headerlogo" alt="">
+                <img src="{!! asset('public/images/logo.svg') !!}" class="headerlogo" alt="">
                 @elseif($data->roleid == 3)
                 <a href="{{URL::to('managerDashboard')}}">
-                <img src="{!! asset('public/bizzmain/logo-nav.png') !!}" class="headerlogo" alt="">
+                <img src="{!! asset('public/images/logo.svg') !!}" class="headerlogo" alt="">
                 @else
-                <img src="{!! asset('public/bizzmain/logo-nav.png') !!}" class="headerlogo" alt="">
+                <img src="{!! asset('public/images/logo.svg') !!}" class="headerlogo" alt="">
                 @endif
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -688,32 +705,58 @@ top: 99% !important;
                         </li>
                         
                         <li class="vl"></li>
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a id="toggle_btn" onclick="mydark()" class="nav-link d-flex" style="">Mode <span class="pl-2"><i class="fa fa-adjust" aria-hidden="true"></i></span></a>
-                        </li> -->
+                        </li>
                         @if(session()->get("dptid") == 4 AND session()->get("role") == 4)
                         <li class="nav-item">
                             <a href="{{url('/itticketrequest')}}" target="_blank" class="nav-link d-flex">IT Support <p><i class="fa fa-bell" aria-hidden="true"></i></p></a>
                         </li>
                         @endif
-                        
+                        <li class="vl"></li>
                         <li class="nav-item dropdown has-arrow main-drop">
-                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <a href="#" class="dropdown-toggle nav-link d-flex" data-toggle="dropdown">
                                 <span class="user-img">
-                                    <!-- <img src="{!! asset('public/assets/img/profiles/avatar-00.jpg') !!}" alt=""> -->
-                                    <img src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
-                                <span class="status online"></span></span>
-                                <span>{{session()->get("name")}}</span>
+            <!-- <img src="{!! asset('public/assets/img/profiles/avatar-00.jpg') !!}" alt=""> -->
+            <img src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
+        <span class="status online"></span></span>
+                                <span class="pl-2">{{session()->get("name")}}</span>
                             </a>
                             <div class="dropdown-menu">
                                 <!--<a class="dropdown-item" href="{{url('/employeeprofile')}}">My Profile</a>-->
-                                <a class="dropdown-item" href="#" onclick="return viewprofile({{session()->get("id")}});" ><i class="fa fa-user" style="padding-right: 7px;"></i>My Profile</a>
+                                <a class="dropdown-item" style="color: black; font-weight:100!important" href="#" onclick="return viewprofile({{$data->elsemployees_empid}});"><i class="fa fa-user" style="padding-right: 7px; font-size: 12px;font-weight:100!important"></i>My Profile</a>
+                                <?php 
+                                if(date('h:i:s A') > "12:01:00 AM")
+                                {
+                                ?>
+                                <a class="dropdown-item" style="color: black;font-weight:100!important" href="{{url('/usertimein')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px;font-weight:100!important"></i>Time In</a>
+                                  <?php
+                                }
+                                //portal timein start
+                                    $cdate = date('Y-m-d');
+                                    $gettimeindate = date('Y-m-d', strtotime('-1 day', strtotime($cdate)));
+                                    $gettodaystimein = DB::connection('mysql')->table('attendance')
+                                    ->where('attendance.elsemployees_empid','=', session()->get('batchid')) 
+                                    ->where('attendance.attendance_date','=', date('Y-m-d')) 
+                                    ->orwhere('attendance.attendance_date','=', $gettimeindate) 
+                                    ->select('attendance.*')
+                                    ->first();
+                                    $gettodaystimeout = DB::connection('mysql')->table('attendancetimeout')
+                                    ->where('attendancetimeout.elsemployees_empid','=', session()->get('batchid')) 
+                                    ->where('attendancetimeout.attendance_date','=', date('Y-m-d')) 
+                                    ->select('attendancetimeout.*')
+                                    ->first();
+                                    // dd($gettodaysattendance);
+                                    if (isset($gettodaystimein) != null && isset($gettodaystimeout) == null) {
+                                    ?>
+                                <a class="dropdown-item" style="color: black;font-weight:100!important" href="{{url('/usertimeout')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px;"></i>Time Out</a>
+                            <?php }?>
+                                <a class="dropdown-item" style="color: black;font-weight:100!important" href="{{url('/chapass')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px;"></i>Change Password</a>
                                 @if(session()->get('batchid') == 1406)
-                                <a class="dropdown-item" href="{{url('/addemployeenos')}}"><i class="fa fa-plus" style="padding-right: 7px;"></i>Add Employee</a>
-                                <a class="dropdown-item" href="{{url('/candidate_list')}}"><i class="fa fa-list" style="padding-right: 7px;"></i>Recruitment</a>
-                                @endif
-                                <a class="dropdown-item" href="{{url('/chapass')}}"><i class="fa fa-key" style="padding-right: 7px;"></i>Change Password</a>
-                                <a class="dropdown-item" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;"></i>Logout</a>
+                                 <a class="dropdown-item" style="color: black;font-weight:100!important" href="{{url('/addemployeenos')}}"><i class="fa fa-plus" style="padding-right: 7px; font-size: 12px;"></i>Add Employee</a>
+                                 <a class="dropdown-item" style="color: black;font-weight:100!important" href="{{url('/candidate_list')}}"><i class="fa fa-list" style="padding-right: 7px; font-size: 12px;"></i>Recruitment</a>
+                                 @endif
+                                <a class="dropdown-item" style="color: black;font-weight:100!important" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px;"></i>Logout</a>
                                 <!-- <a class="dropdown-item" href="{{url('/getimage')}}">Select Image</a> -->
                             </div>
                         </li>
@@ -735,46 +778,46 @@ top: 99% !important;
                         <h3 class="text-center personaldetailsheading1">Personal Details</h3>
                         <div class="d-flex mt-4 personaldetailsinnerdiv">
                             <div class="col-lg-5"><p class="persondetailcolhead">Batch ID:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_batchid}}</span></div>        
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_batchid}}</span></div>        
                         </div>
                         <hr>
                     
                         <div class="d-flex mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">CNIC:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_cnic}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_cnic}}</span></div>
                         </div>
                         <hr>
                         <div class="d-flex mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"> <p class="persondetailcolhead">Cell:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_cno}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_cno}}</span></div>
                         </div>
                         
                        
                         <hr>
                         <div class="d-flex  mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Department:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->dept_name}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->dept_name}}</span></div>
                         </div>
 
                          <hr>
                          <div class="d-flex  mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"> <p class="persondetailcolhead">Designation:</p></div>
-                           <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->DESG_NAME}}</span></div>
+                           <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->DESG_NAME}}</span></div>
                         </div>
                          <hr>
                          <div class="d-flex  mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Reporting To:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->reportingto}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->reportingto}}</span></div>
                         </div>
 						<hr>
                          <div class="d-flex mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Joining Date:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_dofjoining}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_dofjoining}}</span></div>
                         </div>
                          <hr>
                          <div class="d-flex  mt-1 pb-3" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Date Of Birth:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_dofbirth}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_dofbirth}}</span></div>
                             
                             
                         </div>
@@ -788,14 +831,14 @@ top: 99% !important;
                                    
 <div class="col-lg-12 col-md-12 col-sm-12 desc" id="div1">
                                         <br>
-<p style="text-align: justify;">At AU Telecom, Every person in our company is a member of the team and a team player with the expectation and need that they perform their duties to their fullest capacity and potential.Our objective is a commitment to the highest quality customer service. The client satisfaction is our main focus, reached through innovative and cost effective services. We focus on creating the economic and social values for your business on global scale by providing a trustable workplace where you can connect, collaborate and attain the success.</span></p>
+<p style="text-align: justify;">At Arc Inventador, Every person in our company is a member of the team and a team player with the expectation and need that they perform their duties to their fullest capacity and potential.Our objective is a commitment to the highest quality customer service. The client satisfaction is our main focus, reached through innovative and cost effective services. We focus on creating the economic and social values for your business on global scale by providing a trustable workplace where you can connect, collaborate and attain the success.</span></p>
                                     </div>
                                     <div class="col-lg-12 mt-2">
                                         <button class="w-100 messbtn2" type="button" name="rd" id="rd" value="2"> Vision</button>
                                     </div>
                                     <div class="col-lg-12 desc" id="div2" style="display: none;">
                                         <br>
-                                        <p style="text-align: justify;">AU Telecom is an extremely innovative company that is always open to unique ideas. We are always looking at new ways to improve our operations and the process of customer services.AU Telecom difference is in the details. We take the time to understand the challenges that our clients are facing and then we assist them in developing a solution program that works for their unique needs that fits in their budget.</span></p>
+                                        <p style="text-align: justify;">Arc Inventador is an extremely innovative company that is always open to unique ideas. We are always looking at new ways to improve our operations and the process of customer services.Arc Inventador difference is in the details. We take the time to understand the challenges that our clients are facing and then we assist them in developing a solution program that works for their unique needs that fits in their budget.</span></p>
                    
                                   
                                         
@@ -865,14 +908,14 @@ top: 99% !important;
                                             </div> -->
                                             
                                                 
-                                            <div class="col-2 mt-5">
+                                            <div class="col-1 mt-3">
                                                 <img class="rounded-circle" src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
                                             </div>
-                                            <div class="col-8 mt-5">
+                                            <div class="col-9 mt-3" style="padding-right: 0px;">
                                                 <input type="text" class="form-control" name="" id="input-default{{$data->bdannouncementid[$indexannbd]}}" class="" placeholder="Type Comment" >
                                                 </div>
-                                            <div class="col-1 mt-5" style="padding-left: 0;">
-                                                <button style="background: #40c4f1; color: #fff; height: 38px; width: 40px;" onclick="submitcomment({{$data->bdannouncementid[$indexannbd]}})"><span><i class="fas fa-paper-plane"></i></span></button>
+                                            <div class="col-1 mt-3" style="padding-left: 0;">
+                                                <button class="inputsubmitbtn" onclick="submitcomment({{$data->bdannouncementid[$indexannbd]}})"><span><i class="fas fa-paper-plane"></i></span></button>
                                             </div>
                                             
                                                 <script>
@@ -922,11 +965,11 @@ top: 99% !important;
                                     </div>
                                     
                                     <div class="col-12">
-                                    <a class="vc" style="cursor: pointer; color: #40c4f1; font-weight: bold;display: flex;justify-content: center;" onclick="viewdetails({{$data->bdannouncementid[$indexannbd]}})">Click To View Comments</a>
+                                    <a class="vc"  onclick="viewdetails({{$data->bdannouncementid[$indexannbd]}})">Click To View Comments</a>
                                     </div>
                                     
                                     <br>
-                                    <div class="hor ml-auto mr-auto mb-3" style="width: 95%; border-bottom: 2px solid #40c4f1; margin-top: px;"></div>
+                                    <div class="hor ml-auto mr-auto mb-3 vas"></div>
                                 <?php
                                 $indexannbd++;
                                 ?>
@@ -938,7 +981,7 @@ top: 99% !important;
                         </div>
                 </div>
                 <div class="col-lg-6">
-                    <div style="background: #fff; box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px;">
+                    <div class="bannersection">
                         <div class="banner">
                             @if($data->elsemployees_coverimage == null)
                             <img src="{{URL::to('public/img/defaultcover.png')}}" alt=" ">
@@ -961,7 +1004,7 @@ top: 99% !important;
                              
                                 </div>
                                 <div class="w-100" style="position: absolute;top:34%;">
-                                    <h6 style="color: #40c4f1; font-weight: 700;text-align: center;padding-top: 20px;">{{$data->elsemployees_name}}</h6>
+                                    <h6 style="color: #0f5298; font-weight: 700;text-align: center;padding-top: 20px;">{{$data->elsemployees_name}}</h6>
                                     <div class="d-flex justify-content-center">
                                         <h6 class="mt-1" style="font-weight: bold;">{{$data->DESG_NAME}}</h6>
                                       <h6 class="pro" style="font-weight: bold;">{{$data->dept_name}}</h6>
@@ -972,9 +1015,9 @@ top: 99% !important;
                         </div>
                     </div>
                   
-                    <div style="background: #fff;box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px; padding-bottom: 25px;margin-top: 15px; padding-left: 15px; padding-right: 15px;height: 1710px;">
-                        <h3 style="padding-top: 30px;font-weight: bold;color: #000;" class="text-center">Announcement Feed</h3>
-                        <div class="bio bio1" style="height: 1560px !important; overflow-y: scroll !important; background-color: white; margin-top: 15px; border-radius: 4px;">
+                    <div class="announcementsection">
+                        <h3>Announcement Feed</h3>
+                        <div class="bio bio1 div1">
                             <div class="col-lg-12 col-md-12 col-sm-12 m-0 p-0">
                         <div class="ann">
                         <div class="time11 aqua11">
@@ -982,9 +1025,9 @@ top: 99% !important;
                             <h5></h5>
                         
                         </div>
-                        <div class="pt2" style="background-color: white; width: 100%; ; height: 35px; margin-bottom: -20px;"></div>
+                        <div class="pt2" style="background-color: white; width: 100%; ;"></div>
                         </div>
-                         <div class="scroll" style="height: 1374px;">
+                         <div class="scroll">
                                 @if(isset($data->allannouncementtitle))
                                 <?php
                                 $indexannall=0;
@@ -1087,16 +1130,27 @@ top: 99% !important;
                                         </div>
                                     </div>
                                     <div class="row">        
-                                <div class="col-lg-2"><img class="rounded-circle" style="width: 40px; height: 40px" src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt=""></div>
-                                <div class="col-lg-8" style=" background-color: #f9f9f9 !important;border-radius:26px"><input type="text" class="form-control contr2" name="" id="input-default{{$data->allannouncementid[$indexannall]}}" class="" placeholder="Type Comment" ></div>
-                                <div class="col-lg-2" style=""><button style="background: #40c4f1; color: #fff; height: 38px; width: 40px;" onclick="submitcomment({{$data->allannouncementid[$indexannall]}})"><span><i class="fas fa-paper-plane"></i></span></button></div>
+                                        <div class="col-lg-12">
+                                            <div class="d-flex">
+<div>
+<img class="rounded-circle" style="width: 40px; height: 40px" src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
+                                                </div>
+                                                <div style="width:100%">
+                                                    <input type="text" class="form-control" name="" id="input-default{{$data->allannouncementid[$indexannall]}}" class="" placeholder="Type Comment" >
+                                                </div>
+                                                <div>
+                                                <button class="inputsubmitbtn" onclick="submitcomment({{$data->allannouncementid[$indexannall]}})"><span><i class="fas fa-paper-plane"></i></span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                               
                             </div> 
                                     <div class="col-12 mt-2">
-                                    <a class="" style="cursor: pointer; color: #40c4f1; font-weight: bold;text-align: center;display: flex;justify-content: center;" onclick="viewdetails({{$data->allannouncementid[$indexannall]}})">Click To View Comments</a>
+                                    <a class="vas" onclick="viewdetails({{$data->allannouncementid[$indexannall]}})">Click To View Comments</a>
                                     </div>
                                   
                                     <br>
-                                    <div class="hor ml-auto mr-auto" style="width: 95%; border-bottom: 2px solid #40c4f1; margin-top: 10px;"></div>
+                                    <div class="hor ml-auto mr-auto" style="width: 95%; border-bottom: 2px solid #0f5298; margin-top: 10px;"></div>
                                 <?php
                                 $indexannall++;
                                 ?>
@@ -1199,36 +1253,32 @@ top: 99% !important;
                     </div>
                     <hr class="statussectionhr">
 </div>
-<div>
-                        <div class="col-lg-12 mt-3" style="padding-left: 0px; padding-right: 0px;"><a class="mainbtns" id="upload_link" onclick="commingsoon()" href="#"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Email</a></div>
-                        <div class="col-lg-12 mt-3" style="padding-left: 0px; padding-right: 0px;"><a class="mainbtns" id="upload_link" onclick="commingsoon()" href="#"><span><i class="mainbtnsspan  fas fa-comment"></i></span>Chat</a></div>
-                        <div class="col-lg-12 mt-3" style="padding-left: 0px; padding-right: 0px;"><a class="mainbtns" id="upload_link" onclick="commingsoon()" href="#"><span><i  class="mainbtnsspan fa fa fa-users"></i></span>CRM</a></div>
+<div class="btnsdiv">
+                        <div class="col-lg-12 mt-3" style="padding-left: 0px;padding-right: 0px;"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:5100/"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Email</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left: 0px;padding-right: 0px;"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:3000/"><span><i class="mainbtnsspan  fas fa-comment"></i></span>Chat</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left: 0px;padding-right: 0px;"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.7:4001"><span><i  class="mainbtnsspan fa fa fa-users"></i></span>CRM</a></div>
                     </div>
                     <div class="activitiesection">
-                    <h3 class="font-weight-bold text-black text-center pt-4 pb-4">My Acitivities</h3>
+                    <h3 class="font-weight-bold text-center pt-4 pb-4">My Acitivities</h3>
                    <div class="row">
                     <div class="col-lg-4"> 
                         <div class="activitiesectiondivleft">
 
-<a href="{{URL::to('myforms')}}" target="_blank" class="activitiesectionanchor"><span> <i class="abc msgs fa fa-file-signature" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>My Forms</a>
+<a href="{{URL::to('myforms')}}" target="_blank" class="activitiesectionanchor"><span> <i class="abc msgs fa fa-file-signature" ></i></span><br>My Forms</a>
 </div>
                 </div>
                     <div class="col-lg-4">
                         <div class="activitiesectiondivcenter">
 
 <a href="{{URL::to('selectbioattendancemonth')}}" target="_blank" class="activitiesectionanchor"><span>
- <i class="abc msgs fa fa-file-invoice-dollar" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Pay Slips</a>
+ <i class="abc msgs fa fa-file-invoice-dollar" ></i></span><br>Pay Slips</a>
 </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="activitiesectiondivright">
 
-<!-- <a href="{{URL::to('restaurantlist')}}" target="_blank" class="activitiesectionanchor"><span>  -->
-<a href="#"  class="activitiesectionanchor"><span> 
-<i class="abc msgs fa fa-drumstick-bite" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Food Portal</a>
+<a href="{{URL::to('restaurantlist')}}" target="_blank" class="activitiesectionanchor"><span> 
+<i class="abc msgs fa fa-drumstick-bite" ></i></span><br>Food Portal</a>
 </div>
                     </div>
                    </div>
@@ -1238,16 +1288,14 @@ top: 99% !important;
                         <div class="activitiesectiondivleft">
 
 <a href="{{URL::to('games')}}" target="_blank" class="activitiesectionanchor"><span> 
-<i class="abc msgs fa fa-gamepad" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Game</a>
+<i class="abc msgs fa fa-gamepad" ></i></span><br>Game</a>
 </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="activitiesectiondivcenter">
 
 <a href="{{URL::to('bizzlibrary')}}" target="_blank" class="activitiesectionanchor"><span>
-<i class="abc msgs fa fa-book-reader" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Library</a>
+<i class="abc msgs fa fa-book-reader" ></i></span><br>Library</a>
 </div>
 </div>
 <div class="col-lg-4">
@@ -1255,8 +1303,7 @@ top: 99% !important;
     <div class="activitiesectiondivright">
 
 <a href="{{URL::to('websites')}}" target="_blank" class="activitiesectionanchor"><span>
-<i class="abc msgs fa fa-globe" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Websites</a>
+<i class="abc msgs fa fa-globe" ></i></span><br>Websites</a>
 </div>
 </div>
                    </div>
@@ -1265,28 +1312,27 @@ top: 99% !important;
                         <div class="activitiesectiondivleft">
 
 <a href="{{URL::to('employee_list')}}" target="_blank" class="activitiesectionanchor"><span>
-<i class="abc msgs fa fa-address-book" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>AU Directory</a>
+<i class="abc msgs fa fa-address-book" ></i></span><br>Directory</a>
 </div>
                         </div>
                     </div>
                 </div>
-            <div style="background: #fff; box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px;  padding-bottom: 10px;margin-top: 15px;">
-                        <h3 class="font-weight-bold text-black text-center" style="padding-top: 20px;">My Attendance</h3>
-                      <div style="height: 362px; overflow-x: scroll;">
-                        <table class="table" style="width: 95%;margin-left:5px;">
+            <div class="attendancediv">
+                        <h3>My Attendance</h3>
+                      <div class="tablediv">
+                        <table class="table">
                             <thead>
-                              <tr style="border: 1px solid #d3d3d3;">
-                                <th scope="col" style="border-top-left-radius: 5px;border-top-right-radius: 5px;">Date</th>
+                              <tr>
+                                <th scope="col" class="firstd">Date</th>
                                 <th scope="col">Time-In</th>
                                 <th scope="col">Time-Out</th>
-                                <th scope="col" style="border-top-left-radius: 5px;border-top-right-radius: 5px;">Result</th>
+                                <th scope="col" class="lastd">Result</th>
                               </tr>
                             </thead>
                             <tbody style="white-space: nowrap;">
                                 @if($attendancedata != null)
                                 @foreach($attendancedata as $attdata)
-                                <tr style="border: 1px solid #d3d3d3;">
+                                <tr>
                                     <?php $splitattendancedate = explode("-",$attdata['emp_date']);?>
                                    <td >{{$splitattendancedate[1]}}-{{$splitattendancedate[2]}}</td>
                                    <td>{{$attdata['emp_checkin']}}</td>
@@ -1305,16 +1351,16 @@ top: 99% !important;
                                     ?>
                                    @if($attdata['emp_checkin'] == "MissIn" || $attdata['emp_checkout'] == "MissOut")
                                    <?php $attresult = "Absent"?>
-                                   <td class="attt" style="background-color: #FFE4E1;color: #db7093;font-weight: bold;">Absent</td>
+                                   <td class="attt absentd">Absent</td>
                                     @elseif($gettime < 7.56)
                                     <?php $attresult = "Late"?>
-                                    <td class="attt" style="background-color: #FAFAD2;color: orange;font-weight: bold;">Late</td>
+                                    <td class="attt latetd">Late</td>
                                     @elseif($gettime < 4)
                                     <?php $attresult = "Half Day"?>
-                                    <td class="attt" style="background-color: #b7cefa;">Half Day</td>
+                                    <td class="attt halfdaytd">Half Day</td>
                                     @else
                                     <?php $attresult = "Present"?>
-                                    <td class="attt" style="background-color: #e5ffe5;color: #4ee44e;font-weight: bold;">Present</td>
+                                    <td class="attt presentd">Present</td>
                                    @endif
                                 <!--    @if($attdata['emp_checkin'] == "MissIn" || $attdata['emp_checkout'] == "MissOut")
                                    <td>0</td>
@@ -1336,31 +1382,28 @@ top: 99% !important;
                        
                         
                     </div>
-                    <div style="background: #fff;box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px; padding-bottom: 25px;margin-top: 15px;">
-                    <h3 class="font-weight-bold text-black text-center" style="padding-top: 20px;">Training Manual</h3>
+                    <div class="trainingmanual">
+                    <h3>Training Manual</h3>
                    <div class="row mt-3">
                     <div class="col-lg-4"> 
-                        <div style="background: #f9f9f9;display: flex;justify-content: center;margin-left: 10px;">
+                        <div class="iconsdiv1">
 
-<a href="{{URL::to('trainingmanualpdf')}}" target="_blank"style="color: #000;font-size: 11px;padding-top: 10px;font-weight: 600;"><span> <i class="abc msgs fa fa-file-pdf" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>PDF</a>
+<a href="{{URL::to('trainingmanualpdf')}}" target="_blank"><span> <i class="abc msgs fa fa-file-pdf" ></i></span><br>PDF</a>
 </div>
                         
                 
                 </div>
                     <div class="col-lg-4">
-                        <div style="background: #f9f9f9;display: flex;justify-content: center;margin-left: 10px;margin-right: 10px;">
+                        <div class="iconsdiv2">
 
-<a href="{{URL::to('trainingmanualvideo')}}" target="_blank"style="color: #000;font-size: 11px;padding-top: 10px;font-weight: 600;"><span> <i class="abc msgs fa fa-video" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Video</a>
+<a href="{{URL::to('trainingmanualvideo')}}" target="_blank"><span> <i class="abc msgs fa fa-video" ></i></span><br>Video</a>
 </div>      
                     
                     </div>
                     <div class="col-lg-4">
-                        <div style="background: #f9f9f9;display: flex;justify-content: center;margin-right: 10px;">
+                        <div class="iconsdiv3">
 
-<a href="{{URL::to('trainingmanualaudio')}}" target="_blank"style="color: #000;font-size: 11px;padding-top: 10px;font-weight: 600;"><span> <i class="abc msgs fa fa-volume-up" style="    color: #40c4f1;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Audio</a>
+<a href="{{URL::to('trainingmanualaudio')}}" target="_blank"><span> <i class="abc msgs fa fa-volume-up" ></i></span><br>Audio</a>
 </div> 
 
 
@@ -1368,8 +1411,8 @@ top: 99% !important;
                    </div>
               
                 </div>
-                <div class="" style="background: #fff;box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px; margin-top: 15px;padding-bottom: 25px;margin-bottom: 20px;">
-                    <h3 class="font-weight-bold text-black text-center" style="padding-top: 20px;">My Gallery</h3>
+                <div class="gallerydiv">
+                    <h3>My Gallery</h3>
                             
                     <div id="demo" class="carousel slide" data-ride="carousel">
                 
@@ -1393,7 +1436,7 @@ top: 99% !important;
                                         <div class="carousel-item">
                                         @endif
                                         <a href="{{URL::to('gallerylist/')}}/{{$val}}" target="_blank" class="avatar">
-                                            <img src="{{URL::to('public/album/')}}/{{$data->albumimage[$indexalbum]}}" alt="Los Angeles" width="100%" >
+                                            <img src="{{URL::to('public/album/')}}/{{$data->albumimage[$indexalbum]}}" alt="Los Angeles" width="100%" style="height: 380px;" >
                                         </a>
                                         </div>
                                     <?php
@@ -1431,8 +1474,8 @@ top: 99% !important;
      </section>
 
      <!-- Footer -->
-<footer class="text-center" style="background: #0f1431;">
-<h5 class="font-weight-bold text-white">© 2023 Copyright&nbsp;:&nbsp;AU Telecom</h5>
+<footer class="text-center">
+<h5 class="font-weight-bold text-white">© 2023 Copyright&nbsp;:&nbsp;Arc inventador</h5>
 
 </footer>
 <!-- Footer -->
@@ -1478,7 +1521,7 @@ function getcover(){
     });
 }
 function commingsoon(){
-swal("AU Launching", "...Coming Soon");
+swal("Bizz Launching", "...Coming Soon");
 }
 function bizzcall($id){
 let newWindow = window.open("https://chat.bizzworld.local/dialpad?number="+$id, "mywindow","menubar=0,location=0,status=0,titlebar=0,toolbar=0,resizable=0,width=320,height=650");

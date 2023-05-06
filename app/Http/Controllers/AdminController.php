@@ -326,11 +326,11 @@ class AdminController extends Controller
 	public function candidate_listdata(){
 		
 		$task = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','candidatelist')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->orderBy('jobapplicant_id', 'DESC')
 		->paginate(10);
 
@@ -419,11 +419,11 @@ class AdminController extends Controller
 	public function screening_listdata(){
 		
 		$task = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-		->where('jobapplicant.jobapplicant_channel','=','1')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','Screening')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->paginate(20);
 
 		// dd($task);
@@ -630,8 +630,8 @@ class AdminController extends Controller
 	public function modalemployeeview($id){
 
 			$employeemodal = DB::connection('mysql')->table('jobapplicant')
-			->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-			->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+			// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+			// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 			// ->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
 			->where('jobapplicant.jobapplicant_id', '=', $id)
 			->first();
@@ -862,19 +862,19 @@ class AdminController extends Controller
 	public function inprocandidatelist(){
 		
 		$Inprocess = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','inprocess')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		$Awaiting = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','awaiting')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		$all=[
@@ -913,14 +913,15 @@ class AdminController extends Controller
             ->where('jobapplicant_id','=',$request->editempid)
             ->update([
 		   'jobapplicant_status' => $request->optradio,
+		   'jobapplicant_intDateandTime' => $request->interTime,
 		   'updated_at' => date('Y-m-d H:i:s'),
 		   'jobapplicant_ChangeBy' => session()->get("name"),
 			]);
 			
 			$Callforin = DB::connection('mysql')->table('jobapplicant')
-			->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+			// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
 			->where('jobapplicant.jobapplicant_id','=',$request->editempid )
-			->select('jobapplicant.*','hrm_login.*')
+			->select('jobapplicant.*')
 			->first();
 			
 			// dd($request);
@@ -932,7 +933,7 @@ class AdminController extends Controller
 			
 			
 			
-			$emailcandi = $all['candidatedata']->log_email;
+			$emailcandi = $all['candidatedata']->can_email;
 			
 			// dd($emailcandi);
 			
@@ -947,9 +948,8 @@ class AdminController extends Controller
 					],
 				function ($message) use ($emailcandi) {
 				 $message->to($emailcandi);
-				 $message->cc('hr@bizzworld.com');
-				 $message->bcc('muhammad.mehroz@bizzworld.com');
-				 $message->subject('Call For Interview');
+				 $message->cc('recruitment@arcinventador.com');
+				 $message->subject('Invitation to Interview - Arc Inventador');
 				});
 			}
 	
@@ -967,28 +967,28 @@ class AdminController extends Controller
 		
 		
 		$Callforin = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','callforinterview')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		$Attend = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','attend')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		// dd($Attend);
 		
 		$Notattend = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','notattend')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 
@@ -1007,11 +1007,11 @@ class AdminController extends Controller
 		 
 		 
 		$evuinterviewform = DB::connection('mysql')->table('jobapplicant')
-		->leftjoin('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-		->leftjoin('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
+		// ->leftjoin('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->leftjoin('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
 		->leftjoin('can_evulation','can_evulation.can_evu_job_id', '=','jobapplicant.jobapplicant_id')
 		->where('jobapplicant.jobapplicant_id','=',$id)
-		->select('jobapplicant.*','hrm_Department.dept_name','sub_department.*','can_evulation.*')
+		->select('jobapplicant.*','can_evulation.*')
 		->first();
 		
 		// dd($evuinterviewform);
@@ -1023,11 +1023,11 @@ class AdminController extends Controller
 		
 		
 		$evaluation = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','evaluateByCoo')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		// dd($evaluation);
@@ -1040,28 +1040,28 @@ class AdminController extends Controller
 	public function hiredcandi(){
 		
 		$hired = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','hired')
 		->orWhere('jobapplicant.jobapplicant_status','=','nothired')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		$joined = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','joined')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		$notinter = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','notinterested')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		$all=[
@@ -1264,7 +1264,7 @@ class AdminController extends Controller
 				
 				
 				
-				$managername = $manageremail->elsemployees_email;
+				// $managername = $manageremail->elsemployees_email;
 				
 				$all=[
 				'managerdetail'=>$manageremail,
@@ -1274,15 +1274,15 @@ class AdminController extends Controller
 				// dd($managername);
 				
 				
-				Mail::send('emails.evadcometomana',[
-					'datas' =>$all,
-					],
-				function ($message) use ($managername) {
-				 $message->to($managername);
-				 $message->cc('hr@bizzworld.com');
-				 $message->bcc('muhammad.mehroz@bizzworld.com');
-				 $message->subject('Candidate Confirmed And Will Attend Interview');
-				});
+				// Mail::send('emails.evadcometomana',[
+				// 	'datas' =>$all,
+				// 	],
+				// function ($message) use ($managername) {
+				//  $message->to($managername);
+				//  $message->cc('hr@bizzworld.com');
+				//  $message->bcc('muhammad.mehroz@bizzworld.com');
+				//  $message->subject('Candidate Confirmed And Will Attend Interview');
+				// });
 				
 				
 			
@@ -1306,9 +1306,9 @@ class AdminController extends Controller
 	public function modalemployeeviewjust($id){
 
 			$employeemodal = DB::connection('mysql')->table('jobapplicant')
-			->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-			->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-			->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
+			// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+			// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+			// ->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
 			->where('jobapplicant.jobapplicant_id', '=', $id)
 			->first();
 			
@@ -1332,11 +1332,11 @@ class AdminController extends Controller
 		 
 		 
 		$evuinterviewform = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-		->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
 		->join('can_evulation','can_evulation.can_evu_job_id', '=','jobapplicant.jobapplicant_id')
 		->where('jobapplicant.jobapplicant_id','=',$id)
-		->select('jobapplicant.*','hrm_Department.*','can_evulation.*','sub_department.*')
+		->select('jobapplicant.*','can_evulation.*')
 		->first();
 		
 		// dd($evuinterviewform);
@@ -1347,7 +1347,7 @@ class AdminController extends Controller
 	public function finalaction(Request $request){
 	
 		// dd($request);
-		$update  = DB::connection('mysql')->table('jobapplicant')
+			$update  = DB::connection('mysql')->table('jobapplicant')
             ->where('jobapplicant_id','=',$request->can_job_id)
             ->update([
            'updated_at' => date('Y-m-d H:i:s'),
@@ -1377,14 +1377,14 @@ class AdminController extends Controller
 			}else if($request->can_finalstatus == "hired"){
 				
 				$task = DB::connection('mysql')->table('jobapplicant')
-					->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-					->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+					// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+					// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 					->join('can_evulation','can_evulation.can_evu_job_id', '=','jobapplicant.jobapplicant_id')
 					->where('jobapplicant.jobapplicant_id','=',$request->can_job_id )
-					->select('jobapplicant.*','hrm_Department.*','can_evulation.*','hrm_login.*')
+					->select('jobapplicant.*')
 					->first();
 				
-				$candiname = $task->log_email;
+				$candiname = $task->can_email;
 				
 				// dd($candiname);
 				
@@ -1397,11 +1397,11 @@ class AdminController extends Controller
 				 Mail::send('emails.offerlettermail',[
 					'datas' =>$all,
 					],
-				function ($message) use ($candiname) {
-				 $message->to($candiname);
-				 $message->cc('hr@bizzworld.com');
-				 $message->bcc('muhammad.mehroz@bizzworld.com');
-				 $message->subject('Employment Offer || AU Telecom');
+				function ($message) use ($candiname,$task) {
+				//  $message->to($candiname);
+				 $message->to('avidhaus.mehroz@gmail.com');
+				 $message->cc('recruitment@arcinventador.com');
+				 $message->subject('Appointment Letter for '.$task->jobapplicant_postionapppliedform.' Arc Inventador');
 				});
 				
 				
@@ -1443,18 +1443,18 @@ class AdminController extends Controller
 		
 		// dd($task->jobapplicant_department);
 		
-		$manageremail = DB::connection('mysql')->table('elsemployees')
-		->where('elsemployees.elsemployees_departid','=',$task->jobapplicant_department)
-		->where('elsemployees.elsemployees_roleid','=', "3" )
-		->select('elsemployees.*')
-		->first();
+		// $manageremail = DB::connection('mysql')->table('elsemployees')
+		// ->where('elsemployees.elsemployees_departid','=',$task->jobapplicant_department)
+		// ->where('elsemployees.elsemployees_roleid','=', "3" )
+		// ->select('elsemployees.*')
+		// ->first();
 		
 		// dd($manageremail);
 		
-		$managername = $manageremail->elsemployees_email;
+		// $managername = $manageremail->elsemployees_email;
+		$candidateemail = $task->can_email;
 		
 		$all=[
-			'managerdetail'=>$manageremail,
 			'candidate'=>$task,
 			];
 			
@@ -1475,11 +1475,22 @@ class AdminController extends Controller
 				Mail::send('emails.managerattendcanemail',[
 					'datas' =>$all,
 					],
-				function ($message) use ($managername) {
-				 $message->to($managername);
-				 $message->cc('hr@bizzworld.com');
-				 $message->bcc('muhammad.mehroz@bizzworld.com');
-				 $message->subject('Candidate Confirmed And Will Attend Interview');
+				function ($message) use ($candidateemail) {
+				 $message->to($candidateemail);
+				 $message->cc('recruitment@arcinventador.com');
+				 $message->subject('Thank You for Interviewing with Arc Inventador');
+				});
+			 
+			 
+			}elseif($action[0] == "notattend"){
+				
+				Mail::send('emails.notattendinterview',[
+					'datas' =>$all,
+					],
+				function ($message) use ($candidateemail) {
+				 $message->to($candidateemail);
+				 $message->cc('recruitment@arcinventador.com');
+				 $message->subject('Invitation to Reschedule Interview - Arc Inventador');
 				});
 			 
 			 

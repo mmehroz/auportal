@@ -119,7 +119,7 @@
 		<!-- Tab Content -->
 		<div class="tab-content">
 		
-			<div class="row" id="modals">
+			<!-- <div class="row" id="modals">
 				<div class="col-sm-12 col-md-12">
 					<form id="frmeditstore" action="{{ URL::to('/searchirr')}}" >
 						<div class="row filter-row" style="display: flex!important;">
@@ -138,7 +138,7 @@
 						</div>
 					</form>
 				</div>
-			</div>
+			</div> -->
 			<br>
 			<div id="loader"></div>
 			<div id="dynamicdata">

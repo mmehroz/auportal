@@ -22,7 +22,7 @@ svg{
   width: 500px;
     height: 400px;
     text-align: center;
-    fill: ##40c4f1;
+    fill: ##5069e7;
 }
 .onecolor{
     fill: #e1a81b;

@@ -64,10 +64,10 @@
 									$month = $dateObj->format('F');
 									$year = $yearmonth[0];
 									?>
-	                				<th style="font-size: 18px;text-align: center;color: #fff;background: #40c4f1;border: 1px solid lightgray;font-weight: bold;padding: 10px 8px;">{{$month}} {{$year}}</th>
-									<th style="font-size: 18px;text-align: center;color: #fff;background: #40c4f1;border: 1px solid lightgray;font-weight: bold;padding: 10px 8px;">Opening Balance</th>
-									<th style="font-size: 18px;text-align: center;color: #fff;background: #40c4f1;border-top:1px solid #40c4f1;border-bottom:1px solid #40c4f1;border-left:none;border-right:none;font-weight: bold;padding: 10px 8px;">PKR {{$openingbalance}}</th>
-									<th style="    background: #40c4f1; border: 1px solid #40c4f1;"></th>
+	                				<th style="font-size: 18px;text-align: center;color: #fff;background: #5069e7;border: 1px solid lightgray;font-weight: bold;padding: 10px 8px;">{{$month}} {{$year}}</th>
+									<th style="font-size: 18px;text-align: center;color: #fff;background: #5069e7;border: 1px solid lightgray;font-weight: bold;padding: 10px 8px;">Opening Balance</th>
+									<th style="font-size: 18px;text-align: center;color: #fff;background: #5069e7;border-top:1px solid #5069e7;border-bottom:1px solid #5069e7;border-left:none;border-right:none;font-weight: bold;padding: 10px 8px;">PKR {{$openingbalance}}</th>
+									<th style="    background: #5069e7; border: 1px solid #5069e7;"></th>
 								</tr>
 							</thead>
 						</table>
@@ -143,10 +143,10 @@
 						<table class="table table-striped custom-table mb-0 datatable dataTable no-footer" style="transform: translateY(-17px);">
 							<thead style="">	
 								<tr>
-	                				<th style="font-size: 18px;text-align: center;color: #fff;background: #40c4f1;border: 1px solid lightgray;font-weight: bold;padding: 10px 8px;">Total Expenses</th>
-	                				<th style="font-size: 18px;text-align: center;color: #fff;background: #40c4f1;border: 1px solid lightgray;font-weight: bold;">PKR {{$debit}}</th>
-									<th style="font-size: 18px;text-align: center;color: #fff;background: #40c4f1;border: 1px solid lightgray;font-weight: bold;">Closing Balance</th>
-									<th style="font-size: 18px;text-align: center;color: #fff;background: #40c4f1;border: 1px solid lightgray;font-weight: bold;">PKR {{$closing}}</th>
+	                				<th style="font-size: 18px;text-align: center;color: #fff;background: #5069e7;border: 1px solid lightgray;font-weight: bold;padding: 10px 8px;">Total Expenses</th>
+	                				<th style="font-size: 18px;text-align: center;color: #fff;background: #5069e7;border: 1px solid lightgray;font-weight: bold;">PKR {{$debit}}</th>
+									<th style="font-size: 18px;text-align: center;color: #fff;background: #5069e7;border: 1px solid lightgray;font-weight: bold;">Closing Balance</th>
+									<th style="font-size: 18px;text-align: center;color: #fff;background: #5069e7;border: 1px solid lightgray;font-weight: bold;">PKR {{$closing}}</th>
 								</tr>
 							</thead>
 						</table>

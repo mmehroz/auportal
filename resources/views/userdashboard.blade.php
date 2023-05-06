@@ -15,7 +15,7 @@
 .highcharts-data-table table {
 	font-family: Verdana, sans-serif;
 	border-collapse: collapse;
-	border: 1px solid #EBEBEB;
+	border: 1px solid #5069e7;
 	margin: 10px auto;
 	text-align: center;
 	width: 100%;

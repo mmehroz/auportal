@@ -34,7 +34,7 @@
     font-family: 'Raleway', sans-serif;
 }
 .dash-widget-icons {
-	background-color: #40c4f1;
+	background-color: #5069e7;
     border-radius: 100%;
     color: #ffffff;
     display: inline-block;

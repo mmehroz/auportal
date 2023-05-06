@@ -94,41 +94,41 @@ class ManagerController extends Controller
 	public function candidatelimgst(){
 		
 		$Screeninglist = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','Screening')
 		// ->where('jobapplicant.jobapplicant_department','=',session()->get("dptid"))
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		// dd($Screeninglist);
 		
 		$Rejected = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','rejectedByManager')
 		// ->where('jobapplicant.jobapplicant_department','=',session()->get("dptid"))
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		$Callforinter = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','inprocess')
 		// ->where('jobapplicant.jobapplicant_department','=',session()->get("dptid"))
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		$Irreleventlist = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','irreleventByManager')
 		// ->where('jobapplicant.jobapplicant_department','=',session()->get("dptid"))
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		// dd($task);
@@ -503,7 +503,7 @@ class ManagerController extends Controller
 	public function modalmanagerview($id){
 
 			$employeemodal = DB::connection('mysql')->table('jobapplicant')
-			->join('department','department.DEPT_ID', '=','jobapplicant.jobapplicant_department')
+			// ->join('hrm_department','hrm_department.dept_id', '=','jobapplicant.jobapplicant_department')
 			->where('jobapplicant.jobapplicant_id', '=', $id)
 			->first();
 			
@@ -565,12 +565,12 @@ class ManagerController extends Controller
 	public function maevucan(){
 		
 		$Maevucandidate = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('department','department.DEPT_ID', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('department','department.DEPT_ID', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','evaluateByAdmin')
-		->where('jobapplicant.jobapplicant_department','=',session()->get("dptid"))
-		->select('jobapplicant.*','department.*','hrm_login.*')
+		// ->where('jobapplicant.jobapplicant_department','=',session()->get("dptid"))
+		->select('jobapplicant.*')
 		->get();
 		
 		$all=[
@@ -587,11 +587,11 @@ class ManagerController extends Controller
 	public function inasfo($id) {
 		
 		$evuinterviewform = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-		->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
 		->join('can_evulation','can_evulation.can_evu_job_id', '=','jobapplicant.jobapplicant_id')
 		->where('jobapplicant.jobapplicant_id','=',$id)
-		->select('jobapplicant.*','hrm_Department.dept_name','can_evulation.*','sub_department.*')
+		->select('jobapplicant.*','can_evulation.*')
 		->first();
 		
 		// dd($evuinterviewform);
@@ -742,13 +742,13 @@ class ManagerController extends Controller
 			   'jobapplicant_ChangeBy' => session()->get("name"),
 				]);
 				
-				Mail::send('emails.emailforcoo',[
-					],
-				function ($message) {
-				 $message->to("muhammad.mehroz@bizzworld.com");
-				 $message->cc('hr@bizzworld.com');
-				 $message->subject('Candidate Arrival For Interview');
-				});
+				// Mail::send('emails.emailforcoo',[
+				// 	],
+				// function ($message) {
+				//  $message->to("muhammad.mehroz@bizzworld.com");
+				//  $message->cc('hr@bizzworld.com');
+				//  $message->subject('Candidate Arrival For Interview');
+				// });
 				
 				 
 			if($update){
@@ -762,9 +762,9 @@ class ManagerController extends Controller
 	public function modalemployeeviewjust($id){
 
 			$employeemodal = DB::connection('mysql')->table('jobapplicant')
-			->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-			->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-			->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
+			// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+			// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+			// ->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
 			->where('jobapplicant.jobapplicant_id', '=', $id)
 			->first();
 			

@@ -30,7 +30,7 @@
        
     }
 .main .head h2{
-    background-color: #40c4f1;
+    background-color: #5069e7;
     color: white;
     width: 100%;
     height: 30px;
@@ -72,7 +72,7 @@ th, td {
 </style>
 <body>
     <section class="logo">
-        <img width="30%;" src="https://bizzworldcommunications.com/public/bwc-logo.png"/>
+        <img width="30%;" src="https://avidhaus.com/images/arclogo.png"/>
         <div class="hor"></div>
     </section>
     <section class="main">
@@ -97,7 +97,7 @@ th, td {
         </div>
         
         <div>
-            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration: underline;">Department:</label><span> <label>{{ $datas->dept_name }}</label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration: underline;">Department:</label><span> <label>-</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
             <label style="color: #000; font-weight: bold; text-decoration: underline;">Current Salary RS.</label><span> <label>{{ $datas->jobapplicant_currentsalary }}</label></span>
@@ -144,7 +144,7 @@ th, td {
         </div>
         
         <div>
-            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration: underline;">EMAIL:</label><span> {{ $datas->log_email }}<label></label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration: underline;">EMAIL:</label><span> -<label></label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
             <label style="color: #000; font-weight: bold; text-decoration: underline;">Gender:</label><span> <label>{{ $datas->jobapplicant_gender }}</label></span>

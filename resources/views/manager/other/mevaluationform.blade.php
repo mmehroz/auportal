@@ -1,84 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <meta name="description" content="Smarthr - Bootstrap Admin Template">
-		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
-        <meta name="robots" content="noindex, nofollow">
-        <title>INTERVIEW ASSESSMENT FORM - HRMS</title>
-		
-		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/assets/img/favicon.png') !!}">
-		
-		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap.min.css') !!}">
-		
-		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}">
-		
-		<!-- Lineawesome CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/line-awesome.min.css') !!}">
-		
-		<!-- Datatable CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/dataTables.bootstrap4.min.css') !!}">
-		
-		
-		<!-- Datetimepicker CSS -->
-		<link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap-datetimepicker.min.css') !!}">
-		
-		<!-- Main CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/style.css') !!}">
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<meta name="description" content="Smarthr - Bootstrap Admin Template">
+	<meta name="keywords"
+		content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+	<meta name="robots" content="noindex, nofollow">
+	<title>MANAGER INTERVIEW ASSESSMENT & RECOMMENDATION FORM</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Raleway&amp;family=Roboto:wght@500&amp;display=swap" rel="stylesheet">
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/favicon/favicon.png') !!}">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap.min.css') !!}">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}">
+
+	<!-- Lineawesome CSS -->
+	<link rel="stylesheet" href="{!! asset('public/assets/css/line-awesome.min.css') !!}">
+
+	<!-- Datatable CSS -->
+	<link rel="stylesheet" href="{!! asset('public/assets/css/dataTables.bootstrap4.min.css') !!}">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="{!! asset('public/assets/css/select2.min.css') !!}">
+
+	<!-- Datetimepicker CSS -->
+	<link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap-datetimepicker.min.css') !!}">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="{!! asset('public/assets/css/style.css') !!}">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css"
+		rel="stylesheet" />
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
-    </head>
+		<style>
+			.card{
+				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+				margin: 35px 72px;
+    border-radius: 15px !important;
+	border: none;
+			}
+			select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 2px);
+    height: 55px;
+    font-family: 'Raleway', sans-serif;
+	
+}
+.card-body{
+	background: #edf2f5;
+}
+.card-header {
+    background-color: #ebebeb;
+    text-align: center;
+    border-radius: 5px !important;
+ 
+}
+.card-header h4{
+	font-family: 'Raleway', sans-serif;
+    color: #000;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+	letter-spacing: 2px;
+}
+			.form-control {
+    /* border-color: #0f1431; */
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 700;
+    height: 55px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.col-form-label {
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+    color: #4c4c4c;
+    font-size: 15px;
+    
+    font-family: 'Raleway', sans-serif;
+    /* font-family: poppins; */
+    /* font-weight: 500; */
+}
+.form-check-label{
+	font-size: 16px;
+    color: #121212;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+button.btn.mybtn {
+    background: #5069e7;
+    COLOR: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+input[type="file"] {
+    height: 65px;
+    padding-top: 18px;
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: #fff;
+    opacity: 1;
+}
+.submitbtn{
+	background-color: #5069e7;
+    color: #fff;
+    width: 15%;
+    height: 50px;
+    margin-top: 25px;
+}
+.table {
+    color: #4c4c4c;
+    text-transform: capitalize;
+	font-family: 'Raleway', sans-serif;
+}
+.tablep{
+	color: #121212;
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.page-title-box {
+ text-align: center !important;
+ float: none !important;
+}
+.headerheading{
+	text-align: center !important;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	padding-top:5px
+}
+.mainheader{
+	background-image: linear-gradient(to right bottom, #6416ec, #33e0e0) !important;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+	z-index: 999;
+}
+.maincontainer{
+	margin-top: 20px;
+}
+.logo img{
+	width:35%
+}
+.logouttext{
+	font-size: 17px;
+						
+						font-family: 'Raleway', sans-serif;
+}
+@media only screen and (max-width: 720px) {
+	.maincontainer{
+	margin-top: 0px;
+}
+.card{
+				
+				margin: 5px 2px;
+	
+}
+.headerheading{
+	font-size: 14px;
+	margin-top: 15px;
+	text-align: left !important;
+    font-weight: bold;
+}
+.logo img{
+	width:30%
+}
+.logouttext{
+	font-size: 15px;
+	font-weight: bold;
+}
+.logoutcolum{
+	margin-top: 12px;
+}
+.submitbtn {
+    width: 100%;
+}
+.tablep{
+	font-size: 12px;
+}
+}
+			</style>
+</head>
     <body>	
 		<!-- Main Wrapper -->
         <div class="main-wrapper">		
 			<!-- Header -->
-            <div class="header">			
+			<div class="mainheader">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-3 col-12">
+							<a href="{{url('/canLogin')}}" class="logo">
+								<img src="{!! asset('public/images/logo.svg') !!}">
+							</a>
+						</div>
+						<div class="col-lg-6 col-9 pt-1">
+							<h3 class="headerheading">Human Resource Management</h3>
+						</div>
+						<!-- <div class="col-lg-3 text-right col-3 pt-1 logoutcolum">
+							<a class="text-white logouttext" href="{{url('/canLogin')}}">Logout</a>
+						</div> -->
+					</div>
+					
+				</div>
 				<!-- Logo -->
-                <div class="header-left">
-                    <a href="{{url('/')}}" class="logo">
-						<img src="{!! asset('public/assets/img/final-logo.png') !!}" width="120" height="60" alt="">
-					</a>
-                </div>
-				<!-- /Logo -->				
+			
+				<!-- /Logo -->
 				<!-- Header Title -->
-                <div class="page-title-box float-left">
-					<h3>Human Resource Management</h3>
-                </div>
-				<!-- /Header Title -->				
+		
+			
+				<!-- /Header Title -->
 				<!-- Header Menu -->
-				<ul class="nav user-menu">				
-					<!-- Search -->					
-					<!-- /Search -->				
-					<!-- Flag -->					
-					<!-- /Flag -->					
-					<li class="nav-item">
-						<a class="nav-link" href="{{url('/')}}">LogOut</a>
-					</li>
-				</ul>
+				
 				<!-- /Header Menu -->
 				<!-- Mobile Menu -->
-				<div class="dropdown mobile-user-menu">
-					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="{{url('/')}}">LogOut</a>
-					</div>
-				</div>
-				<!-- /Mobile Menu -->				
-            </div>
+		
+				<!-- /Mobile Menu -->
+			</div>
 			<!-- /Header -->			
             <div class="content container-fluid">
             	<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title" style="padding-top: 70px; font-size: 36px; font-weight: 900; text-align: center;">AU Telecom</h3>
+							
 							@if(session('message'))
 								<div class="alert alert-success" ><h4>{!!session('message')!!}</h4></div> 
 						  
@@ -100,7 +263,7 @@
 					<div class="col-xl-12">
 						<div class="card flex-fill">
 							<div class="card-header">
-								<h4 class="card-title mb-0 text-center"> MANAGER INTERVIEW ASSESSMENT & RECOMMENDATION FORM</h4>
+								<h4 class="card-title mb-0 text-center"> Departmental Head Assessment</h4>
 							</div>
 							<div class="card-body">
 								<form class="user" action="{{ URL::to('/submitevaluatemng')}}" id="" enctype="multipart/form-data" method="post">
@@ -109,11 +272,11 @@
 									<input type="hidden" name="can_job_id" value="{{ $data->jobapplicant_id }}" />
 									<input type="hidden" name="can_evu_id" value="{{ $data->can_evu_id }}" />
 									
-									<h4 class="card-title mb-0 text-left" style="color: #000000; background-color: #bfbfbf; text-align: center !important;">Departmental Head Assessment</h4>
+									
 									<p style="color:#f90202;">Filled by Departmental Head</p>
 									<div class="table-responsive">
-							            <table class="table table-bordered">
-												<p>Total Marks: Job Relevancy=3 Experience=5 Knowledge of Industry=5 Career Progression=5  Notable Achievement=2 Potential=2 <br> AVG Marks Obtained=3.67</p>
+							            <table class="table table-bordered mt-4">
+												<p class="tablep">Total Marks: Job Relevancy=3 Experience=5 Knowledge of Industry=5 Career Progression=5  Notable Achievement=2 Potential=2 <br> AVG Marks Obtained=3.67</p>
 							                <thead>
 							                  <tr>
 							                    <th  style="white-space: nowrap;"></th>
@@ -183,10 +346,10 @@
 												
 							              	</tbody>
 							            </table>
-										<p>Piont from 0 to 1.5 = Unsatisfactory, 1.6 to 2.5 = Average, 2.6 to 3.5 = Satisfactory, 3.6 to 4.5 = Good, 4.6 to 5 = Excellent</p>
+										
 						            </div>
-						            <br>
-									
+
+						
 									<div class="row">
 									    <div class="col-md-12">
 											<div class="form-group">
@@ -195,9 +358,9 @@
 											</div>
 										</div>
 									</div>
-						            <div class="table-responsive">
+						            <div class="table-responsive mt-5">
 							            <table class="table table-bordered">
-												
+											<p class="tablep">Piont from 0 to 1.5 = Unsatisfactory, 1.6 to 2.5 = Average, 2.6 to 3.5 = Satisfactory, 3.6 to 4.5 = Good, 4.6 to 5 = Excellent</p>
 							                <thead>
 							                  <tr>
 							                    <th  style="white-space: nowrap;"></th>
@@ -217,8 +380,8 @@
 									<br>
 									
 						            <br>
-									<div class="text-right">
-										<button type="submit" class="btn btn-primary">Submit</button>
+									<div class="">
+										<button type="submit" class="btn submitbtn">Submit</button>
 									</div>
 								</form>
 							</div>

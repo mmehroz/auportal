@@ -46,7 +46,7 @@
     }
     
      :checked+label {
-        border-color: ##40c4f1;
+        border-color: ##5069e7;
         border-radius: 3px;
         /* border: 2px solid #333; */
     }
@@ -58,7 +58,7 @@
         color: rgb(13, 236, 13);
         font-weight: 900;
         /*padding-bottom: 25px;*/
-        border: 1px solid ##40c4f1;
+        border: 1px solid ##5069e7;
     }
     
      :checked+label img {
@@ -68,7 +68,7 @@
     }
     
     .divider {
-        border-bottom: 1px solid ##40c4f1;
+        border-bottom: 1px solid ##5069e7;
         width: 100%;
         margin-bottom: 50px;
         margin-top: 50px;

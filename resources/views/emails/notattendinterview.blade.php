@@ -48,7 +48,7 @@
 						<div class="account-wrapper">
 							<!-- start preheader -->
 							<div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-							Interview Invitation | AU Telecom 
+							Invitation to Reschedule Interview - Arc Inventador
 							</div>
 							<!-- end preheader -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -58,8 +58,8 @@
 							        	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 								          	<tr>
 								            	<td align="center" valign="top" style="padding: 20px 150px;position: absolute;">
-								            		<a href="https://autelecom.net/" target="_blank" style="display: inline-block;">
-								                		<img src="http://209.182.216.71/public/assets/img/logo22.png" alt="BWC" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
+								            		<a href="https://www.arcinventador.com/" target="_blank" style="display: inline-block;">
+								                		<img src="https://avidhaus.com/images/arclogo.png" alt="" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
 								            		</a>
 								            	</td>
 								          	</tr>
@@ -73,7 +73,7 @@
 							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 							          <tr>
 							            <td align="left" bgcolor="#ffffff" style="padding: 120px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-							              <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Dear {{$datas['candidatedata']->jobapplicant_name }} {{$datas['candidatedata']->jobapplicant_fname}}</h1>
+							              <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Dear {{$datas['candidate']->jobapplicant_name }}</h1>
 							            </td>
 							          </tr>
 							        </table>
@@ -87,36 +87,25 @@
 							          <!-- start copy -->
 							          <tr>
 							            <td align="left" bgcolor="#ffffff" style="padding: 24px;  padding-bottom:0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">With reference to our conversation, your video interview has been scheduled for <b>{{$datas['request']->interTime }}</b> for Position. We would like you to consider the following points before and during the interview:</p>
-							            </td>
-							          </tr>
-							          <!-- end copy -->
-							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px; padding-top:20px;  padding-bottom:0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
 							              <p style="margin: 0; color: #000;">
-							              	1. The video interview will last about 10-15 minutes.<br>
-							              	2. Kindly download Zoom App <a href="{{url('https://zoom.us/')}}" target="_blank" style="word-break: break-all;">(https://zoom.us/)</a><br>
-							              	3. The background should be plain and noise free.<br>
-							          		4. Internet signals should be strong.</p>
+                                            We hope this email finds you well. We are writing to follow up on the interview that was scheduled for you on <b>{{$datas['candidate']->jobapplicant_intDateandTime }}.</b> for the <b>{{$datas['candidate']->jobapplicant_postionapppliedform }}.</b> position at Arc Inventador. We were disappointed that you were not able to attend the interview, and we hope that everything is okay.
+                                            <br><br>
+                                            We understand that sometimes unexpected events happen, and we would like to offer you the opportunity to reschedule the interview if you are still interested in the position. We would like to give you another chance to meet with our hiring team and discuss your qualifications and experience.
+                                            <br><br>
+                                            If you would like to reschedule the interview, please let us know your availability for the upcoming week, and we will do our best to accommodate your schedule. We highly recommend that you reply to this email within 24 hours to ensure that we can arrange the interview promptly.
+                                            <br><br>
+                                            If you are no longer interested in the position, please let us know so that we can focus our attention on other candidates.
+                                            <br><br>
+                                            Thank you for considering Arc Inventador as your potential employer. We appreciate your interest in our organization, and we look forward to hearing back from you soon.
+                                            <br><br>
+                                            Best regards,
+                                            <br>
+                                            Team Recruitment
+                                            <br>
+                                            Arc Inventador
+                                          	</p>
 							            </td>
 							          </tr>
-							          <!-- start button -->
-							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px; padding-top:20px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">
-							              	Please note that Zoom Meeting ID will be shared with you before the interview.<br>
-							            	Don’t miss this opportunity as <b>AU Telecom</b> gives candidates a platform to further discuss their background and expand on key aspects of their work experience that make them a great fit for the position and help find their dream job.<br>
-							          		Please share your updated resume and acknowledge when received.</p>
-							            </td>
-							          </tr>
-							          <!-- end button -->
-							          <!-- start copy -->
-							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-							              <p style="margin: 0;"><b>Thank you!</b><br> </p>
-							            </td>
-							          </tr>
-							          <!-- end copy -->
 							        </table>
 							      </td>
 							    </tr>
@@ -129,7 +118,7 @@
 							          <tr>
 							            <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
 							              <!-- <p style="margin: 0;">To stop receiving these emails, you can <a href="https://sendgrid.com" target="_blank">unsubscribe</a> at any time.</p> -->
-							              <p style="margin: 0;">&copy; <b>AU Telecom</b> 2021. All Right Reserved. </p>
+							              <p style="margin: 0;">&copy; <b>Arc-Inventador</b> <?php echo(date('Y'))?>. All Right Reserved. </p>
 							            </td>
 							          </tr>
 							          <!-- end unsubscribe -->

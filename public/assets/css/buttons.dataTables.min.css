@@ -124,10 +124,10 @@ a.dt-button:hover:not(.disabled) {
 button.dt-button:focus:not(.disabled),
 div.dt-button:focus:not(.disabled),
 a.dt-button:focus:not(.disabled) {
-    border: 1px solid ##40c4f1;
+    border: 1px solid ##5069e7;
     text-shadow: 0 1px 0 white;
     outline: none;
-    background-color: ##40c4f1;
+    background-color: ##5069e7;
     /* background-image: -webkit-linear-gradient(top, #bddef4 0%, #79ace9 100%);
     background-image: -moz-linear-gradient(top, #bddef4 0%, #79ace9 100%);
     background-image: -ms-linear-gradient(top, #bddef4 0%, #79ace9 100%);

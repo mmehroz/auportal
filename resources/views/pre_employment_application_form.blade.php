@@ -9,9 +9,9 @@
 		content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
 	<meta name="robots" content="noindex, nofollow">
 	<title>PRE EMPLOYMENT APPLICATION FORM - HRMS</title>
-
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Raleway&amp;family=Roboto:wght@500&amp;display=swap" rel="stylesheet">
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/assets/img/favicon.png') !!}">
+	<link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/favicon/favicon.png') !!}">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap.min.css') !!}">
@@ -42,53 +42,209 @@
 			<script src="assets/js/html5shiv.min.js"></script>
 			<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
+		<style>
+			.card{
+				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+				margin: 35px 72px;
+    border-radius: 15px !important;
+	border: none;
+			}
+			select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 2px);
+    height: 55px;
+    font-family: 'Raleway', sans-serif;
+	
+}
+.card-body{
+	background: #edf2f5;
+}
+.card-header {
+    background-color: #ebebeb;
+    text-align: center;
+    border-radius: 5px !important;
+ 
+}
+.card-header h4{
+	font-family: 'Raleway', sans-serif;
+    color: #000;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+	letter-spacing: 2px;
+}
+			.form-control {
+    /* border-color: #0f1431; */
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 700;
+    height: 55px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.col-form-label {
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+    color: #4c4c4c;
+    font-size: 15px;
+    
+    font-family: 'Raleway', sans-serif;
+    /* font-family: poppins; */
+    /* font-weight: 500; */
+}
+.form-check-label{
+	font-size: 16px;
+    color: #121212;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+}
+button.btn.mybtn {
+    background: #5069e7;
+    COLOR: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+input[type="file"] {
+    height: 65px;
+    padding-top: 18px;
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: #fff;
+    opacity: 1;
+}
+.submitbtn{
+	background-color: #5069e7;
+    color: #fff;
+    width: 15%;
+    height: 50px;
+    margin-top: 25px;
+}
+.table {
+    color: #4c4c4c;
+    text-transform: capitalize;
+	font-family: 'Raleway', sans-serif;
+}
+.tablep{
+	color: #121212;
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.page-title-box {
+ text-align: center !important;
+ float: none !important;
+}
+.headerheading{
+	text-align: center !important;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	padding-top:5px
+}
+.mainheader{
+	background-image: linear-gradient(to right bottom, #6416ec, #33e0e0) !important;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+	z-index: 999;
+}
+.maincontainer{
+	margin-top: 20px;
+}
+.logo img{
+	width:35%
+}
+.logouttext{
+	font-size: 17px;
+						
+						font-family: 'Raleway', sans-serif;
+}
+@media only screen and (max-width: 720px) {
+	.maincontainer{
+	margin-top: 0px;
+}
+.card{
+				
+				margin: 5px 2px;
+	
+}
+.headerheading{
+	font-size: 14px;
+	margin-top: 15px;
+	text-align: left !important;
+    font-weight: bold;
+}
+.logo img{
+	width:30%
+}
+.logouttext{
+	font-size: 15px;
+	font-weight: bold;
+}
+.logoutcolum{
+	margin-top: 12px;
+}
+.submitbtn {
+    width: 100%;
+}
+.tablep{
+	font-size: 12px;
+}
+}
+			</style>
 </head>
 
 <body>
 	<!-- Main Wrapper -->
 	<div class="main-wrapper">
 		<!-- Header -->
-		<div class="header">
-			<!-- Logo -->
-			<div class="header-left">
-				<a href="{{url('/canLogin')}}" class="logo">
-					<img src="{!! asset('public/assets/img/final-logo.png') !!}" width="60%" height="20px" alt="">
-				</a>
+		<div class="mainheader">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-3 col-12">
+						<a href="{{url('/canLogin')}}" class="logo">
+							<img src="{!! asset('public/images/logo.svg') !!}">
+						</a>
+					</div>
+					<div class="col-lg-6 col-9 pt-1">
+						<h3 class="headerheading">PRE EMPLOYMENT APPLICATION FORM</h3>
+					</div>
+					<!-- <div class="col-lg-3 text-right col-3 pt-1 logoutcolum">
+						<a class="text-white logouttext" href="{{url('/canLogin')}}">Logout</a>
+					</div> -->
+				</div>
+				
 			</div>
+			<!-- Logo -->
+		
 			<!-- /Logo -->
 			<!-- Header Title -->
-			<div class="page-title-box float-left">
-				<h3>Human Resource Management</h3>
-			</div>
+	
+		
 			<!-- /Header Title -->
 			<!-- Header Menu -->
-			<ul class="nav user-menu">
-				<!-- Search -->
-				<!-- /Search -->
-				<!-- Flag -->
-				<!-- /Flag -->
-				<li class="nav-item">
-					<a class="nav-link" href="{{url('/canLogin')}}">Logout</a>
-				</li>
-			</ul>
+			
 			<!-- /Header Menu -->
 			<!-- Mobile Menu -->
-			<div class="dropdown mobile-user-menu">
-				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
-						class="fa fa-ellipsis-v"></i></a>
-				<div class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="{{url('/canLogin')}}">Logout</a>
-				</div>
-			</div>
+	
 			<!-- /Mobile Menu -->
 		</div>
 		<!-- /Header -->
-		<div class="content container-fluid">
+		<div class="content container-fluid maincontainer">
 			<div class="page-header">
 				<div class="row">
 					<div class="col">
-						<h3 class="page-title"
-							style="padding-top: 70px; font-size: 36px; font-weight: 900; text-align: center;">AU Telecom</h3>
+						<!-- <h3 class="page-title"
+							style="padding-top: 70px; font-size: 36px; font-weight: 900; text-align: center;">Bizz World
+							Communication</h3> -->
 
 						@if(session('message'))
 						<div class="alert alert-success">
@@ -120,42 +276,38 @@
 					<div class="col-md-12">
 						<div class="card flex-fill">
 							<div class="card-header">
-								<h3 class="card-title mb-0 text-center">PRE-EMPLOYMENT APPLICATION FORM</h3>
+								<h4 class="card-title mb-0">Initial Information</h4>
 							</div>
-							<div class="card-body">
+							<div class="card-body" >
+							
 								<div class="row">
-									<input type="hidden" name="can_log_id" 
-										value="{{ $data['userdata']->log_id }}" />
-									<div class="col-md-3">
+								
+									<div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Position Applied For.*</label>
-											<input type="text" class="form-control" 
+											<!-- <input type="text" class="form-control" 
 												name="can_postionapppliedform"
-												value="{{old('can_postionapppliedform', @$data['userdata']->jobapplicant_postionapppliedform)  }}" />
-											<!-- <select class="form-control selectpicker form-control" placeholder="Select Store Name" data-live-search ="true" id name="can_postionapppliedform"   >
-												<option value="" >Select the Following</option>
-											   <option value="hrheadus"  >Head of HR (US Operation)</option>
-											   <option value="manhrus" >Manager HR (US Operation)</option>
-											   <option value="shapoidev"  >Share Point Developer</option>
-											   <option value="dotnetdev"  >Dot Net Developer</option>
-											   <option value="axdyndev"  >AX Dynamic Developer</option>
-											   <option value="fiexe"  >Finance Executive</option>
-											   <option value="fiaman" >Finance Manager</option>
-											   <option value="treamana"  >Treasury Manager</option>
-											   <option value="intaudmana"  >Internal Audit Manager</option>
-											   <option value="hrexe"  >HR Executive</option>
-											   <option value="recurus"  >Recruiter (US Operation)</option>
-											   <option value="mainsup"  >Maintenance & Support Executive</option>
-											   <option value="hedsur" >Head of Surveillance </option>
-											   <option value="hdofad" >Head of Administration</option>
-											   <option value="genecvsub"  >General/ CV Submission</option>
-											   <option value="ushrpayspea"  >US HR Payroll Specialist</option>
-											</select>  -->
+												value="{{old('can_postionapppliedform')  }}" /> -->
+											<select class="form-control selectpicker form-control" required placeholder="Select Store Name" data-live-search ="true" id name="can_postionapppliedform"   >
+												<option value="" >Please Select</option>
+											   <option value="Human Resource Executive"  >Human Resource Executive</option>
+											   <option value="Financial Accountant" >Financial Accountant</option>
+											   <option value="Receptionist"  >Receptionist</option>
+											   <option value="General Sales Help Desk"  >General Sales Help Desk</option>
+											   <option value="Network Support Engineer"  >Network Support Engineer</option>
+											   <option value="Backend Developer"  >Backend Developer</option>
+											   <option value="UI/UX Designer" >UI/UX Designer</option>
+											   <option value="Social Media Account Manager"  >Social Media Account Manager </option>
+											   <option value="Opensips Developer"  >Opensips Developer </option>
+											   <option value="VOIP Engineer"  >VOIP Engineer</option>
+											   <option value="DevOps Engineer"  >DevOps Engineer</option>
+											   <option value="Data Scientist (Streaming Data Visualization)"  >Data Scientist (Streaming Data Visualization)</option>
+											</select> 
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">Career Level.*</label>
+											<label class="col-form-label">Career Level.</label>
 											<select class="form-control selectpicker form-control"
 												placeholder="Select Store Name" data-live-search="true" name="carlev"
 												>
@@ -170,158 +322,65 @@
 											</select>
 										</div>
 									</div>
-
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">Department.*</label>
-											<select class="form-control  selectpicker form-control"
-												onChange="getedit(this.value);" placeholder="Select Store Name"
-												data-live-search="true" name="deptname" required="true">
+											<label class="col-form-label">Period Required For Joining.</label>
+											<select class="form-control selectpicker form-control"
+												placeholder="Select Store Name" data-live-search="true" id="storeId"
+												name="can_periodjoining" >
 												<option value="">Select the Following</option>
-												@foreach($data['department'] as $val)
-												<option value="{{ $val->dept_id }} ">{{ $val->dept_name }}</option>
-												@endforeach
-
-												<!--<option value="f&i" @{{---if( $data['userdata']->jobapplicant_sub_department == "f&i") {{ "selected"}} @endif >Finance & Accounts</option>
-											   <option value="hrm" @if( $data['userdata']->jobapplicant_sub_department == "hrm") {{ "selected"}} @endif >Human Resources Management</option>
-											   <option value="admin" @if( $data['userdata']->jobapplicant_sub_department == "admin") {{ "selected"}} @endif >Administration</option>
-											   <option value="surv" @if( $data['userdata']->jobapplicant_sub_department == "surv") {{ "selected"}} @endif >Surveillance</option>
-											   <option value="mis" @if( $data['userdata']->jobapplicant_sub_department == "mis") {{ "selected"}} @endif >MIS</option>
-											   <option value="m&s" @if( $data['userdata']->jobapplicant_sub_department == "m&s") {{ "selected"}} @endif >Maintenance & Support</option>
-											   <option value="opr" @if( $data['userdata']->jobapplicant_sub_department == "opr") {{ "selected"}} @endif >Operations</option>
-											   <option value="scm" @if( $data['userdata']->jobapplicant_sub_department == "scm") {{ "selected"}} @endif >Supply Chain Management</option>
-											   <option value="web" @if( $data['userdata']->jobapplicant_sub_department == "web") {{ "selected"}} @endif >Web Development </option>
-											   <option value="it" @if( $data['userdata']->jobapplicant_sub_department == "it") {{ "selected"}} @endif >Information Technology </option>
-											   <option value="sales" @if( $data['userdata']->jobapplicant_sub_department == "sales") {{ "selected"}} @endif >Sales </option>
-											   <option value="intaud" @if( $data['userdata']->jobapplicant_sub_department == "intaud") {{ "selected"}} @endif >Internal Audit</option>
-											   <option value="mark" @if( $data['userdata']->jobapplicant_sub_department == "mark") {{ "selected"}} @endif >Marketing</option>
-											   <option value="legal" @if( $data['userdata']->jobapplicant_sub_department == "legal") {{ "selected"}} @endif >Legal</option>
-											   <option value="qc" @if( $data['userdata']->jobapplicant_sub_department == "qc") {{ "selected"}} @endif >Quality Control</option>
-											   <option value="bd" @if( $data['userdata']->jobapplicant_sub_department == "bd") {{ "selected"}} @endif >Business Development</option>
-											   <option value="r&d" @if( $data['userdata']->jobapplicant_sub_department == "r&d") {{ "selected"}} @endif---}} >Research & Development</option>--->
+												<option value="imme">Immediate</option>
+												<option value="twodays">Two Days</option>
+												<option value="threedays">Three Days</option>
+												<option value="fourday">Four Days</option>
+												<option value="fiveday">Five Days</option>
+												<option value="sixday">Six Days</option>
+												<option value="oneweek">One Week</option>
+												<option value="twoweek">Two Weeks</option>
+												<option value="threeweek">Three Weeks</option>
+												<option value="onemon">One Month</option>
+												<option value="onehalf">One & Half Month</option>
+												<option value="twomon">Two Months</option>
 											</select>
 										</div>
 									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">Department.*</label>
-											<div class='form-group' id="p">
-
-											</div>
-
-											<!--<label class="col-form-label">Sub Department.*</label>
-											<select class="form-control selectpicker form-control" placeholder="Select Store Name" data-live-search ="true"  name="deptname"   >
-											
-											
-											  <option value="" >Select the Following</option>
-											   <option value="tax" @{{---if( $data['userdata']->jobapplicant_department == "tax") {{ "selected"}} @endif >Taxation</option>
-											   <option value="pay" @if( $data['userdata']->jobapplicant_department == "pay") {{ "selected"}} @endif >Payable </option>
-											   <option value="receive" @if( $data['userdata']->jobapplicant_department == "receive") {{ "selected"}} @endif >Receivable</option>
-											   <option value="treasure" @if( $data['userdata']->jobapplicant_department == "treasure") {{ "selected"}} @endif >Treasury</option>
-											   <option value="ficialrep" @if( $data['userdata']->jobapplicant_department == "ficialrep") {{ "selected"}} @endif >Financial Reporting</option>
-											   <option value="fiana" @if( $data['userdata']->jobapplicant_department == "fiana") {{ "selected"}} @endif >Finance Analyst</option>
-											   <option value="impexp" @if( $data['userdata']->jobapplicant_department == "impexp") {{ "selected"}} @endif >Export & Import</option>
-											   <option value="proper" @if( $data['userdata']->jobapplicant_department == "proper") {{ "selected"}} @endif >Property</option>
-											   <option value="rec&sel" @if( $data['userdata']->jobapplicant_department == "rec&sel") {{ "selected"}} @endif >Recruitment & Selection</option>
-											   <option value="compbene" @if( $data['userdata']->jobapplicant_department == "compbene") {{ "selected"}} @endif >Compensation & Benefit</option>
-											   <option value="tra&dev" @if( $data['userdata']->jobapplicant_department == "tra&dev") {{ "selected"}} @endif >Training & Development</option>
-											   <option value="orgdev" @if( $data['userdata']->jobapplicant_department == "orgdev") {{ "selected"}} @endif >Organizational Development</option>
-											   <option value="payman" @if( $data['userdata']->jobapplicant_department == "payman") {{ "selected"}} @endif >Payroll Management</option>
-											   <option value="hrop" @if( $data['userdata']->jobapplicant_department == "hrop") {{ "selected"}} @endif >HR Operations</option>
-											   <option value="secur" @if( $data['userdata']->jobapplicant_department == "secur") {{ "selected"}} @endif >Security</option>
-											   <option value="geneadm" @if( $data['userdata']->jobapplicant_department == "geneadm") {{ "selected"}} @endif >General Administration</option>
-											   <option value="ofcadm" @if( $data['userdata']->jobapplicant_department == "ofcadm") {{ "selected"}} @endif >Office Administration</option>
-											   <option value="cctvop" @if( $data['userdata']->jobapplicant_department == "cctvop") {{ "selected"}} @endif >CCTV Operations</option>
-											   <option value="cctvtech" @if( $data['userdata']->jobapplicant_department == "cctvtech") {{ "selected"}} @endif >CCTV Technicians</option>
-											   <option value="inve" @if( $data['userdata']->jobapplicant_department == "inve") {{ "selected"}} @endif >Investigation</option>
-											   <option value="dotnet" @if( $data['userdata']->jobapplicant_department == "dotnet") {{ "selected"}} @endif >DOT Net</option>
-											   <option value="pyt" @if( $data['userdata']->jobapplicant_department == "pyt") {{ "selected"}} @endif >Python</option>
-											   <option value="axdy" @if( $data['userdata']->jobapplicant_department == "axdy") {{ "selected"}} @endif >AX Dynamics</option>
-											   <option value="share" @if( $data['userdata']->jobapplicant_department == "share") {{ "selected"}} @endif >Sharepoint</option>
-											   <option value="sofeng" @if( $data['userdata']->jobapplicant_department == "sofeng") {{ "selected"}} @endif >Software Engineering</option>
-											   <option value="ofcmaint" @if( $data['userdata']->jobapplicant_department == "ofcmaint") {{ "selected"}} @endif >Office Maintenance</option>
-											   <option value="genmain" @if( $data['userdata']->jobapplicant_department == "genmain") {{ "selected"}} @endif >General Maintenance</option>
-											   <option value="supser" @if( $data['userdata']->jobapplicant_department == "supser") {{ "selected"}} @endif >Support & Services</option>
-											   <option value="genopera" @if( $data['userdata']->jobapplicant_department == "genopera") {{ "selected"}} @endif >General Operations</option>
-											   <option value="genesupchan" @if( $data['userdata']->jobapplicant_department == "genesupchan") {{ "selected"}} @endif >General Supply Chain</option>
-											   <option value="logis" @if( $data['userdata']->jobapplicant_department == "logis") {{ "selected"}} @endif >Logistics</option>
-											   <option value="procu" @if( $data['userdata']->jobapplicant_department == "procu") {{ "selected"}} @endif >Procurements</option>
-											   <option value="purcha" @if( $data['userdata']->jobapplicant_department == "purcha") {{ "selected"}} @endif >Purchase</option>
-											   <option value="webdev" @if( $data['userdata']->jobapplicant_department == "webdev") {{ "selected"}} @endif >Web development General</option>
-											   <option value="netwo" @if( $data['userdata']->jobapplicant_department == "netwo") {{ "selected"}} @endif >Network</option>
-											   <option value="hard" @if( $data['userdata']->jobapplicant_department == "hard") {{ "selected"}} @endif >Hardware</option>
-											   <option value="suppor" @if( $data['userdata']->jobapplicant_department == "suppor") {{ "selected"}} @endif >Support</option>
-											   <option value="infra" @if( $data['userdata']->jobapplicant_department == "infra") {{ "selected"}} @endif >Infrastructure</option>
-											   <option value="genesal" @if( $data['userdata']->jobapplicant_department == "genesal") {{ "selected"}} @endif >General Sales</option>
-											   <option value="preaud" @if( $data['userdata']->jobapplicant_department == "preaud") {{ "selected"}} @endif >Pre Audit</option>
-											   <option value="posaud" @if( $data['userdata']->jobapplicant_department == "posaud") {{ "selected"}} @endif >Post Audit</option>
-											   <option value="genintaud" @if( $data['userdata']->jobapplicant_department == "genintaud") {{ "selected"}} @endif >General Internal Audit</option>
-											   <option value="primark" @if( $data['userdata']->jobapplicant_department == "primark") {{ "selected"}} @endif >Print Marketing</option>
-											   <option value="socia" @if( $data['userdata']->jobapplicant_department == "socia") {{ "selected"}} @endif >Social Marketing</option>
-											   <option value="genemark" @if( $data['userdata']->jobapplicant_department == "genemark") {{ "selected"}} @endif >General Marketing</option>
-											   <option value="genelegop" @if( $data['userdata']->jobapplicant_department == "genelegop") {{ "selected"}} @endif >General Legal Operations</option>
-											   <option value="genepro" @if( $data['userdata']->jobapplicant_department == "genepro") {{ "selected"}} @endif >General Productions</option>
-											   <option value="qualass" @if( $data['userdata']->jobapplicant_department == "qualass") {{ "selected"}} @endif >Quality Assurance</option>
-											   <option value="qcaler" @if( $data['userdata']->jobapplicant_department == "qcaler") {{ "selected"}} @endif >Quality Control</option>
-											   <option value="genebusidev" @if( $data['userdata']->jobapplicant_department == "genebusidev") {{ "selected"}} @endif >General Business Development</option>
-											   <option value="r&dsub" @if( $data['userdata']->jobapplicant_department == "r&dsub") {{ "selected"}} @endif >R&D</option>
-											   <option value="analys" @if( $data['userdata']->jobapplicant_department == "analys") {{ "selected"}} @endif--}} >Analyst</option>
-											</select>--->
-										</div>
-									</div>
+								
+									
 								</div>
-								<div class="row">
-									<div class="col-md-3">
+								<div class="row mt-1">
+									
+									
+									<div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Current Salary RS.*</label>
-											<input type="number" min='1'  class="form-control"
+											<input type="number" min='1' required  class="form-control"
 												name="can_currentsalary" value="{{old('can_currentsalary')  }}"
 												 />
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Monthly Expected Salary RS.*</label>
-											<input type="number" min='1' class="form-control"
+											<input type="number" min='1' required class="form-control"
 												name="can_monthlyexpectedsalary"
 												value="{{old('can_monthlyexpectedsalary')  }}"  />
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">Select Condition.*</label>
-											<div class="col-lg-9">
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio"
-														name="can_negotiablesalary" id="Negotiable" value="Negotiable"
-														checked=""  />
-													<label class="form-check-label" for="Negotiable">
-														Negotiable
-													</label>
-												</div>
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio"
-														name="can_negotiablesalary" id="Not Negotiable"
-														value="NotNegotiable"  />
-													<label class="form-check-label" for="Not Negotiable">
-														Not Negotiable
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">Reason To Left Last Job.*</label>
+											<label class="col-form-label">Reason To Left Last Job.</label>
 											<input type="text" class="form-control" name="can_reasonofleave"
 												value="{{old('can_reasonofleave')  }}"  />
 										</div>
 									</div>
+									
 								</div>
-								<div class="row">
+								<div class="row mt-1">
+							
+								
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">Current Benefits.*</label>
+											<label class="col-form-label">Current Benefits.</label>
 											<input type="text" class="form-control" name="can_remarksofleave"
 												value="{{old('can_remarksofleave')  }}"  />
 										</div>
@@ -329,7 +388,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class=" col-form-label">Comfortable / Agreed for Night
-												Shift?*</label>
+												Shift?</label>
 											<div class="col-lg-9">
 												<div class="form-check form-check-inline">
 													<input class="form-check-input" type="radio" name="can_nightshift"
@@ -350,7 +409,7 @@
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class=" col-form-label">Communication Skills.*</label>
+											<label class=" col-form-label">Communication Skills.</label>
 											<div class="col-lg-12">
 												<div class="form-check form-check-inline">
 													<input class="form-check-input" type="radio"
@@ -404,28 +463,31 @@
 											</div>
 										</div>
 									</div>
+								
 								</div>
-								<div class="row">
+								<div class="row mt-1">
+									
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">Period Required For Joining.*</label>
-											<select class="form-control selectpicker form-control"
-												placeholder="Select Store Name" data-live-search="true" id="storeId"
-												name="can_periodjoining" >
-												<option value="">Select the Following</option>
-												<option value="imme">Immediate</option>
-												<option value="twodays">Two Days</option>
-												<option value="threedays">Three Days</option>
-												<option value="fourday">Four Days</option>
-												<option value="fiveday">Five Days</option>
-												<option value="sixday">Six Days</option>
-												<option value="oneweek">One Week</option>
-												<option value="twoweek">Two Weeks</option>
-												<option value="threeweek">Three Weeks</option>
-												<option value="onemon">One Month</option>
-												<option value="onehalf">One & Half Month</option>
-												<option value="twomon">Two Months</option>
-											</select>
+											<label class="col-form-label">Salary Negotiable?</label>
+											<div class="col-lg-9">
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio"
+														name="can_negotiablesalary" id="Negotiable" value="Negotiable"
+														checked=""  />
+													<label class="form-check-label" for="Negotiable">
+														Yes
+													</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio"
+														name="can_negotiablesalary" id="Not Negotiable"
+														value="NotNegotiable"  />
+													<label class="form-check-label" for="Not Negotiable">
+														No
+													</label>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div class="col-md-4">
@@ -437,11 +499,12 @@
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">Drop Your CV.*</label>
+											<label class="col-form-label">Drop Your CV.</label>
 											<input type="file" accept=".doc,.pdf" class="form-control" name="input1">
 										</div>
 									</div>
 								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -451,21 +514,26 @@
 					<div class="col-md-12">
 						<div class="card mb-0">
 							<div class="card-header">
-								<h4 class="card-title mb-0">EDUCATIONAL RECORD</h4>
+								<h4 class="card-title mb-0">Educational Record</h4>
 							</div>
 							<div class="card-body">
 								<div id="msg5">
 									<p class="msg4 alert"></p>
 								</div>
-								<div class="text-right" style="margin-bottom : 2%">
-									<button type="button" onclick="addedudetails()" class="btn btn-primary">+ Add
-										Education Record</button>
-									<br />
+								<div class="row pb-5">
+									<div class="col-lg-8 col-9">
+										<p class="tablep">EDUCATIONAL / PROFESSIONAL QUALIFICATIONS: (LIST THE LAST ONE FIRST)</p>
+									</div>
+									<div class="col-lg-4 col-3 text-right">
+										<button type="button" onclick="addedudetails()" class="btn mybtn">+ Add
+											</button>
+									</div>
 								</div>
+							
 								<div class="table-responsive">
 									<table class="table table-bordered" id="preempform">
 										<thead>
-											<p>EDUCATIONAL / PROFESSIONAL QUALIFICATIONS: (LIST THE LAST ONE FIRST)</p>
+											
 											<tr>
 												<th style="white-space: nowrap;">S.NO.</th>
 												<th style="white-space: nowrap;">CERTIFICATE/DEGREE</th>
@@ -523,21 +591,25 @@
 					<div class="col-md-12">
 						<div class="card mb-0">
 							<div class="card-header">
-								<h4 class="card-title mb-0">EMPLOYMENT RECORD</h4>
+								<h4 class="card-title mb-0">Employment Record</h4>
 							</div>
 							<div class="card-body">
 								<div id="msg5">
 									<p class="msg4 alert"></p>
 								</div>
-								<div class="text-right" style="margin-bottom : 2%">
-									<button type="button" onclick="addempdetails()" class="btn btn-primary">+ Add
-										Employment Record</button>
-									<br />
+								<div class="row pb-5">
+									<div class="col-lg-8 col-9">
+										<p class="tablep">(LIST THE LAST ONE FIRST)</p>
+									</div>
+									<div class="col-lg-4 col-3 text-right">
+										<button type="button" onclick="addempdetails()" class="btn mybtn">+ Add
+										</button>
+									</div>
 								</div>
 								<div class="table-responsive">
 									<table class="table table-bordered" id="preempformj">
 										<thead>
-											<p>(LIST THE LAST ONE FIRST)</p>
+											
 											<tr>
 												<th style="white-space: nowrap;">S.NO.</th>
 												<th style="white-space: nowrap;">NAME OF ORGANIZATION</th>
@@ -603,25 +675,25 @@
 							<div class="card-header">
 								<h4 class="card-title mb-0">Personal Details</h4>
 							</div>
-							<div class="card-body">
+							<div class="card-body" >
 								<div class="row">
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Name.*</label>
-											<input type="text" class="form-control" name="can_name"
+											<input type="text" class="form-control" required name="can_name"
 												value="{{old('can_name')  }}" >
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">FATHER'S/HUSBAND'S Name.*</label>
+											<label class="col-form-label">Father/Husband Name</label>
 											<input type="text" class="form-control" name="can_fathername"
 												value="{{old('can_fathername')  }}" >
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">Gender.*</label>
+											<label class="col-form-label">Gender.</label>
 											<select class="form-control selectpicker form-control"
 												placeholder="Select Store Name" data-live-search="true" id="storeId"
 												name="can_gender" >
@@ -636,7 +708,7 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group">
-											<label class="col-form-label">ADDRESS (Permanent).*</label>
+											<label class="col-form-label">ADDRESS (Permanent).</label>
 											<input type="text" class="form-control" name="can_address"
 												value="{{old('can_address')  }}" >
 										</div>
@@ -649,101 +721,106 @@
 										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-md-3">
+								<div class="row mt-1">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">MOBILE #.*</label>
+											<label class="col-form-label">Mobile</label>
 											<input type="tel" class="form-control" minlength="11" maxlength="11" min="0"
-												name="can_mobileno" value="{{old('can_mobileno') }}" >
-											<span class="form-text text-muted">e.g(03001234567)</span>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">RES/OFFICE #</label>
-											<input type="tel" class="form-control" minlength="11" maxlength="11" min="0"
-												name="can_officeno" value="{{old('can_officeno') }}" >
-											<span class="form-text text-muted">e.g(02131234567)</span>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">DATE OF BIRTH.*</label>
-											<input class="form-control " type="date" name="can_dob"
-												value="{{old('can_dob') }}" >
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">AGE.*</label>
-											<input class="form-control" type="tel" minlength="2" maxlength="2" min="0"
-												name="can_age" value="{{old('can_age' ) }}" >
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-2">
-										<div class="form-group">
-											<label class="col-form-label">PLACE OF BIRTH.*</label>
-											<input class="form-control " type="text" name="can_placeob"
-												value="{{old('can_placeob') }}" >
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="form-group">
-											<label class="col-form-label">N.I.C NO.*</label>
-											<input class="form-control " type="tel" maxlength="13" minlength="13"
-												min="0" name="can_nic" value="{{old('can_nic') }}" >
-											<span class="form-text text-muted">e.g(4210112345671)</span>
+												name="can_mobileno" value="{{old('can_mobileno') }}" placeholder="e.g(03001234567)" >
+											
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">EMAIL.*</label>
-											<input class="form-control " type="email" name="can_email"
-												value="{{old('can_email', @$data['userdata']->log_email ) }}" 
-												readonly>
+											<label class="col-form-label">Res/Office</label>
+											<input type="tel" class="form-control" minlength="11" maxlength="11" min="0"
+												name="can_officeno" value="{{old('can_officeno') }}" placeholder="e.g(02131234567)" >
+											
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-form-label">Date of Birth.</label>
+											<input class="form-control " type="date" name="can_dob"
+												value="{{old('can_dob') }}" >
+										</div>
+									</div>
+									
+								</div>
+								<div class="row mt-1">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-form-label">Age</label>
+											<input class="form-control" type="tel" minlength="2" maxlength="2" min="0"
+												name="can_age" value="{{old('can_age' ) }}" >
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-form-label">Place of Birth</label>
+											<input class="form-control " type="text" name="can_placeob"
+												value="{{old('can_placeob') }}" >
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-form-label">N.I.C NO.</label>
+											<input class="form-control " type="tel" maxlength="13" minlength="13"
+												min="0" name="can_nic" value="{{old('can_nic') }}" placeholder="e.g(4210112345671)" >
+											
+										</div>
+									</div>
+								
+								</div>
+								<div class="row mt-1">
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="col-form-label">Email</label>
+											<input class="form-control " type="email" name="can_email" required
+												
+												>
+										</div>
+									</div>
+									<div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Reference</label>
 											<input type="text" class="form-control" name="can_reference"
 												value="{{old('can_reference') }}" >
 										</div>
 									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">NATIONALITY.*</label>
+											<label class="col-form-label">Nationality</label>
 											<input class="form-control" type="text" name="can_nationality"
 												value="{{old('can_nationality') }}" >
 										</div>
 									</div>
-									<div class="col-md-3">
+									
+								</div>
+								<div class="row mt-1">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">RELIGION.*</label>
+											<label class="col-form-label">Religion</label>
 											<input class="form-control" type="text" name="can_religion"
 												value="{{old('can_religion')  }}" >
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">MARITAL STATUS.*</label>
+											<label class="col-form-label">Martial Status</label>
 											<input class="form-control" type="text" name="can_martialstatus"
 												value="{{old('can_martialstatus') }}" >
 										</div>
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label class="col-form-label">OCCUPATION.*</label>
+											<label class="col-form-label">Occupation</label>
 											<input type="text" class="form-control" name="can_occupation"
 												value="{{old('can_occupation') }}" >
 										</div>
 									</div>
 								</div>
-								<div class="row">
+								<div class="row mt-1">
 									<div class="col-md-12">
 										<div class="form-group">
 											<label class="col-form-label">Social Media Links</label>
@@ -752,16 +829,17 @@
 										</div>
 									</div>
 								</div>
-								<div class="text-center">
-									<button type="submit" class="btn btn-primary"
-										style="margin-left: 700px;">Submit</button>
+								<div>
+									<button type="submit" class="btn submitbtn"
+										>Submit</button>
 								</div>
 			</form>
 		</div>
 	</div>
-	</div>
-	</div>
-	</div>
+</div>
+</div>
+</div>
+
 	<br>
 	<!-- /Main Wrapper -->
 	<!-- jQuery -->
@@ -936,6 +1014,9 @@
 });
 		</script>
 		-->
+		<footer class="text-center mt-3" style="background:#5069e7 !important">
+		© Copyright <?php echo date('Y')?> Arc-Inventador. All rights reserved  
+	</footer>
 </body>
 
 </html>

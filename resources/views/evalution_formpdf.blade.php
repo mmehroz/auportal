@@ -3,97 +3,15 @@
 	<head>
 	  <title>PRE-EMPLOYMENT APPLICATION</title>
 	  	
+<style>
+	.col-form-label{
+		width: 50%;
+	}
+	input{
+		border: none !important;
+	}
+</style>
 
-
-		<style>
-			label
-			{
-			text-align:justify;
-			font-weight:200;
-			font-family: Verdana;
-			font-size:8px;
-			color: #333;
-			}
-			hr
-			{
-			border:1px solid #4a4a4a;
-			}
-			table
-			{
-			font-size:9px;
-			}
-			.table.table-bordered td, .table.table-bordered th
-			{
-			width:auto;
-			}
-			.col-md-2 {
-			    flex: 0 0 16.666667%;
-			    max-width: 15.666667%;
-			    position: relative;
-			    width: 100%;
-			    padding-right: 15px;
-			    padding-left: 15px;
-			}
-			.col-md-3 {
-			    flex: 0 0 25%;
-			    max-width: 24%;
-			}
-			.col-md-4 {
-			    flex: 0 0 33.333333%;
-			    max-width: 32.333333%;
-			}
-			.col-md-6 {
-			    flex: 0 0 50%;
-			    max-width: 49%;
-			}
-			.col-md-12 {
-			    flex: 0 0 100%;
-			    max-width: 100%;
-			}
-			.form-group {
-			    margin-bottom: 1rem;
-			}
-			.col-form-label {
-				color:#000;
-			    padding-top: calc(.375rem + 1px);
-			    padding-bottom: calc(.375rem + 1px);
-			    margin-bottom: 0;
-			    font-size: inherit;
-			    line-height: 1.5;
-			}
-			textarea.form-control {
-			    resize: vertical;
-			    height: auto;
-			}
-			p {
-			    margin-top: 0;
-			    margin-bottom: 1rem;
-			}
-			.custom-table tr {
-			    background-color: #4a4a4a;
-			    box-shadow: 0 0 3px #2c3325;
-			}
-			.custom-table tbody tr {
-			    background-color: #b1b1b1;
-			    box-shadow: 0 0 3px #2c3325;
-			}
-			.table-striped > tbody > tr:nth-of-type(2n+1) {
-			    background-color: #f6f6f6;
-			}
-			table.dataTable {
-			    border-collapse: separate !important;
-			    border-spacing: 0!important;
-			}
-			.table-striped tbody tr:nth-of-type(odd) {
-			    background-color: rgba(0,0,0,.05);
-			}
-			/*.form-check-inline {
-			    display: inline-flex;
-			    align-items: center;
-			    padding-left: 0;
-			    margin-right: .75rem;
-			}*/
-		</style>
 	</head>
 	<body>
 		<div class="content container-fluid">
@@ -103,7 +21,7 @@
 						<p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri","sans-serif";text-align:center;'>
 							<strong>
 								<u><span style="font-size:19px;line-height:107%;">
-									<img height="100px;" width="200px;" src="https://bizzworldcommunications.com/public/bwc-logo.png"/>
+								<img width="30%;" src="https://avidhaus.com/images/arclogo.png"/>
 								</span></u>
 							</strong>
 						</p>
@@ -113,82 +31,83 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card flex-fill" style="border:2px solid #4a4a4a;">
-						<div class="card-header" style="box-sizing:border-box;padding-top:.75rem;padding-bottom:.75rem;padding-right:1.25rem;padding-left:1.25rem;margin-bottom:0;background-color:#4a4a4a;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgba(0,0,0,.125);border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0;background-color: #40c4f1">
-							<h3 class="card-title mb-0 text-center" style="box-sizing:border-box;margin-top:0;margin-bottom:0!important;font-weight:500;line-height:1.2;font-size:20px;orphans:3;widows:3;page-break-after:avoid;font-family:CircularStd;color:#fff;text-align:center!important;background-color: #40c4f1">INTERVIEW ASSESSMENT & RECOMMENDATION FORM</h3>
+						<div class="card-header" style="box-sizing:border-box;padding-top:.75rem;padding-bottom:.75rem;padding-right:1.25rem;padding-left:1.25rem;margin-bottom:0;background-color:#4a4a4a;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgba(0,0,0,.125);border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0;background-color: #5069e7">
+							<h3 class="card-title mb-0 text-center" style="box-sizing:border-box;margin-top:0;margin-bottom:0!important;font-weight:500;line-height:1.2;font-size:20px;orphans:3;widows:3;page-break-after:avoid;font-family:CircularStd;color:#fff;text-align:center!important;background-color: #5069e7">INTERVIEW ASSESSMENT & RECOMMENDATION FORM</h3>
 						</div>
 						<div class="card-body" style="padding:1.25rem;">
 							<!-- <div class=""> -->
 					            <h4 class="card-title mb-0 text-left" style="color: #000000; background-color: #bfbfbf; text-align: center !important;">Candidate Personal Data</h4>
 					            <div class="row">
-								    <div class="col-md-6 col-6 col-lg-6">
+								  
 										<div class="form-group">
-											<label class="col-form-label">Name</label>
+											<label class="col-form-label" >Name :</label>
 											<input type="text" class="form-control" value="{{$datas->jobapplicant_name}}" readonly="">
 										</div>
-									</div>
+								
 
 
-								    <div class="col-md-6 col-6 col-lg-6">
-										<div class="form-group">
-											<label class="col-form-label">Company</label>
-											<input type="text" class="form-control" name="can_company" value="AU Telecom" readonly="">
+								
+										<div class="form-group" style="margin-left: 360px; margin-top: -30px; ">
+											<label class="col-form-label" >Company :</label>
+											<input type="text"  class="form-control" name="can_company" value="AU Telecom" readonly="">
 										</div>
-									</div>
+								
 
 
 								</div>
 
 
 								<div class="row">
-								    <div class="col-md-6 col-6">
-										<div class="form-group">
-											<label class="col-form-label">Position Title</label>
+								   
+										<div class="form-group" >
+											<label class="col-form-label" >Position Title :</label>
 											<input type="text" class="form-control" value="{{$datas->jobapplicant_postionapppliedform}}" readonly="">
 										</div>
-									</div>
-								    <div class="col-md-6 col-6">
-										<div class="form-group">
-											<label class="col-form-label">Department</label>
+									
+								  
+										<div class="form-group" style="margin-left: 360px;margin-top: -30px; " >
+											<label class="col-form-label">Department :</label>
 											<input type="text" class="form-control" value="{{$datas->dept_name}}" readonly="">
 											
 										</div>
-									</div>
+									
 								</div>
-								<div class="row" style=" margin-top: -250px; margin-right: -15px; margin-left: -15px;">
-								    <div class="col-md-3">
+								<div class="row">
+								   
 										<div class="form-group">
-											<label class="col-form-label">Sub Department</label>
+											<label class="col-form-label">Sub Department :</label>
 											<input type="text" class="form-control" value="{{$datas->sd_name}}" readonly="">
 										</div>
-									</div>
-								    <div class="col-md-3" style="margin-left:25%;">
-										<div class="form-group">
-											<label class="col-form-label">Reports to</label>
+									
+								    
+										<div class="form-group" style="margin-left: 360px; margin-top: -30px; padding-bottom: 0px">
+											<label class="col-form-label" >Reports to :</label>
 											<input type="text" class="form-control" name="Test" value="{{$datas->can_evu_reportsto}}" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-3" style="margin-left:50%;">
+										<div class="row">
+								 
 										<div class="form-group">
-											<label class="col-form-label">Location</label>
+											<label class="col-form-label" >Location :</label>
 											<input type="text" class="form-control" value="{{$datas->can_evu_location}}" readonly="">
 										</div>
-									</div>
-								    <div class="col-md-3" style="margin-left: 75%;">
-										<div class="form-group">
+									
+								   
+										<div class="form-group" style="margin-left: 360px; margin-top: -30px; padding-bottom: 0px">
 											<label class="col-form-label">Job Grade</label>
 											<input type="text" class="form-control" value="{{$datas->can_evu_grade}}" readonly="">
 										</div>
-									</div>
+								
 								</div>
-								<div class="row" style=" margin-top: -250px; margin-right: -15px; margin-left: -15px;">
-								    <div class="col-md-2">
+								<div class="row">
+								    
 										<div class="form-group">
 											<label class="col-form-label">Reference</label>
 											<input type="text" readonly="" class="form-control" value="{{$datas->jobapplicant_reference}}">									
 										</div>
-									</div>
-								    <div class="col-md-3" style="margin-left:16.666667%;">
-										<div class="form-group">
+								
+								   
+										<div class="form-group" style="margin-left: 360px; margin-top: -30px; padding-bottom: 0px">
 											<label class="col-form-label">Job Typ</label>
 											<input type="text" class="form-control" readonly="" @if($datas->can_evu_job_type == "1" )  value = Permanent
 																					@elseif( $datas->can_evu_job_type == "2" ) value = Contract
@@ -198,41 +117,41 @@
 																					@elseif( $datas->can_evu_job_type == "6" )  value =MTO	
 																					@endif >
 										</div>
-									</div>
-								    <div class="col-md-3" style="margin-left: 41.666667%;">
+									
+								  
 										<div class="form-group">
 											<label class="col-form-label">Relative in AU Telecom</label>
 											<input type="text" class="form-control" value="{{$datas->can_evu_relativename}}" readonly="">
 										</div>
-									</div>
-								    <div class="col-md-4" style="margin-left:66.666667%;">
-										<div class="form-group">
+									
+								  
+										<div class="form-group" style="margin-left: 360px; margin-top: -30px; padding-bottom: 0px">
 											<label class="col-form-label">Dependents</label>
 											<input type="text" class="form-control" value="{{$datas->can_evu_depends}}" readonly="">
 										</div>
-									</div>
+									
 								</div>
-								<div class="row" style=" margin-top: -170px; margin-right: -15px; margin-left: -15px;">
-								    <div class="col-md-4">
-										<div class="form-group">
+								<div class="row">
+								 
+										<div class="form-group" >
 											<label class="col-form-label">BUDGETED in Business Plan</label>
 											<input type="text" class="form-control" value="{{$datas->can_evu_budget}}" readonly="">
 										</div>
-									</div>
-								    <div class="col-md-4" style="margin-left:33.333333%;">
-										<div class="form-group">
+									
+								    
+										<div class="form-group" style="margin-left: 360px; margin-top: -30px; padding-bottom: 0px">
 											<label class="col-form-label">Expected Salary</label>
 											<input type="text" class="form-control" name="Test" value="{{$datas->jobapplicant_monthlyexpectedsalary}}" readonly="">
 										</div>
-									</div>
-								    <div class="col-md-4" style="margin-left:66.666666%;">
+								
+								    
 										<div class="form-group">
 											<label class="col-form-label">Expected Benefit</label>
 											<input type="text" class="form-control" name="Test" value="{{$datas->jobapplicant_remarksofleave}}" readonly="">
 										</div>
-									</div>
+									
 								</div>
-								<div class="row" style=" margin-right: -15px; margin-left: -15px;">
+								<div class="row">
 								    <div class="col-md-12">
 										<div class="form-group">
 											<label class="col-form-label">JOB SUMMARY</label>
@@ -244,7 +163,7 @@
 					            <h4 class="card-title mb-0 text-left" style="color: #000000; background-color: #bfbfbf; text-align: center !important;">HR Department Assessment</h4>
 					            <p style="color:#f90202; font-size: 11.8px; padding-bottom: -15px;">Filled by HR Department</p>
 					            <div class="">
-						            <p style="font-size: 11.8px; color: #000;">Total Marks: Qualification=3  Professional Training=4  Computer Skill=5 <br> AVG Marks Obtained=3.13</p>
+						            <p style="font-size: 18px; color: #000;">Total Marks:<br> Qualification=3  Professional Training=4  Computer Skill=5  AVG Marks Obtained=3.13</p>
 									<table class="table table-bordered table-striped custom-table datatable" id="preempform">
 						                <thead>
 				            			
@@ -295,21 +214,21 @@
 						              	</tbody>
 						            </table>
 					            </div>
-					            <div class="row" style=" margin-bottom: -100px; margin-right: -15px; margin-left: -15px;">
+					            <div class="row" >
 								    <div class="col-md-6">
 										<div class="form-group">
 											<label class="col-form-label">Interviewer Name</label>
 											<input type="text" class="form-control" value="{{$datas->can_evu_hr_int_name}}" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-6" style="margin-left:50%;">
+								    <div class="col-md-6">
 										<div class="form-group">
 											<label class="col-form-label">Interviewer Date</label>
 											<input type="text" class="form-control" name="Test" value="{{$datas->can_evu_hr_int_date}}" readonly="">
 										</div>
 									</div>
 								</div>
-								<div class="row" style=" margin-right: -15px; margin-left: -15px;">
+								<div class="row">
 								    <div class="col-md-12">
 										<div class="form-group">
 											<label class="col-form-label">HR Comments</label>
@@ -370,41 +289,41 @@
 						            </table>
 					            </div>
 					            <h4 class="card-title mb-0 text-left" style="color: #000000; background-color: #bfbfbf; text-align: center !important;">Approval Authority</h4>
-					            <div class="row" style=" margin-top: -80px; margin-right: -15px; margin-left: -15px;">
+					            <div class="row">
 								    <div class="col-md-6">
 										<div class="form-group">
 											<label class="col-form-label">Proposed Salary By Coo</label>
 											<input type="text" class="form-control" value="{{$datas->can_evu_rec_sal}}" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-6" style="margin-left:50%;">
+								    <div class="col-md-6">
 										<div class="form-group">
 											<label class="col-form-label">Proposed Designation By COO</label>
 											<input type="text" class="form-control" name="can_company" value="{{$datas->can_evu_pro_desg}}" readonly="">
 										</div>
 									</div>
 								</div>
-								<div class="row" style=" margin-top: -160px; margin-right: -15px; margin-left: -15px;">
+								<div class="row">
 								    <div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Recommended Salary By HR</label>
 											<input type="text" class="form-control" value="{{$datas->can_evu_off_salary}}" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-4" style="margin-left:33.333333%;">
+								    <div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Proposed Designation By HR</label>
 											<input type="text" class="form-control" name="can_company" value="{{$datas->can_evu_off_desg}}" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-4" style="margin-left:66.666666%;">
+								    <div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Candidate Expected Salary</label>
 											<input type="text" class="form-control" name="can_company" value="{{$datas->jobapplicant_monthlyexpectedsalary}}" readonly="">
 										</div>
 									</div>
 								</div>
-								<div class="row" style=" margin-right: -15px; margin-left: -15px;">
+								<div class="row">
 								    <div class="col-md-12">
 										<div class="form-group">
 											<label class="col-form-label">COO Remarks</label>
@@ -413,7 +332,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style=" margin-top: -160px; margin-right: -15px; margin-left: -15px;">
+								<div class="row">
 								    <div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Approval</label>
@@ -423,27 +342,27 @@
 																					@endif >
 										</div>
 									</div>
-								    <div class="col-md-4" style="margin-left:33.333333%;">
+								    <div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Name</label>
 											<input type="text" class="form-control" name="can_company" value="{{$datas->can_evu_app_name}}" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-4" style="margin-left:66.666666%;">
+								    <div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Date</label>
 											<input type="text" class="form-control" name="can_company" value="{{$datas->can_evu_app_date}}" readonly="">
 										</div>
 									</div>
 								</div>
-								<div class="row" style=" margin-top: -80px; margin-right: -15px; margin-left: -15px;">
+								<div class="row">
 								    <div class="col-md-6">
 										<div class="form-group">
 											<label class="col-form-label">Salary After Probition Period</label>
 											<input type="text" class="form-control" value="{{$datas->can_evu_sal_afpro}}" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-6" style="margin-left:50%;">
+								    <div class="col-md-6" >
 										<div class="form-group">
 											<label class="col-form-label">Final Status</label>
 											<input type="text" class="form-control" name="can_company" readonly="" @if($datas->jobapplicant_status == "nothired" )  value = Not Hired

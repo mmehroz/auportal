@@ -42,9 +42,9 @@
 								@endif
 								<h4 class="user-name m-t-10 mb-0 text-ellipsis">{{$val->elsemployees_name}}</h4>
 								<hr>
-								<h6 class="text-left mt-" style="color: black"><span><i class="fa fa-user" style="color: ##40c4f1"></i></span> <span> {{$val->DESG_NAME}}</span></h6>
-								<h6 class="text-left" style="color: black"><span><i class="fa fa-at" style="color: ##40c4f1"></i></span> {{$val->elsemployees_emailaddress}}</h6>
-								<h6 class="text-left" style="color: black"><span><i class="fa fa-phone" style="color: ##40c4f1"></i></span> {{$val->elsemployees_ext}}</h6>
+								<h6 class="text-left mt-" style="color: black"><span><i class="fa fa-user" style="color: ##5069e7"></i></span> <span> {{$val->DESG_NAME}}</span></h6>
+								<h6 class="text-left" style="color: black"><span><i class="fa fa-at" style="color: ##5069e7"></i></span> {{$val->elsemployees_emailaddress}}</h6>
+								<h6 class="text-left" style="color: black"><span><i class="fa fa-phone" style="color: ##5069e7"></i></span> {{$val->elsemployees_ext}}</h6>
 							</div>
 							</div>
 						</div>

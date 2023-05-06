@@ -28,7 +28,7 @@
 			margin-left: 10px;
 		}
 		.modal-header{
-			background-color: ##40c4f1;
+			background-color: ##5069e7;
 			color: white;
 		}
 		.modal-header h5{
@@ -40,12 +40,12 @@
 			color: white;
 		}
 		.form-control{
-			border: 2px solid ##40c4f1;
+			border: 2px solid ##5069e7;
 			outline: none;
 			height: 50px;
 		}
 		.form-control:focus{
-			border-color: ##40c4f1;
+			border-color: ##5069e7;
 			outline: none !important;
 			
 
@@ -63,16 +63,16 @@
 		}
 		.submit-section button{
 			width: 100%;
-			border: 2px solid ##40c4f1;
+			border: 2px solid ##5069e7;
 			outline: none !important;
-			background-color: ##40c4f1;
+			background-color: ##5069e7;
 			color: white;
 		}
 		.submit-section button:hover{
 			background-color: white;
-			color: ##40c4f1;
+			color: ##5069e7;
 			font-weight: 700;
-			border: 2px solid ##40c4f1;
+			border: 2px solid ##5069e7;
 		}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />

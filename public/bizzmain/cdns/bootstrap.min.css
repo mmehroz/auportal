@@ -5413,12 +5413,12 @@ a.badge-dark:focus {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
-  color: #40c4f1;
+  color: #5069e7;
   text-shadow: 0 1px 0 #fff;
   opacity: 0.5;
 }
 .close:hover {
-  color: #40c4f1;
+  color: #5069e7;
   text-decoration: none;
 }
 .close:not(:disabled):not(.disabled):focus,
@@ -5593,7 +5593,7 @@ a.close.disabled {
   opacity: 0.5;
 }
 .modal-header {
-  background-color: #40c4f1;
+  background-color: #5069e7;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: start;
@@ -5946,7 +5946,7 @@ a.close.disabled {
   margin-bottom: 0;
   font-size: 1rem;
   background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #5069e7;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
 }

@@ -121,7 +121,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> View Resume/CV</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #40c4f1 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #5069e7 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>--->
@@ -129,7 +129,7 @@
 										</td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #40c4f1 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #5069e7 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 												</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
@@ -178,7 +178,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #40c4f1 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #5069e7 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>-->
@@ -186,7 +186,7 @@
 										</td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #40c4f1 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #5069e7 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 												</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
@@ -245,7 +245,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #40c4f1 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #5069e7 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>-->
@@ -253,7 +253,7 @@
 										</td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #40c4f1 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #5069e7 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 												</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
@@ -302,7 +302,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #40c4f1 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #5069e7 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>-->
@@ -310,7 +310,7 @@
 										</td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #40c4f1 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #5069e7 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 												</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>

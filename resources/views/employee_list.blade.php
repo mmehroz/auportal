@@ -12,7 +12,7 @@
 	}
 
 	.view-icons .btn.active {
-	    color: #333;
+	    color: #fff;
 	}
 
         #loader{
@@ -181,11 +181,11 @@
 					var dropdownval = $(this).val();
 					
 					if(dropdownval == "name" ){
-						$("#field").html("<div class='row filter-row'style='display: flex!important;'><div class='col-sm-6 col-md-6'><label class='focus-label'>Name</label><input class='form-control floating' type='text' name='myname' ></div><div class='col-sm-6 col-md-2'></div><div class='col-sm-6 col-md-4'><label class='focus-label'></label><input class='btn btn-success btn-block' type='submit'></div></div>");
+						$("#field").html("<div class='row filter-row'style='display: flex!important;'><div class='col-sm-6 col-md-6'><label class='focus-label'>Name</label><input class='form-control floating' type='text' name='myname' ></div><div class='col-sm-6 col-md-8'></div><div class='col-sm-6 col-md-4'><label class='focus-label'></label><input class='btn btn-success btn-block' type='submit'></div></div>");
 					}else if(dropdownval == "department"){
-						$("#field").html("<div class='row filter-row'style='display: flex!important;'><div class='col-sm-6 col-md-6'><label class='focus-label'>Department</label><select class='form-control floating'  name='myname' > @foreach($data as $datas)<option value='{{ $datas->dept_id }}'>{{ $datas->dept_name }}</option>@endforeach </select></div><div class='col-sm-6 col-md-2'></div><div class='col-sm-6 col-md-4'><label class='focus-label'></label><input class='btn btn-success btn-block' type='submit'></div></div>");
+						$("#field").html("<div class='row filter-row'style='display: flex!important;'><div class='col-sm-6 col-md-6'><label class='focus-label'>Department</label><select class='form-control floating'  name='myname' > @foreach($data as $datas)<option value='{{ $datas->dept_id }}'>{{ $datas->dept_name }}</option>@endforeach </select></div><div class='col-sm-6 col-mf-8'></div><div class='col-sm-6 col-md-4'><label class='focus-label'></label><input class='btn btn-success btn-block' type='submit'></div></div>");
 					}else if(dropdownval == "batch"){
-						$("#field").html("<div class='row filter-row'style='display: flex!important;'><div class='col-sm-6 col-md-6'><label class='focus-label'>Batch ID</label><input class='form-control floating' type='text' name='myname' ></div><div class='col-sm-6 col-md-2'></div><div class='col-sm-6 col-md-4'><label class='focus-label'></label><input class='btn btn-success btn-block' type='submit'></div></div>");
+						$("#field").html("<div class='row filter-row'style='display: flex!important;'><div class='col-sm-6 col-md-6'><label class='focus-label'>Batch ID</label><input class='form-control floating' type='text' name='myname' ></div><div class='col-sm-6 col-md-8'></div><div class='col-sm-6 col-md-4'><label class='focus-label'></label><input class='btn btn-success btn-block' type='submit'></div></div>");
 					}else{
 						$("#field").html("<div><h2>Invalid Type</h2></div>");
 					}

@@ -62,7 +62,6 @@
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -72,7 +71,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #40c4f1" href="{{ URL::to('/modalademployeeviewol/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #5069e7" href="{{ URL::to('/modalademployeeviewol/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>--->
@@ -80,16 +79,15 @@
 										</td>
 										<td>
 											<div class="dropdown dropdown-action">
-											<a href="#" style="color: #40c4f1" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more</i></a>
+											<a href="#" style="color: #5069e7" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more</i></a>
 												<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" onclick="getedit({{$datas->jobapplicant_id}})" data-toggle="modal" data-target="#view_irrelevent"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>
 											</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<td>{{$datas->log_email}}</td>
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<td>{{$datas->dept_name}}</td>
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 									</tr>
 								@endforeach
@@ -116,7 +114,6 @@
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -141,9 +138,8 @@
 											</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<td>{{$datas->log_email}}</td>
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<td>{{$datas->dept_name}}</td>
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 									</tr>
 								@endforeach

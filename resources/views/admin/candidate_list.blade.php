@@ -2,7 +2,7 @@
 @section('hr-HRM')
 
 <style type="text/css">
-	.dropdown-menu {
+	/* .dropdown-menu {
 		max-width: 27rem!important;
 		font-size: 11px;
 	}
@@ -50,8 +50,15 @@
 
 	.view-icons .btn {
 		margin-right: 50px;
+	} */
+	.card {
+	    padding: 1.25rem;
+	    flex: 1 1 auto;
+	    background-color: #a29e9e47;
 	}
-
+	.row{
+		display: block!important;
+	}
 </style>
 
 <!-- Page Wrapper -->
@@ -123,7 +130,7 @@
 		<!-- Tab Content -->
 		<div class="tab-content">
 		
-			<div class="row" id="modals">
+			<!-- <div class="row" id="modals">
 				<div class="col-sm-12 col-md-12">
 					<form id="frmeditstore" action="{{ URL::to('/searchcan')}}" >
 						<div class="row filter-row" style="display: flex!important;">
@@ -142,7 +149,7 @@
 						</div>
 					</form>
 				</div>
-			</div>
+			</div> -->
 			<br>
 			<div id="loader"></div>
 			<div id="dynamicdata">

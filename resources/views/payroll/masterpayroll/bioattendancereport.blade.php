@@ -743,8 +743,7 @@
         color: black;
     }
     .tfoot tr td{
-background-color: #40c4f1 !important;
-color: black;
+
     }
     section{
     	margin-top: 50px;

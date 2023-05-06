@@ -52,7 +52,7 @@
 								<div class="row" style="display: flex!important; margin-left: -2%">
                                 	<div class="col-md-8 col-sm-8 col-8 col-lg-8 col-xl-8">
 										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
-											<b>Department:</b> {{$val->dept_name}}
+											<b>Department:</b> -
 										</div>
 									</div>
 	                            	<div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4">

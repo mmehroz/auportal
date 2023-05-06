@@ -64,13 +64,13 @@
 
 button.dt-button
 {
-background: #3c99dc;
+background: #5069e7;
 color: white;
 }  
 button.dt-button:hover:not(.disabled), div.dt-button:hover:not(.disabled), a.dt-button:hover:not(.disabled) {
 	    border: 1px solid #666;
-background: #40c4f1;
-background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
+background: #5069e7;
+background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 }
 
 </style>
@@ -91,8 +91,8 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
                 </div> -->
                  <div class="header-left">
                     <a href="{{URL('maindashboard')}}" class="logo">
-						<img src="{!! asset('public/assets/img/logo--nav-collapse.png') !!}"  width="100%" height="5" alt="">
-						<img src="{!! asset('public/assets/img/logo-nav.png') !!}" width="200px"  style="display:none" alt="">
+						<img src="{!! asset('public/images/arciconlogo.svg') !!}"   alt="">
+						<img src="{!! asset('public/images/logo.svg') !!}" width="100px"  style="display:none" alt="">
 					</a>
 					<script>
         $(document).ready(function() {
@@ -104,7 +104,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
                 </div>
                 @if(session()->get('role') != 4)
 				<a id="backbutton" title="Click to go back">
-					<i class="fa fa-arrow-left" style="font-size:18px; color: #fff !importantfff;margin-top: 22px; cursor: pointer;"></i>
+					<i class="fa fa-arrow-left" style="font-size:18px; color: #fff !important;margin-top: 22px; cursor: pointer;"></i>
 				</a>
 				@endif
 				<!-- /Logo -->
@@ -128,7 +128,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 				<!-- Header Title -->
                 <div class="page-title-box">
                 	<a href="{{URL('maindashboard')}}" style="cursor: pointer;">
-					<h3>AU Portal</h3>
+					<h3>AI Portal</h3>
                 	</a>
                 </div>
 				<!-- /Header Title -->
@@ -202,7 +202,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							</li>-->
 							<!--Dashboards -->
 							<li class="submenu">
-								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-gauge"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 								@if( session()->get("role") == 3 )
 								<li><a href="{{url('/managerDashboard')}}">Manager Dashboard</a></li>
@@ -219,7 +219,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							<!-- DataTables -->
 							<li class="submenu">
 							@if( session()->get("role") < 4 )
-								<a href="#"><i class="la la-cube"></i> <span> Recruiting</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-cube"></i> <span> Recruiting</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 								@if( session()->get("role") == 2 )
 									<li class="submenu">
@@ -321,7 +321,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 
 							@if( session()->get("role") <=	 3 )
 							<li class="submenu">
-								<a href="#"><i class="la la-users"></i> <span> Employee</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-users"></i> <span> Employee</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/employeelist')}}">Employee List</a></li>
 									<li><a href="{{url('/notactiveemployeelist')}}">Not Active Employee List</a></li>
@@ -332,7 +332,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							
 							@if( session()->get("role") <=	 2 )
 							<li class="submenu">
-								<a href="#"><i class="la la-briefcase"></i> <span> Depart & Designation</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-briefcase"></i> <span> Depart & Designation</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/departmentlist')}}">Department List</a></li>
 									<li><a href="{{url('/designationlist')}}">Designation List</a></li>
@@ -341,7 +341,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							@endif
 
 							<li class="submenu">
-								<a href="#"><i class="la la-rocket"></i> <span> Leave System</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-rocket"></i> <span> Leave System</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/selfrequest')}}">Self Request</a></li>
 									@if(session()->get('role') <= 3)
@@ -361,7 +361,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							</li>
 							
 							<li class="submenu">
-								<a href="#"><i class="fas fa-fingerprint"></i> <span> Biomatric Attendance</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-fingerprint"></i> <span> Biomatric Attendance</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/selectmonthforattendance')}}">Monthly Bio Attendance</a></li>
 									<li><a href="{{url('/dailyattendance')}}">Daily Attendance</a></li>
@@ -374,7 +374,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							</li>
 							@if(session()->get('role') != 4)
 							<li class="submenu">
-								<a href="#"><i class="fa fa-check"></i> <span> Portal Attendance</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-check"></i> <span> Portal Attendance</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<!-- <li><a href="{{url('/attendance')}}">Mark Attendance</a></li> -->
 									<li><a href="{{url('/viewattendnce')}}">Timein Cont</a></li>
@@ -385,7 +385,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							</li>
 							@endif
 							<li class="submenu">
-								<a href="#"><i class="la la-edit"></i> <span> Attendance Correctrion</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-pen-to-square"></i> <span> Attendance Correctrion</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/attendancecorrectionlist')}}">Pending Request</a></li>
 									<li><a href="{{url('/correctionreport')}}">All Request</a></li>
@@ -393,7 +393,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							</li>
 
 							<li class="submenu">
-								<a href="#"><i class="la la-file-text"></i> <span>Employee Feedback</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-file-lines"></i> <span>Employee Feedback</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 										<li><a href="{{url('/hrmform')}}">Feedback Form</a></li>
 									@if(session()->get('role') <= 2||(session()->get('email') == "salman.khairi@bizzworld.com" ))
@@ -401,14 +401,14 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 									@endif
 								</ul>
 							</li>
-							<li class="submenu">
+							<!-- <li class="submenu">
 								<a href="#"><i class="fas fa-hamburger"></i> <span>Food Portal</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 										<li><a href="{{url('/restaurantlist')}}">Restaurant List</a></li>
 										<li><a href="{{url('/deliveryordertlist')}}">Awaiting To Deliver</a></li>
 										<li><a href="{{url('/cancelorcompleteorderlist')}}">Order Report</a></li>
 								</ul>
-							</li>
+							</li> -->
 							@if( session()->get("role") !=	 4)
 							<li class="menu-title" style="color: #0f1431 !important; font-weight: bold"> 
 								<span>Meeting Room</span>
@@ -453,7 +453,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 								<span>HR</span>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="la la-money"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-money-bill"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/selectbioattendancemonth')}}">Monthly Payroll Salaries</a></li>
 									<li><a href="{{url('/ondaylist')}}"> On Day</a></li>
@@ -474,27 +474,27 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							@endif
 							@if( session()->get("role") <=	 2 )
 							<li class="submenu">
-								<a href="#"><i class="fa fa-money"></i> <span> Vendor Registration </span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="	fa fa-clipboard"></i> <span> Vendor Registration </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/vendorlist')}}">Report</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="fa fa-money"></i> <span> Car Registration </span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa fa-car"></i> <span> Car Registration </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/carlist')}}">Report</a></li>
 								</ul>
 							</li>
 							@endif
 							<li class="submenu">
-								<a href="#"><i class="fa fa-money"></i> <span> Expense </span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-comment-dollar"></i> <span> Expense </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/selectexpensemonth')}}">Petty Cash Report</a></li>
 									<li><a href="{{url('/recuringexpenselist')}}">Expense Report</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="la la-bullhorn"></i> <span> Announcement</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-bullhorn"></i> <span> Announcement</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">	
 									<li class="submenu">
 										<li><a href="{{url('/announcementlist')}}">Announcement List</a></li>
@@ -504,7 +504,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							</li>
 
 							<li class="submenu">
-								<a href="#"><i class="la la-bullhorn"></i> <span> Complain</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-pen"></i> <span> Complain</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">	
 									<li class="submenu">
 										<li><a href="{{url('/complainreport')}}">Report</a></li>
@@ -522,7 +522,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							</li>
 
 							<li class="submenu">
-								<a href="#"><i class="la la-send"></i> <span> Holidays</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-sharp fa-solid fa-mug-hot"></i> <span> Holidays</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">	
 									<li class="submenu">
 										<li><a href="{{url('/holidayslist')}}">Holidays List</a></li>
@@ -531,7 +531,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 							</li>
 
 							<li class="submenu">
-								<a href="#"><i class="fa fa-sign-out"></i> <span> Resignation</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fas fa-sign-out"></i> <span> Resignation</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">	
 									<li class="submenu">
 										<li><a href="{{url('/resignationlist')}}">Resignation List</a></li>
@@ -567,7 +567,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 
 							
 							<li class="submenu">
-								<a href="#"><i class="la la-file-text"></i> <span>Probationary Form</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-receipt"></i> <span>Probationary Form</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/probationaryformlist')}}">Probationary Form List</a></li>
 									@if( session()->get("role") <= 3 )
@@ -607,7 +607,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 								<span>IT</span>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="la la-file-text"></i> <span>IT Support</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-headset"></i> <span>IT Support</span> <span class="menu-arrow"></span></a>
 								<ul>
 									<li><a href="{{url('/itticketrequest')}}">Pending Tickets</a></li>
 									<li><a href="{{url('/itticketresolverequest')}}">Resolve Tickets</a></li>
@@ -615,13 +615,13 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 								</ul>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="la la-file-text"></i> <span>IT Inventory</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-cart-flatbed"></i> <span>IT Inventory</span> <span class="menu-arrow"></span></a>
 								<ul>
 									<li><a href="{{url('/itinventorylist')}}">Inventory List</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="la la-file-text"></i> <span>IT Review</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-comments"></i> <span>IT Review</span> <span class="menu-arrow"></span></a>
 								<ul>
 									<li><a href="{{url('/itreviewreport')}}">Review List</a></li>
 								</ul>
@@ -641,7 +641,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li class="submenu">
-								<a href="#"><i class="la la-file-text"></i> <span>IT Support</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa-solid fa-headset"></i> <span>IT Support</span> <span class="menu-arrow"></span></a>
 								<ul>
 									<li><a href="{{url('/itticketrequest')}}">Pending Tickets</a></li>
 									<li><a href="{{url('/itticketresolverequest')}}">Resolve Tickets</a></li>
@@ -752,6 +752,7 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 		<!-- <script src="{!! asset('public/assets/js/buttons.print.min.js') !!}"></script> -->
 		<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
 		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+		<script src="https://kit.fontawesome.com/0c38600b09.js" crossorigin="anonymous"></script>
 		<!-- SelectPicker JS -->
 		<script src="{!! asset('public/assets/js/selectpicker.js') !!}"></script>
 		
@@ -762,8 +763,8 @@ background-image: linear-gradient(to bottom, #40c4f1 0%, #40c4f1 100%);
 <script type="text/javascript">	
 	
 </script>
-<footer class="text-center" style="background:#0f1431 !important" >
-					© COPYRIGHT <?php echo(date('Y'));?> AU Telecom ALL RIGHTS RESERVED.
+<footer class="text-center" >
+					© COPYRIGHT <?php echo(date('Y'));?> Arc Inventador ALL RIGHTS RESERVED.
 			</footer>
     </body>
 </html>

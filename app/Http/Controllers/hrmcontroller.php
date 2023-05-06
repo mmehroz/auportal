@@ -446,23 +446,23 @@ class hrmcontroller extends Controller
 	}
 	
 	public function jobforminput(){
-		if(session()->get("emailocand")){
+		// if(session()->get("emailocand")){
 			
-			$emailadd = session()->get("emailocand");
+			// $emailadd = session()->get("emailocand");
 			
-				$department = DB::connection('mysql')->table('hrm_Department')
-							->where('dept_id','>',8)	
-							->select('hrm_Department.*')
-							->get();
+			// 	$department = DB::connection('mysql')->table('hrm_Department')
+			// 				// ->where('dept_id','>',8)	
+			// 				->select('hrm_Department.*')
+			// 				->get();
 							
-				$designation = DB::connection('mysql')->table('designation')
-							->select('designation.*')
-							->get(); 
+			// 	$designation = DB::connection('mysql')->table('designation')
+			// 				->select('designation.*')
+			// 				->get(); 
 				
-				$user = DB::connection('mysql')->table('hrm_login')
-					->where('log_email','=',$emailadd)	
-					->select('hrm_login.*')
-					->first();
+			// 	$user = DB::connection('mysql')->table('hrm_login')
+			// 		->where('log_email','=',$emailadd)	
+			// 		->select('hrm_login.*')
+			// 		->first();
 						
 					// ->join('hrm_Department','hrm_Department.dept_id','=','jobapplicant.jobapplicant_department')
 					// ->join('sub_department','hrm_Department.dept_id', '=','sub_department.sd_id')
@@ -470,18 +470,18 @@ class hrmcontroller extends Controller
 						
 				// dd($user);
 				
-				$all=[
-					'department'=>$department,
-					'designation'=>$designation,
-					'userdata'=>$user,
-				];
+				// $all=[
+				// 	'department'=>$department,
+				// 	'designation'=>$designation,
+				// 	'userdata'=>$user,
+				// ];
 
 				// dd($all);
 		 
-				return view('pre_employment_application_form',['data'=>$all]);
-		}else{
-			return redirect('/canLogin')->with('message','Kindly Do Login For Access');
-		}	
+				return view('pre_employment_application_form');
+		// }else{
+		// 	return redirect('/canLogin')->with('message','Kindly Do Login For Access');
+		// }	
     }
 	
     public function submitjobapplicant(Request $request){
@@ -646,8 +646,9 @@ class hrmcontroller extends Controller
 				
 				 $insert[] = [
 					 'jobapplicant_name' => $request->can_name,
-				   'jobapplicant_fname' => $request->can_fathername,
-				   'jobapplicant_cnic' => $request->can_nic,
+					 'jobapplicant_fname' => $request->can_fathername,
+					 'can_email' => $request->can_email,
+					 'jobapplicant_cnic' => $request->can_nic,
 				   'jobapplicant_address' => $request->can_address,
 				   'jobapplicant_log_id' => $request->can_log_id,
 				   'jobapplicant_password' => $request->can_pass,
@@ -708,8 +709,20 @@ class hrmcontroller extends Controller
 				
 					$created = DB::connection('mysql')->table('jobapplicant')->insert($insert);
 					   
-			
-					return redirect('/canLogin')->with('message','Thank You For Submiting');
+					Mail::send('emails.done_employee',[
+						'can_name' => $request->can_name,
+						],
+					function ($message) use ($request){
+					 $message->to($request->can_email);
+					 $message->cc('recruitment@arcinventador.com');
+					 $message->subject('Application Received for Job');
+					});
+					session()->put([
+					
+					'can_name' => $request->can_name,
+					
+					]);
+					return redirect('/thankyou');
 				
 			
 		// }else{
@@ -1154,8 +1167,8 @@ class hrmcontroller extends Controller
     	// dd($id);
         
 		$task = DB::connection('mysql')->table('jobapplicant')
-			->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-			->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+			// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+			// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 			// ->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
 			->where('jobapplicant.jobapplicant_id', '=', $id)
 			->first();

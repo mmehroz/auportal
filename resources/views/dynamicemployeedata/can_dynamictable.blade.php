@@ -1,4 +1,13 @@
-
+<style>
+	.profile-widget{
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    border-radius: 5px !important;
+    border: none;
+	}
+	.small{
+color: #121212;
+	}
+	</style>
 <center>
 <div class="row">
 	<div class="col-md-4">
@@ -15,7 +24,7 @@
 			<div class="col-md-12">
 			@foreach ($data as $val)
 					<div class="row staff-grid-row">
-						<div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-6" style="float: left;">
+						<div class="col-md-4 col-sm-4 col-12 col-lg-4 col-xl-4" style="float: left;">
 							<div class="profile-widget">
 								<div class="profile-img">
 									<a href="{{ URL::to('/modalemployeeview/')}}/{{$val->jobapplicant_id}}" title="Click To View Application Form" target="_blank" class="avatar">
@@ -45,38 +54,26 @@
 
                                 <div class="row" style="display: flex!important; margin-top: 4%; margin-left: -2%">
                                 	<div class="col-md-8 col-sm-8 col-8 col-lg-8 col-xl-8">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
+										<div class="small " style="font-style: normal!important;font-size: 15px;text-align:left!important;">
 											<b>Position Applied For:</b> {{$val->jobapplicant_postionapppliedform}}
 										</div>
 									</div>
 	                            	<div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
+										<div class="small " style="font-style: normal!important;font-size: 15px;text-align:left!important;">
 											 <b>Gender:</b> {{$val->jobapplicant_gender}}
 										</div>
 									</div>
 								</div>
 
 								<div class="row" style="display: flex!important; margin-left: -2%">
-                                	<div class="col-md-8 col-sm-8 col-8 col-lg-8 col-xl-8">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
-											<b>Department:</b> {{$val->dept_name}}
-										</div>
-									</div>
-	                            	<div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
+                                	
+	                            	<div class="col-md-8 col-sm-8 col-8 col-lg-8 col-xl-8">
+										<div class="small " style="font-style: normal!important;font-size: 15px;text-align:left!important;">
 											<b>Current Salary:</b> {{$val->jobapplicant_currentsalary}}
 										</div>
 									</div>
-								</div>
-
-								<div class="row" style="display: flex!important; margin-left: -2%">
-                                	<div class="col-md-8 col-sm-8 col-8 col-lg-8 col-xl-8">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
-											<b>Comfortable in Night?:</b> {{$val->jobapplicant_nightshift}}
-										</div>
-									</div>
-	                            	<div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
+									<div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4">
+										<div class="small " style="font-style: normal!important;font-size: 15px;text-align:left!important;">
 											<b>Expected Salary:</b> {{$val->jobapplicant_monthlyexpectedsalary}}
 										</div>
 									</div>
@@ -84,7 +81,20 @@
 
 								<div class="row" style="display: flex!important; margin-left: -2%">
                                 	<div class="col-md-8 col-sm-8 col-8 col-lg-8 col-xl-8">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
+										<div class="small " style="font-style: normal!important;font-size: 15px;text-align:left!important;">
+											<b>Comfortable in Night?:</b> {{$val->jobapplicant_nightshift}}
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4">
+										<div class="small " style="font-style: normal!important;font-size: 15px;text-align:left!important;">
+											<b>Contact#:</b> {{$val->jobapplicant_contact}}
+										</div>
+									</div>
+								</div>
+
+								<div class="row" style="display: flex!important; margin-left: -2%">
+                                	<div class="col-md-8 col-sm-8 col-8 col-lg-8 col-xl-8">
+										<div class="small " style="font-style: normal!important;font-size: 15px;text-align:left!important;">
 											<b>Career Level:</b> @if($val->jobapplicant_careerlevel == "stusclcol" ) Student (School/College)
 		                                                            @elseif( $val->jobapplicant_careerlevel == "undgra" ) Student (Undergrad./Grad.)
 		                                                            @elseif( $val->jobapplicant_careerlevel == "entlev" ) Entry Level
@@ -95,23 +105,19 @@
 		                                                            @endif
 		                                </div>
 		                            </div>
-	                            	<div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
-											<b>Contact#:</b> {{$val->jobapplicant_contact}}
-										</div>
-									</div>
+	                         
 								</div>
 
 								<div class="row" style="display: flex!important; margin-left: -2%">
                                 	<div class="col-md-12 col-sm-12 col-12 col-lg-12 col-xl-12">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
+										<div class="small " style="font-style: normal!important;font-size: 15px;text-align:left!important;">
 											<b>Education:</b> {{$val->jobapplicant_edu_cerdeg}}
 										</div>
 									</div>
 								</div>
 								<div class="row" style="display: flex!important; margin-left: -2%">
                                 	<div class="col-md-12 col-sm-12 col-12 col-lg-12 col-xl-12">
-										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
+										<div class="small " style="font-style: normal!important;font-size: 15px;text-align:left!important;">
 											<b>HR Comment:</b> {{$val->jobapplicant_hrcomment}}
 										</div>
 									</div>

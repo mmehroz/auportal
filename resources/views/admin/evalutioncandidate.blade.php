@@ -37,11 +37,10 @@
 													<th>Resume</th>
 													<th>Evalution Form</th>
 													<th>View</th>
-													<th>PDF</th>
+													<!-- <th>PDF</th> -->
 													<th>Name</th>
 													<th>Email</th>
 													<th>Contact No</th>
-													<th>Department</th>
 													<th>Postion Appplied for</th>
 												</tr>
 											</thead>
@@ -58,15 +57,14 @@
 																</div>--->
 																</div>
 														</td>
-														<td class="text-right">
+														<!-- <td class="text-right">
 															<div class="dropdown dropdown-action">
 																<a href="{{ URL::to('/evalution_formpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
 																</div>
-														</td>
+														</td> -->
 														<td>{{$datas->jobapplicant_name}}</td>
-														<td>{{$datas->log_email}}</td>
+														<td>{{$datas->can_email}}</td>
 														<td>{{$datas->jobapplicant_contact}}</td>
-														<td>{{$datas->dept_name}}</td>
 														<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 													</tr>
 												@endforeach

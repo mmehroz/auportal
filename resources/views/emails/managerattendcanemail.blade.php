@@ -48,7 +48,7 @@
 						<div class="account-wrapper">
 							<!-- start preheader -->
 							<div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-							Candidate Arrival For Interview | AU Telecom
+							Thank You for Interviewing with Arc Inventador
 							</div>
 							<!-- end preheader -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -58,8 +58,8 @@
 							        	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 								          	<tr>
 								            	<td align="center" valign="top" style="padding: 20px 24px;">
-								            		<a href="https://autelecom.net/" target="_blank" style="display: inline-block;">
-								                		<img src="http://209.182.216.71/public/assets/img/logo22.png" alt="BWC" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
+								            		<a href="https://www.arcinventador.com/" target="_blank" style="display: inline-block;">
+								                		<img src="https://avidhaus.com/images/arclogo.png" alt="" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
 								            		</a>
 								            	</td>
 								          	</tr>
@@ -73,7 +73,7 @@
 							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 							          <tr>
 							            <td align="left" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-							              <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Dear {{$datas['managerdetail']->elsemployees_name }}</h1>
+							              <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Dear <b>{{$datas['candidate']->jobapplicant_name }}</b></h1>
 							            </td>
 							          </tr>
 							        </table>
@@ -86,33 +86,39 @@
 							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 							          <!-- start copy -->
 							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px;  padding-bottom:0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">We have a Candidate name <b>{{$datas['candidate']->jobapplicant_name }}</b> which you approved to attend an interview is coming for interview.</p>
-							            </td>
-							          </tr>
-							          <!-- end copy -->
-							          <tr>
 							            <!---<td align="left" bgcolor="#ffffff" style="padding: 24px; padding-top:20px;  padding-bottom:0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
 							              <p style="margin: 0; color: #000;">
 							              	Please Ignore it The portal is in Under Development.<br>
 							            </td>--->
 							          </tr>
-							          <!-- start button 
 							          <tr>
 							            <td align="left" bgcolor="#ffffff" style="padding: 24px; padding-top:20px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">
-							              	Please note that Zoom Meeting ID will be shared with you before the interview.<br>
-							            	Don’t miss this opportunity as <b>Level 3 BOS pvt Ltd</b> gives candidates a platform to further discuss their background and expand on key aspects of their work experience that make them a great fit for the position and help find their dream job.<br>
-							          		Please share your updated resume and acknowledge when received.</p>
+							              <p style="margin: 0; color: #000;">														
+										  	We would like to express our sincere gratitude for taking the time to attend the interview with our team for the <b>{{$datas['candidate']->jobapplicant_postionapppliedform }}.</b> position at Arc Inventador. We appreciate the effort you put into preparing for the interview and your interest in our organization.
+											<br><br>
+											We were impressed with your qualifications and experience, and we enjoyed learning more about your skills and background. Your enthusiasm for the role and our organization was evident throughout the interview process, and we appreciated your thoughtful responses to our questions.
+											<br><br>
+											We want to assure you that your application is being evaluated, and we will contact you as soon as possible to inform you of the outcome of the interview process. We understand that waiting for the outcome of the interview can be stressful, but please know that we will provide you with a prompt update.
+											<br><br>
+											In the meantime, if you have any questions or require any further information, please do not hesitate to contact us. We are always happy to assist you in any way we can.
+											<br><br>
+											Once again, thank you for considering Arc Inventador as your potential employer. We appreciate your interest in our organization, and we look forward to getting in touch with you soon.
+											<br><br>
+											Best regards,
+											<br>
+											Team Recruitment
+											<br>
+											Arc Inventador
+</p>
 							            </td>
-							          </tr>-->
+							          </tr>
 							          <!-- end button -->
 							          <!-- start copy -->
-							          <tr>
+							          <!-- <tr>
 							            <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
 							              <p style="margin: 0;"><b>Thank you!</b><br> </p>
 							            </td>
-							          </tr>
+							          </tr> -->
 							          <!-- end copy -->
 							        </table>
 							      </td>
@@ -126,7 +132,9 @@
 							          <tr>
 							            <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
 							              <!-- <p style="margin: 0;">To stop receiving these emails, you can <a href="https://sendgrid.com" target="_blank">unsubscribe</a> at any time.</p> -->
-							              <p style="margin: 0;">&copy; <b>AU Telecom</b> 2021. All Right Reserved. </p>
+										  	<a href="https://www.arcinventador.com/" target="_blank" style="display: inline-block;"> 
+										  		<p style="margin: 0;">&copy; <b>Arc-Inventador</b> <?php echo(date('Y'))?>. All Right Reserved. </p>
+											</a>
 							            </td>
 							          </tr>
 							          <!-- end unsubscribe -->

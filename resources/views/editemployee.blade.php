@@ -1,5 +1,79 @@
 @extends('layout.apptheme')
 @section('hr-HRM')
+<style type="text/css">
+	.form-control {
+		color: #000000fc!important;
+	}
+	.card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    margin: 35px 30px;
+    border-radius: 15px !important;
+    border: none;
+}
+	.card-header {
+    background-color: #ebebeb;
+    text-align: center;
+    border-radius: 5px !important;
+}
+.card-body {
+    background: #edf2f5;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.7rem + 2px);
+    font-family: 'Raleway', sans-serif;
+}
+.form-control:focus,.form-control:active{
+	background: #fff !important;
+}
+.form-control {
+    /* border-color: #0f1431; */
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 700;
+    height: 55px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form-control {
+
+    color: black;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 700;
+    height: 44px;
+}
+.col-form-label {
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+    color: #4c4c4c;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+color:#4c4c4c
+}
+.card-header h4 {
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+}
+::placeholder {
+ font-weight:400;
+}
+.submitbtn {
+    background-color: #5069e7;
+    color: #fff;
+    width: 15%;
+    height: 50px;
+    margin-top: 25px;
+}
+</style>
 <div class="page-wrapper">
     <div class="content container-fluid">
 	
@@ -30,58 +104,62 @@
 						</div>
 						<div class="card-body">
 							<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<input type="hidden" name="hdnempid" id="hdnempid" value="{{$data['user']->elsemployees_empid}}" class="form-control"/>
 									<label class="col-form-label">Employee Batch ID</label>
 									<input type="text" name="emp_batch" placeholder="Please Enter Employee Batch ID" title="Please Enter your Full Name"  class="form-control required_colom" required="required" id="name" value="{{$data['user']->elsemployees_batchid}}" >
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Name</label>
 									<input type="text" name="emp_name" placeholder="Please Enter Employee Name" title="Please Enter your Full Name"  class="form-control required_colom" required="required" id="name" value="{{$data['user']->elsemployees_name}}" >
 									</div>
-								</div>
-									<div class="col-md-6">
+							</div>
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Father Name</label>
 									<input type="text" name="emp_fname"  placeholder="Please Enter Employee  Father Name" title="Please Enter your Seven (7) Digit ADP Employee ID"  class="allownumericwithoutdecimala form-control required_colom"  required="required" id="name" value="{{$data['user']->elsemployees_fname}}">
 								</div>
 							</div>
-							<div class="col-md-6">
+							</div>
+							<div class="row">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee CNIC</label>
 									<input type="text" name="emp_cnic"  placeholder="Please Enter Employee  CNIC" title="Please Enter your Seven (7) Digit ADP Employee ID"  class="allownumericwithoutdecimala form-control required_colom"  required="required" id="name" value="{{$data['user']->elsemployees_cnic}}">
 									</div>
-								</div>
-							<div class="col-md-6">
+							</div>
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Contact No</label>
 									<input type="text" name="emp_contactno"  placeholder="Please Enter Employee  Contact No" title="Please Enter your Seven (7) Digit ADP Employee ID"  class="allownumericwithoutdecimala form-control required_colom"  required="required" id="name" value="{{$data['user']->elsemployees_cno}}">
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Company Email</label>
 									<input type="text" name="emp_com_email"  placeholder="Please Enter Employee  Company Email" title="Please Enter your Seven (7) Digit ADP Employee ID"  class="allownumericwithoutdecimala form-control required_colom"  required="required" id="name" value="{{$data['user']->elsemployees_email}}">
 									</div>
-								</div>
-							<div class="col-md-6">
+							</div>
+							</div>
+							<div class="row">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Date of Birth</label>
 										<div class="cal-icon"><input type="text" name="emp_dob"   class="form-control datetimepicker required_colom" required="required" value="{{ $data['user']->elsemployees_dofbirth }}">
 										</div>
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Date of Joining</label>
 										<div class="cal-icon">
 										<input type="text" name="emp_doj"   class="form-control datetimepicker required_colom" required="required" value="{{ $data['user']->elsemployees_dofjoining }}">
 										</div>
 									</div>
-								</div>
+							</div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Department</label>
@@ -92,6 +170,8 @@
                                 	</select>
 								</div>
 							</div>
+							</div>
+							<div class="row">
 							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Designation</label>
@@ -123,6 +203,8 @@
 	                                </select>
 								</div>
 							</div>
+							</div>
+							<div class="row">
 							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Sick Leave</label>
@@ -135,19 +217,21 @@
 									<input type="text" name="emp_annual_leave" title="Please Enter Store Name" placeholder="Please Enter Employee Annual Leave" class="form-control required_colom"  required="required" id="name" value="{{ $data["user"]->elsemployees_annualleaves }}">
 								</div>
 							</div>
-							<div class="col-md-8">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Address</label>
 									<textarea class="form-control" rows="4" cols="5" id="comment" name="emp_address" placeholder="Enter Address">{{ $data["user"]->elsemployees_address }}</textarea>
 									</div>
-								</div>
+							</div>
+							</div>
+							<div class="row">
 									<!-- <div class="col-md-3">
 										<label class="col-form-label">Upload Picture</label>
 											<input type="file" accept=".jpg, .jpeg, .png" class="form-control">
 									</div> -->
 								<div class="col-md-4">
 									<div class="form-group">
-										<label for="name">Employee Status:</label>
+										<label for="name" class="col-form-label">Employee Status:</label>
 										<select class="form-control " name="emp_status"  required>
 											@foreach($data['empstatus'] as $empstatus)
 											<option @if ($data["user"]->elsemployees_status == $empstatus->status_id ) {{"selected"}} @endif value={{$empstatus->status_id}}>{{$empstatus->status_name}}</option>
@@ -157,11 +241,11 @@
 						  		</div>
 						  		<div class="col-md-4">
 									<div class="form-group">
-										<label for="name">Date Of Leaving:</label>
+										<label for="name" class="col-form-label">Date Of Leaving:</label>
 										<input type="date" name="dol" id="dol" class="form-control" value="{{ $data["user"]->elsemployees_dofleaving }}">
                                 	</div>
 						  		</div>
-						  	</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -194,32 +278,33 @@
 							</div>
 							</div>
 							<div class="row">
-						    <div class="col-md-3">
+						    <div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Attendance Allowance</label>
 										<input type="number" name="attendance_allowance" placeholder="Please Enter Attendance Allowance" title="Please Enter Attendance Allowance" required class="form-control" id="attendance_allowance" value="{{$data['salary'][2]}}">
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Punctuality Allowance</label>
 										<input type="number" name="punctuality_allowance" placeholder="Please Enter Punctuality Allowance" title="Please Enter Punctuality Allowance" required class="form-control" id="punctuality_allowance" value="{{$data['salary'][3]}}">
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Transport Allowance</label>
 										<input type="number" name="transport_allowance" placeholder="Please Enter Transport Allowance" title="Please Enter Transport Allowance" required class="form-control" id="transport_allowance" value="{{$data['salary'][4]}}">
 								</div>
 							</div>
-							<div class="col-md-3">
-								<div class="form-group">
-									<label class="col-form-label">Fuel Allowance</label>
-										<input type="number" name="fuel_allowance" placeholder="Please Enter Fuel Allowance" title="Please Enter Fuel Allowance" required class="form-control" id="fuel_allowance" value="{{$data['salary'][5]}}">
-								</div>
-							</div>
+							
 							</div>
 							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-form-label">Fuel Allowance</label>
+											<input type="number" name="fuel_allowance" placeholder="Please Enter Fuel Allowance" title="Please Enter Fuel Allowance" required class="form-control" id="fuel_allowance" value="{{$data['salary'][5]}}">
+									</div>
+								</div>
 						    <div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Is Eligible For Car?</label><br>
@@ -256,23 +341,26 @@
 		                            </select>
 								</div>
 							</div>
-							<div class="col-md-4" id="car" style="display: none;">
-								<div class="form-group">
-									<label class="col-form-label">Select Car</label><br>
-									<select class="form-control " name="car_id" id="elsemployees_car">
-										<option value="" selected>Please Select</option>
-										@foreach($data['car'] as $cars)
-										<option @if ($data["user"]->car_id == $cars->car_id ) {{"selected"}} @endif <option value={{$cars->car_id}}>{{$cars->car_name}}</option>
-										@endforeach
-		                            </select>
-								</div>
+						
 							</div>
-							<div class="col-md-4" id="amount" style="display: none;">
-								<div class="form-group">
-									<label class="col-form-label">Enter Amount</label><br>
-									<input type="number" name="elsemployees_caramount" id="elsemployees_caramount" placeholder="Please Enter Car Rent Amount" title="Please Enter Car Rent Amount"  class="form-control" id="caramount" value="{{ $data["user"]->elsemployees_ext }}">
+							<div class="row">
+								<div class="col-md-4" id="car" style="display: none;">
+									<div class="form-group">
+										<label class="col-form-label">Select Car</label><br>
+										<select class="form-control " name="car_id" id="elsemployees_car">
+											<option value="" selected>Please Select</option>
+											@foreach($data['car'] as $cars)
+											<option @if ($data["user"]->car_id == $cars->car_id ) {{"selected"}} @endif <option value={{$cars->car_id}}>{{$cars->car_name}}</option>
+											@endforeach
+										</select>
+									</div>
 								</div>
-							</div>
+								<div class="col-md-4" id="amount" style="display: none;">
+									<div class="form-group">
+										<label class="col-form-label">Enter Amount</label><br>
+										<input type="number" name="elsemployees_caramount" id="elsemployees_caramount" placeholder="Please Enter Car Rent Amount" title="Please Enter Car Rent Amount"  class="form-control" id="caramount" value="{{ $data["user"]->elsemployees_ext }}">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -320,13 +408,13 @@
 					</div>
 					<div class="card-body">
 						<div class="row">
-						    <div class="col-md-6">
+						    <div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Phone (Ext)</label>
 										<input type="number" name="ext" placeholder="Please Enter Extention" title="Please Enter Extention" required class="form-control" id="ext" value="{{ $data["user"]->elsemployees_ext }}">
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employement Type</label>
 										<select class="form-control "   placeholder="Employement Type" name="emp_type" >
@@ -362,37 +450,36 @@
 					
 					<div class="card-body">
 						<div class="row">
-						    <div class="col-md-6">
+						    <div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Account Tittle</label>
 										<input type="text" name="emp_acctitle" placeholder="Please Enter Employee Account Tittle" class="form-control" id="name" value="{{$data['user']->account_title}}">
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Account No</label>
 										<input type="number" name="emp_accno" placeholder="Please Enter Employee Account No" class="form-control" id="name" value="{{$data['user']->account_no}}">
 									</div>
 								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-md-3 col-form-label">IBAN No</label>
-								<div class="col-md-9">
+								<div class="col-md-4">
+									<label class="col-md-3 col-form-label">IBAN No</label>
 									<input type="text" name="emp_ibanno" placeholder="Please Enter Employee IBAN No" class="form-control" id="name" value="{{$data['user']->iban_no}}">
 								</div>
 							</div>
-							<div class="form-group row">
+						<div class="row">
+							<div class="col-md-4">
 								<label class="col-md-3 col-form-label">Bank Branch</label>
-								<div class="col-md-9">
-									<input type="text" name="emp_bbranch" placeholder="Please Enter Employee Bank Branch" class="form-control" id="name" value="{{$data['user']->bank_branch}}">
-								</div>
+								<input type="text" name="emp_bbranch" placeholder="Please Enter Employee Bank Branch" class="form-control" id="name" value="{{$data['user']->bank_branch}}">
 							</div>
-							<div class="form-group row">
+							<div class="col-md-4">
 								<label class="col-md-3 col-form-label">Bank Name</label>
-								<div class="col-md-9">
-									<input type="text" name="emp_bname" placeholder="Please Enter Employee Bank Name" class="form-control" id="name" value="{{$data['user']->bank_name}}">
-								</div>
+								<input type="text" name="emp_bname" placeholder="Please Enter Employee Bank Name" class="form-control" id="name" value="{{$data['user']->bank_name}}">
 							</div>
+							<div class="col-md-4"></div>
+						</div>
+							
+						
 						</div>
 					</div>
 				</div>
@@ -424,13 +511,18 @@
 								</div>
 							</div>
 							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="">
+										<button type="submit" class="btn submitbtn">Submit</button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div><br>
-			<div class="text-right">
-				<button type="submit" class="btn btn-primary">Submit</button>
 			</div>
+			
 							</form>
 						</div>
 					</div>

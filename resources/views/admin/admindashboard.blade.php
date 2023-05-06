@@ -24,7 +24,7 @@
 	.highcharts-data-table table {
 	    font-family: Verdana, sans-serif;
 	    border-collapse: collapse;
-	    border: 1px solid #ebebeb;
+	    border: 1px solid #5069e7;
 	    margin: 10px auto;
 	    text-align: center;
 	    width: 100%;
@@ -124,7 +124,7 @@ table.table td h2.table-avatar{
     font-family: 'Raleway', sans-serif;
 }
 .submitbtn{
-	background: #40c4f1 !important;
+	background: #5069e7 !important;
     color: #fff !important;
     font-weight: 600;
     width: 35%;
@@ -281,7 +281,7 @@ table.table td h2.table-avatar{
 								
 								<div class="form-group d-flex">
 									<input type="month" class="form-control calendarbtn" name="filter" id="filter">
-									<input type="button" class="btn form-control submitbtn" name="btnfilter" value="Submit" onclick="filteradminDashboard();" style="color: #0c0c0c;background-color: #40c4f1; border-color: #40c4f1;">
+									<input type="button" class="btn form-control submitbtn" name="btnfilter" value="Submit" onclick="filteradminDashboard();" style="color: #0c0c0c;background-color: #5069e7; border-color: #5069e7;">
 								</div>
 							
 					<!-- <form> -->

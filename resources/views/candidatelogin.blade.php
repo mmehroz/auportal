@@ -1,172 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.logintheme')
+@section('content')
+<link href="https://www.day2daywholesale.com/_next/static/css/b71d463df487ea9c.css" rel="stylesheet" />
 
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-<meta name="description" content="Register Your Self In Our Recruitment Portal For Your Dream Job | AU Telecom">
-<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
-<meta name="author" content="Register Your Self In Our Recruitment Portal For Your Dream Job | AU Telecom">
-<meta name="robots" content="noindex, nofollow">
-<title>HRMS</title>
-<link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/favicong/favicon.png') !!}" />
-<!-- <link rel="stylesheet" href="style.scss"> -->
+<body>
+	<div class="w-screen h-screen overflow-y-scroll">
+		<div class="w-full h-full flex">
+			<div
+				class="h-full w-1/2  hidden land:flex flex-col items-start p-10 justify-between" style="background-image: linear-gradient(to right bottom, #6416ec, #33e0e0);">
+				<a href="/">
+				<img src="{!! asset('public/img/arc-logo.gif') !!}" style="width: 24%;">
+				</a>
+				<div class="-mt-20 flex flex-col gap-5 w-[80%]">
+					<!-- <div class="w-full flex gap-10 items-center">
+						<div class="2xl:w-60 2xl:h-60 w-[40%] h-[100%] relative"><img alt="" sizes="100vw"
+								
+							src="{!! asset('public/img/logo.png') !!}"
+								decoding="async" data-nimg="fill" class="object-cover" loading="lazy"
+								style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+						</div>
+						<div class="flex flex-col w-[54%] gap-4">
+							<h2
+								class="text-white font-bold w-full text-[24px] 2xl:text-[40px] font-primary mt-2 uppercase">
+								Start your journey with us.</h2>
+				
+						</div>
+					</div> -->
+					<div class="row">
+<div class="col-lg-12">
+	<img alt="" sizes="100vw"
+								
+							src="{!! asset('public/img/loho.png') !!}"
+								decoding="async" data-nimg="fill" class="object-cover" loading="lazy"
+								style=" height: 100%; width: 100%; inset: 0px; color: transparent;">
+</div>
 
-<link rel="stylesheet" href="{!! asset('public/assets/css/logincss/style.css') !!}" />
-<link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}" />
-</head>
-<style>
-    .form-structor{
-        left:0;
-    }
-    .form-structor .signup{
-        top:34%;
-    }
-video {
-object-fit: cover;
-width: 100vw;
-height: 100vh;
-position: fixed;
-top: 0;
-left: 0;
-}
-.field-icon {
-float: right;
-color: #6f8c51;
-font-size: 20px;
-margin-left: -25px;
-margin-top: -36px;
-position: relative;
-z-index: 2;
-}
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
+					</div>
+				</div>
+				<div class="w-full flex">
+					<p class="text-white">© Copyright 2023 Arc-Inventador. All rights reserved</p>
+				</div>
+			</div>
+			<div
+				class="w-full land:w-1/2 flex flex-col items-start px-10 py-10 pb-40 sm:pb-40 justify-between overflow-y-scroll">
+				<div>
+					<h2 class="text-[26px] font-bold text-primaryText font-primary mt-10" >Welcome to Arc Inventador!</h2>
+					<h2 class=" text-primaryText font-primary" style="line-height:30px;"><br>We would like to extend a warm welcome to you as you prepare to submit your job application form. We are thrilled that you have taken an interest in our organization and are excited to learn more about you.<br><br>
 
-</style>
+At <b>Arc Inventador</b>, we are committed to creating a supportive and inclusive work environment where everyone can thrive. We believe that our employees are our most valuable asset and we are always looking for talented individuals who share our values and vision.<br><br>
 
-<body >
-    <video autoplay muted loop id="myVideo">
-		<source src="{!! asset('public/assets/video/au-video.mp4') !!}" type="video/mp4">
-	  </video>
-<section>
-<!-- <video width="100%" autoplay muted loop>
-<source src="" type="video/mp4" />
-<source src="public/kw_assets/1.ogg" type="video/ogg" />
-Your browser does not support the video tag.
-</video> -->
+We understand that the application process can be a bit daunting, but we assure you that we will review your application with care and consideration. We are looking for candidates who are passionate, motivated, and eager to make a positive impact in their roles.<br><br>
+
+Thank you for considering <b>Arc Inventador</b> as your potential employer. We look forward to reviewing your application and getting to know you better.</h2>
+</div>
 
 
-<div class="form-structor">
+				
+				<div class=" sm:w-[50%] 2xl:w-[40%] flex mt-10 justify-between items-center">				<a style="text-decoration:none;" href="{{URL('jobform')}}"><button
+							class="w-44 h-12 disabled:cursor-not-allowed submit disabled:shadow-none flex items-center justify-center rounded-md  transition duration-100  text-sx font-primary font-semibold hover:shadow-lg  select-none"
+							style="color: white; transform: none;    background-image: linear-gradient(to right bottom, #6416ec, #33e0e0);" type="submit" ><span>Apply Now</span></button></a>
+					
+					
+					</div>
+				<div></div>
+			</div>
+		</div>
+	</div>
 
-@if(session('message'))
-<div class="account-title" style="color: #fbaa1a;text-align: center;font-size: 24px;font-weight: bold;">{{session('message')}}</div>
-@endif
-@if ($errors->any())
-<div class="alert alert-danger">
-<ul>
-@foreach ($errors->all() as $error)
-<div> <p><li>{{ $error }}</li></p> </div>
-@endforeach
-</ul>
-</div>
-@endif
-<form action="{{ URL::to('/candidatelogin')}}" id="frmimage" method="post">
-{{ csrf_field() }}
-<div>
-    <img src="{!! asset('public/images/BizzWorldLogo-05.png') !!}" alt="" style="margin-left: 50px">
-    </div>
-<div class="signup">
-<h2 class="form-title" id="signup"><span>or</span>Login</h2>
-<div class="form-holder">
-<input type="email" class="input" name="username" placeholder="Email" required />
-<input type="password" class="input" placeholder="Password" name="pass" id="password-field" required/>
-<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" style="color: #0059ef" id="pass-status" onclick="viewPassword()"></span>
-</div>
-<button class="submit-btn sign-btn">Login</button>
-</div>
-</form>
-<form method="Post" action="{{url('/saveJobee')}}">
-{{ csrf_field() }}
-<div class="login slide-up">
-<div class="center">
-<h2 class="form-title" id="login"><span>or</span>Register</h2>
-<div class="form-holder">
-<input type="email" class="input" name="email" placeholder="Email" />
-<input type="password" class="input" placeholder="Password" name="password" id="password-fieldr" min="8" title="Must contain at least eight number" required/>
-<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" style="color: #0059ef" id="pass-statusr" onclick="viewPasswordr()"></span>
-<input type="password" class="input" placeholder="Confirm Password" name="password_confirmation" min="8" title="Must contain at least eight number" required/>
-</div>
-<button type="submit" class="submit-btn">Register</button>
-</div>
-</div>
-</form>
-</div>
-</section>
 </body>
-<script>
-console.clear();
 
-const loginBtn = document.getElementById('login');
-const signupBtn = document.getElementById('signup');
+<script type="text/javascript">
+	function viewPassword() {
+		var passwordInput = document.getElementById('password-field');
+		var passStatus = document.getElementById('pass-status');
 
-loginBtn.addEventListener('click', (e) => {
-let parent = e.target.parentNode.parentNode;
-Array.from(e.target.parentNode.parentNode.classList).find((element) => {
-if (element !== "slide-up") {
-parent.classList.add('slide-up')
-} else {
-signupBtn.parentNode.classList.add('slide-up')
-parent.classList.remove('slide-up')
-}
-});
-});
+		if (passwordInput.type == 'password') {
+			passwordInput.type = 'text';
+			passStatus.className = 'fa fa-fw fa-eye-slash field-icon toggle-password';
 
-signupBtn.addEventListener('click', (e) => {
-let parent = e.target.parentNode;
-Array.from(e.target.parentNode.classList).find((element) => {
-if (element !== "slide-up") {
-parent.classList.add('slide-up')
-} else {
-loginBtn.parentNode.parentNode.classList.add('slide-up')
-parent.classList.remove('slide-up')
-}
-});
-});
-function viewPassword()
-{
-var passwordInput = document.getElementById('password-field');
-var passStatus = document.getElementById('pass-status');
-
-if (passwordInput.type == 'password'){
-passwordInput.type='text';
-passStatus.className='fa fa-fw fa-eye-slash field-icon toggle-password';
-
-}
-else{
-passwordInput.type='password';
-passStatus.className='fa fa-fw fa-eye field-icon toggle-password';
-}
-}
-function viewPasswordr()
-{
-var passwordInput = document.getElementById('password-fieldr');
-var passStatus = document.getElementById('pass-statusr');
-
-if (passwordInput.type == 'password'){
-passwordInput.type='text';
-passStatus.className='fa fa-fw fa-eye-slash field-icon toggle-password';
-
-}
-else{
-passwordInput.type='password';
-passStatus.className='fa fa-fw fa-eye field-icon toggle-password';
-}
-}
+		}
+		else {
+			passwordInput.type = 'password';
+			passStatus.className = 'fa fa-fw fa-eye field-icon toggle-password';
+		}
+	}
 </script>
-
-</html>
+@endsection

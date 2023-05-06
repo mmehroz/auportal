@@ -122,9 +122,9 @@
 	.bd .btn{
  width: 160px;
     /*height: 20px !important;*/
-    border: 1px solid ##40c4f1;
+    border: 1px solid ##5069e7;
     outline: none;
-    background-color: ##40c4f1;
+    background-color: ##5069e7;
     color: white;
     border-radius: 20px;
     padding-bottom: 30px !important;
@@ -133,7 +133,7 @@
 }
 .bd .btn:hover{
     background-color: white;
-    color: ##40c4f1;
+    color: ##5069e7;
 }
 	
 

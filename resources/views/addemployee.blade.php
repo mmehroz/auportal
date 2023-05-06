@@ -5,6 +5,75 @@
 	.form-control {
 		color: #000000fc!important;
 	}
+	.card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    margin: 35px 30px;
+    border-radius: 15px !important;
+    border: none;
+}
+	.card-header {
+    background-color: #ebebeb;
+    text-align: center;
+    border-radius: 5px !important;
+}
+.card-body {
+    background: #edf2f5;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.7rem + 2px);
+    font-family: 'Raleway', sans-serif;
+}
+.form-control:focus,.form-control:active{
+	background: #fff !important;
+}
+.form-control {
+    /* border-color: #0f1431; */
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 700;
+    height: 55px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form-control {
+
+    color: black;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 700;
+    height: 44px;
+}
+.col-form-label {
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+    color: #4c4c4c;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+color:#4c4c4c
+}
+.card-header h4 {
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+}
+::placeholder {
+ font-weight:400;
+}
+.submitbtn {
+    background-color: #5069e7;
+    color: #fff;
+    width: 15%;
+    height: 50px;
+    margin-top: 25px;
+}
 </style>
 			
 <!-- Page Wrapper -->
@@ -44,37 +113,35 @@
 					{{ csrf_field() }} 
 					<div class="card-body">
 						<div class="row">
-						    <div class="col-md-6">
+						    <div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Account Tittle</label>
 										<input type="text" name="emp_acctitle" placeholder="Please Enter Employee Account Tittle" class="form-control" id="name" value="{{ old('emp_acctitle') }}">
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Account No</label>
 										<input type="number" name="emp_accno" placeholder="Please Enter Employee Account No" class="form-control" id="name" value="{{ old('emp_accno') }}">
 									</div>
 								</div>
-							</div>
-							<div class="form-group row">
-								<label class="col-md-3 col-form-label">IBAN No</label>
-								<div class="col-md-9">
-									<input type="text" name="emp_ibanno" placeholder="Please Enter Employee IBAN No" class="form-control" id="name" value="{{ old('emp_ibanno') }}">
+								<div class="col-md-4">
+										<label class="col-md-3 col-form-label">IBAN No</label>
+											<input type="text" name="emp_ibanno" placeholder="Please Enter Employee IBAN No" class="form-control" id="name" value="{{ old('emp_ibanno') }}">
 								</div>
 							</div>
-							<div class="form-group row">
+						<div class="row">
+							<div class="col-md-4">
 								<label class="col-md-3 col-form-label">Bank Branch</label>
-								<div class="col-md-9">
-									<input type="text" name="emp_bbranch" placeholder="Please Enter Employee Bank Branch" class="form-control" id="name" value="{{ old('emp_bbranch') }}">
-								</div>
+								<input type="text" name="emp_bbranch" placeholder="Please Enter Employee Bank Branch" class="form-control" id="name" value="{{ old('emp_bbranch') }}">
 							</div>
-							<div class="form-group row">
+							<div class="col-md-4">
 								<label class="col-md-3 col-form-label">Bank Name</label>
-								<div class="col-md-9">
-									<input type="text" name="emp_bname" placeholder="Please Enter Employee Bank Name" class="form-control" id="name" value="{{ old('emp_bname') }}">
-								</div>
+								<input type="text" name="emp_bname" placeholder="Please Enter Employee Bank Name" class="form-control" id="name" value="{{ old('emp_bname') }}">
 							</div>
+						</div>
+						
+							
 						</div>
 
 					</div>
@@ -108,33 +175,34 @@
 							</div>
 							</div>
 							<div class="row">
-						    <div class="col-md-3">
+						    <div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Attendance Allowance</label>
 										<input type="number" name="attendance_allowance" placeholder="Please Enter Attendance Allowance" title="Please Enter Attendance Allowance" required class="form-control" id="attendance_allowance" value="{{ old('attendance_allowance') }}0">
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Punctuality Allowance</label>
 										<input type="number" name="punctuality_allowance" placeholder="Please Enter Punctuality Allowance" title="Please Enter Punctuality Allowance" required class="form-control" id="punctuality_allowance" value="{{ old('punctuality_allowance') }}0">
 								</div>
 							</div>
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Transport Allowance</label>
 										<input type="number
 										" name="transport_allowance" placeholder="Please Enter Transport Allowance" title="Please Enter Transport Allowance" required class="form-control" id="transport_allowance" value="{{ old('transport_allowance') }}0">
 								</div>
 							</div>
-								<div class="col-md-3">
-								<div class="form-group">
-									<label class="col-form-label">Fuel Allowance</label>
-										<input type="number" name="fuel_allowance" placeholder="Please Enter Fuel Allowance" title="Please Enter Fuel Allowance" required class="form-control" id="fuel_allowance" value="{{ old('fuel_allowance') }}0">
-								</div>
-							</div>
+						
 							</div>
 							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-form-label">Fuel Allowance</label>
+											<input type="number" name="fuel_allowance" placeholder="Please Enter Fuel Allowance" title="Please Enter Fuel Allowance" required class="form-control" id="fuel_allowance" value="{{ old('fuel_allowance') }}0">
+									</div>
+								</div>
 						    <div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Is Eligible For Car?</label><br>
@@ -154,23 +222,26 @@
 		                            </select>
 								</div>
 							</div>
-							<div class="col-md-4" id="car" style="display: none;">
-								<div class="form-group">
-									<label class="col-form-label">Select Car</label><br>
-									<select class="form-control " name="car_id" id="elsemployees_car">
-										<option value="">Please Select Car</option>
-										@foreach($data['car'] as $cars)
-										<option value="{{$cars->car_id}}">{{$cars->car_name}}</option>
-										@endforeach
-		                            </select>
-								</div>
+							
 							</div>
-							<div class="col-md-4" id="amount" style="display: none;">
-								<div class="form-group">
-									<label class="col-form-label">Enter Amount</label><br>
-									<input type="number" name="elsemployees_caramount" id="elsemployees_caramount" placeholder="Please Enter Car Rent Amount" title="Please Enter Car Rent Amount" class="form-control" id="caramount">
+							<div class="row">
+								<div class="col-md-4" id="car" style="display: none;">
+									<div class="form-group">
+										<label class="col-form-label">Select Car</label><br>
+										<select class="form-control " name="car_id" id="elsemployees_car">
+											<option value="">Please Select Car</option>
+											@foreach($data['car'] as $cars)
+											<option value="{{$cars->car_id}}">{{$cars->car_name}}</option>
+											@endforeach
+										</select>
+									</div>
 								</div>
-							</div>
+								<div class="col-md-4" id="amount" style="display: none;">
+									<div class="form-group">
+										<label class="col-form-label">Enter Amount</label><br>
+										<input type="number" name="elsemployees_caramount" id="elsemployees_caramount" placeholder="Please Enter Car Rent Amount" title="Please Enter Car Rent Amount" class="form-control" id="caramount">
+									</div>
+								</div>
 							</div>
 							<script type="text/javascript">
 							$(document).ready(function(){
@@ -218,13 +289,13 @@
 					</div>
 					<div class="card-body">
 						<div class="row">
-						    <div class="col-md-6">
+						    <div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Phone (Ext)</label>
 										<input type="number" name="ext" placeholder="Please Enter Extention" title="Please Enter Extention" required class="form-control" id="ext" value="{{ old('ext') }}">
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employement Type</label>
 										<select class="form-control "   placeholder="Employement Type" name="emp_type"  required>
@@ -235,35 +306,35 @@
                                 		</select>
 									</div>
 								</div>
-							</div>
-							<div class="row">
-						    <div class="col-md-6">
-								<div class="form-group">
-									<label class="col-form-label">Check-In Time</label>
-										<input type="time" name="checkintime" placeholder="Please Enter Check-In Time" title="Please Enter Check-In Time" class="form-control" id="checkintime" value="{{ old('checkintime') }}"  required>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-form-label">Check-In Time</label>
+											<input type="time" name="checkintime" placeholder="Please Enter Check-In Time" title="Please Enter Check-In Time" class="form-control" id="checkintime" value="{{ old('checkintime') }}"  required>
+									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="row">
+						
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Check-Out Time</label>
 										<input type="time" name="checkouttime" placeholder="Please Enter Check-Out Time" title="Please Enter Check-Out Time" class="form-control" id="checkouttime" value="{{ old('checkouttime') }}"  required>
 								</div>
 							</div>
-							</div>
-							<div class="row">
-						    <div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Start Date</label>
 										<input type="date" name="startdate" placeholder="Please Enter Start Date" title="Please Enter Start Date" class="form-control" id="startdate" value="<?php echo(date('Y-m-d'))?>"  required>
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">End Date</label>
 										<input type="date" name="enddate" placeholder="Please Enter End Date" title="Please Enter End Date" class="form-control" id="enddate" value="{{ old('enddate')}}"  required>
 								</div>
 							</div>
 							</div>
+						
 						</div>
 					</div>
 				</div>
@@ -307,57 +378,61 @@
 						</div>
 						<div class="card-body">
 							<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Batch ID</label>
 									<input type="text" name="emp_batch" placeholder="Please Enter Employee Batch ID" title="Please Enter your Full Name"  class="form-control required_colom" required="required" id="name" value="{{ old('emp_batch') }}" >
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Name</label>
 									<input type="text" name="emp_name" placeholder="Please Enter Employee Name" title="Please Enter your Full Name"  class="form-control required_colom" required="required" id="name" value="{{ old('emp_name') }}" >
 									</div>
-								</div>
-									<div class="col-md-6">
+							</div>
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Father Name</label>
 									<input type="text" name="emp_fname"  placeholder="Please Enter Employee  Father Name" title="Please Enter your Seven (7) Digit ADP Employee ID"  class="allownumericwithoutdecimala form-control required_colom"  required="required" id="name" value="{{ old('emp_fname') }}">
 								</div>
 							</div>
-							<div class="col-md-6">
+						</div>
+						<div class="row">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee CNIC</label>
 									<input type="text" name="emp_cnic"  placeholder="Please Enter Employee  CNIC" title="Please Enter your Seven (7) Digit ADP Employee ID"  class="allownumericwithoutdecimala form-control required_colom"  required="required" id="name" value="{{ old('emp_cnic') }}">
 									</div>
-								</div>
-							<div class="col-md-6">
+							</div>
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Contact No</label>
 									<input type="text" name="emp_contactno"  placeholder="Please Enter Employee  Contact No" title="Please Enter your Seven (7) Digit ADP Employee ID"  class="allownumericwithoutdecimala form-control required_colom"  required="required" id="name" value="{{ old('emp_contactno') }}">
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Company Email</label>
 									<input type="text" name="emp_com_email"  placeholder="Please Enter Employee  Company Email" title="Please Enter your Seven (7) Digit ADP Employee ID"  class="allownumericwithoutdecimala form-control required_colom"  required="required" id="name" value="{{ old('emp_com_email') }}">
 									</div>
-								</div>
-							<div class="col-md-6">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Date of Birth</label>
 										<div class="cal-icon"><input type="text" id="sales" max=<?php echo date('Y-m-d',strtotime("-1 days")); ?>  title="Please Enter Employee  Collection" name="emp_dob"   class="form-control datetimepicker required_colom" required="required"  value="{{ old('emp_dob') }}">
 										</div>
 								</div>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Date of Joining</label>
 										<div class="cal-icon">
 										<input type="text" id="sales" max=<?php echo date('Y-m-d',strtotime("-1 days")); ?>  title="Please Enter Employee " name="emp_doj"   class="form-control datetimepicker required_colom" required="required"  value="{{ old('emp_doj') }}">
 										</div>
 									</div>
-								</div>
+							</div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Department</label>
@@ -369,40 +444,44 @@
                                 </select>
 								</div>
 							</div>
-							<div class="col-md-4">
-								<div class="form-group">
-									<label class="col-form-label">Employee Designation</label>
-									<select class="form-control "   placeholder="Enter TM Name" name="emp_desg"  required>
-                                		<option selected="" disabled="" value="{{ old('emp_desg') }}">Select Employee Designation</option>
-		                            	@foreach($data['desg'] as $desig)
-		                                <option value={{$desig->DESG_ID}}>{{$desig->DESG_NAME}}</option>
-		                            	@endforeach 
-	                                </select>
+						</div>
+							<div class="row">
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-form-label">Employee Designation</label>
+										<select class="form-control "   placeholder="Enter TM Name" name="emp_desg"  required>
+											<option selected="" disabled="" value="{{ old('emp_desg') }}">Select Employee Designation</option>
+											@foreach($data['desg'] as $desig)
+											<option value={{$desig->DESG_ID}}>{{$desig->DESG_NAME}}</option>
+											@endforeach 
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-form-label">Employee Reporting To</label>
+										<select class="form-control "  placeholder="Enter TM Name" name="emp_report"  required>
+											<option selected="" disabled="" value="{{ old('emp_report') }}">Select Employee Reporting To</option>
+											@foreach($data['manager'] as $mnger)
+											<option value={{$mnger->elsemployees_empid}}>{{$mnger->elsemployees_name}}</option>
+											@endforeach 
+											<option value="1">Admin</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label class="col-form-label">Employee Role</label>
+										<select class="form-control "  placeholder="Enter TM Name" name="emp_role"  required>
+											<option selected="" disabled="" value="{{ old('emp_role') }}">Select Employee Role</option>
+											@foreach($data['role'] as $role)
+											<option value={{$role->roleid}}>{{$role->rolename}}</option>
+											@endforeach 
+										</select>
+									</div>
 								</div>
 							</div>
-							<div class="col-md-4">
-								<div class="form-group">
-									<label class="col-form-label">Employee Reporting To</label>
-									<select class="form-control "  placeholder="Enter TM Name" name="emp_report"  required>
-                                		<option selected="" disabled="" value="{{ old('emp_report') }}">Select Employee Reporting To</option>
-		                            	@foreach($data['manager'] as $mnger)
-		                                <option value={{$mnger->elsemployees_empid}}>{{$mnger->elsemployees_name}}</option>
-		                            	@endforeach 
-		                            	<option value="1">Admin</option>
-	                                </select>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="form-group">
-									<label class="col-form-label">Employee Role</label>
-									<select class="form-control "  placeholder="Enter TM Name" name="emp_role"  required>
-                                		<option selected="" disabled="" value="{{ old('emp_role') }}">Select Employee Role</option>
-		                            	@foreach($data['role'] as $role)
-		                                <option value={{$role->roleid}}>{{$role->rolename}}</option>
-		                            	@endforeach 
-	                                </select>
-								</div>
-							</div>
+						<div class="row">
 							<div class="col-md-4">
 								<div class="form-group">
 									<label class="col-form-label">Employee Sick Leave</label>
@@ -415,29 +494,36 @@
 									<input type="text" name="emp_annual_leave" title="Please Enter Store Name" placeholder="Please Enter Employee Annual Leave" class="form-control required_colom"  required="required" id="name" value="{{ old('emp_annual_leave') }}">
 								</div>
 							</div>
-							<div class="col-md-8">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="name" class="col-form-label">Employee Status:</label>
+									<select class="form-control "   placeholder="Enter TM Name" name="emp_status"  required>
+										<option selected="" disabled="">Select Status</option>
+										<option value=2>Active</option>
+										<option value=1>Not Active</option>
+									</select>
+								</div>
+							  </div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
 								<div class="form-group">
 									<label class="col-form-label">Employee Address</label>
 									<textarea class="form-control" rows="4" cols="5" id="comment" name="emp_address" placeholder="Enter Address">{{ old('emp_address') }}</textarea>
 									</div>
-								</div>
+							</div>
+						</div>
+						
+							
 									<!-- <div class="col-md-3">
 										<label class="col-form-label">Upload Picture</label>
 											<input type="file" accept=".jpg, .jpeg, .png" class="form-control">
 									</div> -->
-								<div class="col-md-4">
-									<div class="form-group">
-										<label for="name">Employee Status:</label>
-										<select class="form-control "   placeholder="Enter TM Name" name="emp_status"  required>
-											<option selected="" disabled="">Select Status</option>
-											<option value=2>Active</option>
-			                                <option value=1>Not Active</option>
-                                		</select>
-                                	</div>
-						  		</div>
-							</div>
-								<div class="text-right">
-									<button type="submit" class="btn btn-primary">Submit</button>
+								
+						
+								<div class="">
+									<button type="submit" class="btn submitbtn">Submit</button>
 								</div>
 							</form>
 						</div>
@@ -448,5 +534,5 @@
 		</div>			
 </div>
 <!-- /Main Wrapper -->
-
+<br><br><br>
 @endsection

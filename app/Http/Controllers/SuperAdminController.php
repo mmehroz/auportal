@@ -13,11 +13,11 @@ class SuperAdminController extends Controller
 		
 		
 		$evaluateByManager = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('department','department.DEPT_ID', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('department','department.DEPT_ID', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','evaluateByManager')
-		->select('jobapplicant.*','department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		
@@ -31,11 +31,11 @@ class SuperAdminController extends Controller
 		 
 		 
 		$evuinterviewform = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-		->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
 		->join('can_evulation','can_evulation.can_evu_job_id', '=','jobapplicant.jobapplicant_id')
 		->where('jobapplicant.jobapplicant_id','=',$id)
-		->select('jobapplicant.*','hrm_Department.dept_name','can_evulation.*','sub_department.*')
+		->select('jobapplicant.*','can_evulation.*')
 		->first();
 		
 			
@@ -256,11 +256,11 @@ class SuperAdminController extends Controller
 	public function cooapprovelist(){
 		
 		$evaluateByCoo = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('department','department.DEPT_ID', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('department','department.DEPT_ID', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','evaluateByCoo')
-		->select('jobapplicant.*','department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		

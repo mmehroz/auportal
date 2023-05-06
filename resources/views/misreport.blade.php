@@ -5,7 +5,7 @@
 		display: none;
 	}
 	.tfoot tr td{
-		background-color: #40c4f1 !important;
+		background-color: #5069e7 !important;
 		color: black;
     }
 </style>

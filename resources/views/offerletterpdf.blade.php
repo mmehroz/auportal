@@ -45,7 +45,7 @@
         text-transform: uppercase;
         width: 100%;
         height: 40px;
-        background-color: #40c4f1;
+        background-color: #5069e7;
         color: white;
 
     }
@@ -65,7 +65,7 @@
         width: 100%;
         height: 40px;
         color: white;
-        background-color: #40c4f1;
+        background-color: #5069e7;
         /*margin-bottom: 30px;*/
     }
 
@@ -80,7 +80,7 @@
         padding-top: 8px;
         width: 100%;
         height: 40px;
-        background-color: #40c4f1;
+        background-color: #5069e7;
         color: white;
         text-transform: uppercase;
         text-align: center;
@@ -97,7 +97,7 @@
     .acc h2 {
         padding-top: 8px;
         color: white;
-        background-color: #40c4f1;
+        background-color: #5069e7;
         text-transform: uppercase;
         text-align: center;
         width: 100%;
