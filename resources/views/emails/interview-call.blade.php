@@ -57,9 +57,9 @@
 						      		<td align="center" bgcolor="#e9ecef">
 							        	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 								          	<tr>
-								            	<td align="center" valign="top" style="padding: 20px 150px;position: absolute;">
+								            	<td align="center" valign="top" style="padding: 20px 28px;position: absolute;">
 								            		<a href="https://www.arcinventador.com/" target="_blank" style="display: inline-block;">
-								                		<img src="https://avidhaus.com/images/arclogo.png" alt="" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
+								                		<img src="https://avidhaus.com/images/arclogo.png" alt="" border="0" width="48" style="display: block; width: 210px; max-width: 100%; min-width: 48px;">
 								            		</a>
 								            	</td>
 								          	</tr>
@@ -72,8 +72,12 @@
 							      <td align="center" bgcolor="#e9ecef">
 							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 120px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-							              <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Dear {{$datas['candidatedata']->jobapplicant_name }}</h1>
+							            <td align="left" bgcolor="#ffffff" style="padding: 105px 0px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
+                                            <div style="border-top: 1px solid #d3d3d3;">
+                                                <h1 style="margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -1px; line-height: 48px;padding-left: 24px;
+                                                padding-top: 15px; ">Dear {{$datas['candidatedata']->jobapplicant_name }}</h1>
+                                            </div>
+							           
 							            </td>
 							          </tr>
 							        </table>
@@ -86,7 +90,7 @@
 							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 							          <!-- start copy -->
 							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px;  padding-bottom:0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
+							            <td align="left" bgcolor="#ffffff" style="padding: 24px;  padding-bottom:30px !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
 							              <p style="margin: 0; color: #000;">We are pleased to inform you that your application for the <b>{{$datas['candidatedata']->jobapplicant_postionapppliedform }}.</b> position at Arc Inventador has been reviewed, and we are impressed with your qualifications and experience. As a result, we would like to invite you for an interview with our team.<br><br>
 											The interview is scheduled for <b>{{$datas['request']->interTime }}.</b>, and it will take place at 3rd Floor, Building B&H House Gulshan e Iqbal Block 15 Karachi. Please arrive at least 10 minutes before the scheduled time to allow for parking and check-in procedures.
 											<br><br>
@@ -108,14 +112,47 @@
 							    <!-- end copy block -->
 							    <!-- start footer -->
 							    <tr>
-							      <td align="center" bgcolor="#e9ecef" style="padding: 24px;">
-							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+							      <td align="center" bgcolor="#e9ecef" style="padding: 0px 24px;">
+							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;    background: #fff;    border-top: 1px solid #d3d3d3;
+                                    ">
+                                        <tr>
+                                            <td>
+                                              <div style="display: flex; justify-content: space-around;margin-top: 20px;">
+<div style="display:flex">
+    <img src="https://patchtripper.com/public/img/Group.png" style="    height:16px;margin-top: 12px;">
+    <p style="padding-left: 10px;font-family: sans-serif;font-size: 12px;">+92 336 6677766</p>
+</div>
+<div style="display:flex">
+    <img src="https://patchtripper.com/public/img/Group%20(1).png" style="    height:16px;margin-top: 12px;">
+    <p style="padding-left: 10px;font-family: sans-serif;font-size: 12px;">info@arcinventador.com</p>
+</div>
+<div style="display:flex">
+    <img src="https://patchtripper.com/public/img/Group%20(2).png" style="    height:16px;margin-top: 12px;">
+    <p style="padding-left: 10px;font-family: sans-serif;font-size: 12px;">www.arcinventador.com</p>
+</div>
+
+                                              </div>
+                                            <div style="margin-left: 30px;">
+                                                <div style="display:flex" style="    margin-left: 30px;">
+                                                    <img src="https://patchtripper.com/public/img/Group%20(3).png" style="    height:22px;margin-top: 14px;">
+                                                    <p style="font-family: sans-serif; font-size: 12px; padding-left: 8px; padding-top: 7px;">3rd floor B&H house, B-75, Gulshan-e-Iqbal, karachi, pakistan , Karachi, Pakistan</p>
+                                                </div>
+                                            </div>
+                                         
+                                            
+                                             
+                                            </td>
+                                        </tr>
 							          <!-- start unsubscribe -->
 							          <tr>
-							            <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
-							              <!-- <p style="margin: 0;">To stop receiving these emails, you can <a href="https://sendgrid.com" target="_blank">unsubscribe</a> at any time.</p> -->
-							              <p style="margin: 0;">&copy; <b>Arc-Inventador</b> <?php echo(date('Y'))?>. All Right Reserved. </p>
-							            </td>
+                                        <td align="center" bgcolor="#e9ecef" style="padding: 12px 0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;background: #fff;">
+                                            <a href="https://www.arcinventador.com/" style="text-decoration: none;" target="_blank" style="display: inline-block;">
+                                            <p style="margin: 0;margin: 0;
+                                            color: #121212;
+                                            letter-spacing: 1px;
+                                            font-weight: 600;">&copy;Arc-Inventador <?php echo(date('Y'))?>. All Right Reserved. </p>
+                                            </a>
+                                            </td>
 							          </tr>
 							          <!-- end unsubscribe -->
 							        </table>

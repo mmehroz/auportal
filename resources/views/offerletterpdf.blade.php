@@ -110,7 +110,7 @@
     <!-- logo -->
     <section class="logo">
         <div class="img" style="width: 100%;">
-            <img src="http://bizzworldcommunications.com/public/bwc-logo.png" alt="">
+            <img src="https://avidhaus.com/images/arclogo.png" alt="">
         </div>
     </section>
     <!-- Name & Date -->
@@ -140,11 +140,11 @@
             <p>Dear {{$datas->jobapplicant_name}},</p>
             <p>Congratulations!</p>
             <p>
-                It gives us an incredible satisfaction in offering you to join the team of Bizz World as <span
+                It gives us an incredible satisfaction in offering you to join the team of Arc Inventador as <span
                     style="color: red;">“{{$datas->can_evu_pro_desg}}"</span>, now that you have effectively cleared all our enrollment stages. We would
                 like to
                 congratulate you on this honorable accomplishment, since you are among the 5.0% effective competitors
-                who have experienced all of the stages and are being offered a position at Bizz World, from all
+                who have experienced all of the stages and are being offered a position at Arc Inventador, from all
                 candidates who at first registered.
             </p>
             <p>
@@ -158,7 +158,7 @@
             </p>
             <p>
                 We look forward to have you in our energetic team with an aspiration that will find your work experience
-                with Bizz World professionally challenging and rewarding.
+                with Arc Inventador professionally challenging and rewarding.
             </p>
             <p>
                 Awaiting to welcome you on board!
@@ -187,11 +187,6 @@
         <div>
             <p>
                 <span style="font-weight: 700; margin-right: 35px;">Job Description</span> <span>: {{$datas->can_evu_job_sum}} </span>
-            </p>
-        </div>
-        <div>
-            <p>
-                <span style="font-weight: 700; margin-right: 60px;">Department</span> <span>: {{$datas->dept_name}} </span>
             </p>
         </div>
         <div>

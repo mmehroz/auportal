@@ -233,9 +233,9 @@ class AdminController extends Controller
 	public function alllist(){
 		
 		$candidatelist = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		->select('jobapplicant.*')
 		->get();
 		
 		// dd($all);
@@ -249,35 +249,35 @@ class AdminController extends Controller
 	public function candidatelist(){
 		
 		$candidatelist = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','candidatelist')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 
 		$Screeninglist = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','Screening')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 
 		$Irreleventlist = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','Irrelevent')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 		
 		$Irexperiencelist = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+		// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','inexperience')
-		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->select('jobapplicant.*')
 		->get();
 
 		$all=[
@@ -1398,8 +1398,8 @@ class AdminController extends Controller
 					'datas' =>$all,
 					],
 				function ($message) use ($candiname,$task) {
-				//  $message->to($candiname);
-				 $message->to('avidhaus.mehroz@gmail.com');
+				 $message->to($candiname);
+				//  $message->to('avidhaus.mehroz@gmail.com');
 				 $message->cc('recruitment@arcinventador.com');
 				 $message->subject('Appointment Letter for '.$task->jobapplicant_postionapppliedform.' Arc Inventador');
 				});

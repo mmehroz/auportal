@@ -1072,11 +1072,11 @@ class hrmcontroller extends Controller
     	// dd($id);
         
 		$task = DB::connection('mysql')->table('jobapplicant')
-				->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-				->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+				// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+				// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
 				->join('can_evulation','can_evulation.can_evu_job_id', '=','jobapplicant.jobapplicant_id')
-				->where('hrm_login.log_email','=',$id)
-				->select('jobapplicant.*','hrm_Department.dept_name','can_evulation.*','hrm_login.*')
+				->where('jobapplicant.can_email','=',$id)
+				->select('jobapplicant.*','can_evulation.*')
 				->first();
 		
 			// dd($task);

@@ -25,9 +25,9 @@ class EmployeesExport implements FromCollection, WithHeadings,ShouldAutoSize, Wi
     {
 
 			$task = DB::connection('mysql')->table('jobapplicant')
-			->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
-			->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-			->select('jobapplicant.*','hrm_login.*','hrm_Department.*')
+			// ->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
+			// ->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+			->select('jobapplicant.*')
 			->get();
 
 
@@ -47,7 +47,7 @@ class EmployeesExport implements FromCollection, WithHeadings,ShouldAutoSize, Wi
 						'jobapplicant_age' => $arraydatas->jobapplicant_age,
 						'jobapplicant_placeob' => $arraydatas->jobapplicant_placeob,
 						'jobapplicant_cnic' => $arraydatas->jobapplicant_cnic,
-						'log_email' => $arraydatas->log_email,
+						'log_email' => $arraydatas->can_email,
 						'jobapplicant_reference' => $arraydatas->jobapplicant_reference,
 						'jobapplicant_nationality' => $arraydatas->jobapplicant_nationality,
 						'jobapplicant_religion' => $arraydatas->jobapplicant_religion,
@@ -55,7 +55,6 @@ class EmployeesExport implements FromCollection, WithHeadings,ShouldAutoSize, Wi
 						'jobapplicant_occupation' => $arraydatas->jobapplicant_occupation,
 						'jobapplicant_postionapppliedform' => $arraydatas->jobapplicant_postionapppliedform,
 						'jobapplicant_careerlevel' => $arraydatas->jobapplicant_careerlevel,
-						'jobapplicant_department' => $arraydatas->jobapplicant_department,
 						'jobapplicant_currentsalary' => $arraydatas->jobapplicant_currentsalary,
 						'jobapplicant_monthlyexpectedsalary' => $arraydatas->jobapplicant_monthlyexpectedsalary,
 						'jobapplicant_negotiablesalary' => $arraydatas->jobapplicant_negotiablesalary,
@@ -116,7 +115,6 @@ class EmployeesExport implements FromCollection, WithHeadings,ShouldAutoSize, Wi
 				'OCCUPATION',
                 'Position Applied For',
                 'Career Level',
-                'Department',
                 'Current  Salary RS',
                 'Monthly Expected Salary RS',
                 'Condition',
