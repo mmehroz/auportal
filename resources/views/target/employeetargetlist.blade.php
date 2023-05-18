@@ -56,7 +56,7 @@
 	        				@if(session()->get("role") <= 3)
 			                <td class="text-right">
 			                  <div class="dropdown dropdown-action">
-			                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+			                    <a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 			                    <div class="dropdown-menu dropdown-menu-right">
 			                      <a class="dropdown-item" href="#" onclick="edittarget({{$val->employeetarget_id}})"><i class="fa fa-pencil m-r-5"></i> Edit</a>
 			                      <a class="dropdown-item" href="{{url('/deletetarget')}}/{{$val->employeetarget_id}}"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
@@ -65,7 +65,7 @@
 			                </td>
 			                <td class="text-right">
 			                  <div class="dropdown dropdown-action">
-			                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+			                    <a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 			                    <div class="dropdown-menu dropdown-menu-right">
 			                      <a class="dropdown-item" href="#" id="{{$val->elsemployees_batchid}}~{{$val->employeetarget_month}}" onclick="addachieved(this.id)"><i class="fa fa-add m-r-5"></i> Add</a>
 			                      <a class="dropdown-item" href="#" id="{{$val->elsemployees_batchid}}~{{$val->employeetarget_month}}" onclick="achievedlist(this.id)"><i class="fa fa-add m-r-5"></i> List</a>

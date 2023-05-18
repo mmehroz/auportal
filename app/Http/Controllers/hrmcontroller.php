@@ -708,21 +708,28 @@ class hrmcontroller extends Controller
 						// ->delete();
 				
 					$created = DB::connection('mysql')->table('jobapplicant')->insert($insert);
-					   
-					Mail::send('emails.done_employee',[
+					try{
+						Mail::send('emails.done_employee',[
+							'can_name' => $request->can_name,
+							],
+						function ($message) use ($request){
+						$message->to($request->can_email);
+						$message->cc('recruitment@arcinventador.com');
+						$message->subject('Application Received for Job');
+						});
+						session()->put([
+						
 						'can_name' => $request->can_name,
-						],
-					function ($message) use ($request){
-					 $message->to($request->can_email);
-					 $message->cc('recruitment@arcinventador.com');
-					 $message->subject('Application Received for Job');
-					});
-					session()->put([
+						
+						]);
+						return redirect('/thankyou');
+					}catch ( \Exception $e ) {
+						session()->put([
+							'can_name' => "User",
+						]);
+						return redirect('/thankyou');
+					}
 					
-					'can_name' => $request->can_name,
-					
-					]);
-					return redirect('/thankyou');
 				
 			
 		// }else{

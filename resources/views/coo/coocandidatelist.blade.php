@@ -40,7 +40,7 @@
 				<div class="col-auto float-right ml-auto">
 					<div class="view-icons">
 						<a href="{{url('/candidate_listcoo')}}" class="Grid-view btn btn-link active" title="Grid-view"><i class="fa fa-th"></i></a>
-						<!-- <a href="{{url('/candidate_listcoo')}}" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Grid-view"><i class="fa fa-th"></i></a> -->
+						<!-- <a href="{{url('/candidate_listcoo')}}" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Grid-view"><i class="fa fa-th"></i></a> -->
 					</div>
 				</div>
 			</div>
@@ -87,7 +87,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a href="{{ URL::to('/modalemployeeviewol/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a href="{{ URL::to('/modalemployeeviewol/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>--->

@@ -121,7 +121,7 @@
 									</a><br>
 									@if( session()->get("role") <=	 2)
 								<div class="dropdown profile-action">
-									<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+									<a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 									<div class="dropdown-menu dropdown-menu-right">
 										<a class="dropdown-item" href="{{url('/deletegallery')}}/{{$val->gallery_id}}/{{$data->albumid}}"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
 									</div>

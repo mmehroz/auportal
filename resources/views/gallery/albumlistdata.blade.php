@@ -25,7 +25,7 @@
 								</div>
 								@if( session()->get("role") <=	 2)
 								<div class="dropdown profile-action">
-									<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+									<a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 									<div class="dropdown-menu dropdown-menu-right">
 										<a class="dropdown-item" href="#" onclick="getedit({{'"'.$val->album_id.'"'}})" ><i class="fa fa-pencil m-r-5"></i> Edit</a>
 										<a class="dropdown-item" href="{{url('/deletealbum')}}/{{$val->album_id}}"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
@@ -39,7 +39,7 @@
 							<!-- <div class="alb">
 								 @if( session()->get("role") <=	 2)
 								<div class="dropdown profile-action ">
-									<a href="#" class="action-icon dropdown-toggle pr-2" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+									<a href="#" class="fa fa-ellipsis-v dropdown-toggle pr-2" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 									<div class="dropdown-menu dropdown-menu-right">
 										<a class="dropdown-item" href="#" onclick="getedit({{'"'.$val->album_id.'"'}})" ><i class="fa fa-pencil m-r-5"></i> Edit</a>
 										<a class="dropdown-item" href="{{url('/deletealbum')}}/{{$val->album_id}}"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
@@ -70,7 +70,7 @@
                         <!-- <a href="#"> <i class="fa fa-ellipsis-h"></i></a> -->
                         @if( session()->get("role") <=	 2)
                         <div class="dropdown profile-action ">
-							<a href="#" class="action-icon dropdown-toggle pr-2" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+							<a href="#" class="fa fa-ellipsis-v dropdown-toggle pr-2" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<a class="dropdown-item" href="#" onclick="getedit({{'"'.$val->album_id.'"'}})" ><i class="fa fa-pencil m-r-5"></i> Edit</a>
 								<a class="dropdown-item" href="{{url('/deletealbum')}}/{{$val->album_id}}"><i class="fa fa-trash-o m-r-5"></i> Delete</a>

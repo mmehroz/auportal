@@ -64,7 +64,7 @@
 													@if( session()->get("role") <= 2 || session()->get("email") == "salman.khairi@bizzworld.com" )
 													<td class="text-right">
 														<div class="dropdown dropdown-action">
-															<a href="{{ URL::to('/probationaryemppdf')}}/{{$datas->elsemployees_batchid}}" target="_blank" ><i class="material-icons">more</i></a>
+															<a href="{{ URL::to('/probationaryemppdf')}}/{{$datas->elsemployees_batchid}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 														</div>
 													</td>
 													@endif

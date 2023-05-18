@@ -1,7 +1,7 @@
 @extends('layout.logintheme')
 @section('content')
 <link href="https://www.day2daywholesale.com/_next/static/css/b71d463df487ea9c.css" rel="stylesheet" />
-
+<link href="http://149.102.249.46/public/assets/css/login.css" rel="stylesheet" />
 <body>
 	<div class="w-screen h-screen overflow-y-scroll">
 		<div class="w-full h-full flex">
@@ -29,9 +29,9 @@
 <div class="col-lg-12">
 	<img alt="" sizes="100vw"
 								
-							src="{!! asset('public/img/loho.png') !!}"
+							src="{!! asset('public/img/hp.png') !!}"
 								decoding="async" data-nimg="fill" class="object-cover" loading="lazy"
-								style=" height: 100%; width: 100%; inset: 0px; color: transparent;">
+								style="margin-top:20px; margin-left:20% !important; width:90%; inset: 0px; color: transparent;">
 </div>
 
 					</div>

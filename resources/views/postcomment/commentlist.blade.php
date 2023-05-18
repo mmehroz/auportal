@@ -62,7 +62,7 @@
         				@if(session()->get("role") <= 2)
 		                <td class="text-right">
 		                  <div class="dropdown dropdown-action">
-		                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+		                    <a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 		                    <div class="dropdown-menu dropdown-menu-right">
 		                      <a class="dropdown-item" href="#" onclick="approvedcomment({{$val->commentpost_id }})"><i class="fa fa-check m-r-5"></i> Approved</a>
 		                      <a class="dropdown-item" href="#" onclick="declinedcomment({{$val->commentpost_id }})"><i class="fa fa-close m-r-5"></i> Declined</a>

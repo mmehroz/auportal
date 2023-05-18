@@ -29,7 +29,7 @@
 								</div> -->
 
 								<!-- <div class="dropdown profile-action">
-									<a href="#" class="action-icon dropdown-toggle" title="View Details" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+									<a href="#" class="fa fa-ellipsis-v dropdown-toggle" title="View Details" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 									<div class="dropdown-menu dropdown-menu-right">
 											<select class="form-control" id="mySelect" onchange="getedit(this.value)">
 												<option selected="" disabled=""  value="">New</option>

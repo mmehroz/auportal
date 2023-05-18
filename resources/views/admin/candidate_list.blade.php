@@ -59,6 +59,9 @@
 	.row{
 		display: block!important;
 	}
+	.dropdown.profile-action{
+		position:relative !important;
+	}
 </style>
 
 <!-- Page Wrapper -->
@@ -79,11 +82,11 @@
 					</ul>
 				</div>
 				<div class="col-auto float-right ml-auto">
-					<div class="view-icons">
+					<div class="view-icons" style="display:flex;">
 						<!-- <a href="{{url('/candidate_list')}}" class="grid-view btn btn-link" title="Grid-view"><i class="fa fa-th"></i></a> -->
-						<a href="{{url('/candidatelist')}}" class="list-view btn btn-link active" title="List-view"><i class="fa fa-bars"></i></a>
+						<a href="{{url('/candidatelist')}}" class="list-view btn btn-link" style="background: #fff; color: #777; border: 1px solid #e3e3e3" title="List-view"><i class="fa fa-bars"></i></a>
 						<div class="dropdown profile-action" style="right: 0px!important;">
-							<a href="#" class="action-icon dropdown-toggle" style="background-color: #fff; border: 1px solid #e3e3e3; color: #777; font-size: 18px;display: inline-block; margin-right: 30px; margin-top: -10px; min-width: 40px; padding: 4px; padding-right: 10px;" data-toggle="dropdown" aria-expanded="false" title="Grid-view"><i class="fa fa-th"></i></a>
+							<a href="#" class=" dropdown-toggle " style=" border: 1px solid #e3e3e3;  font-size: 18px;display: inline-block; margin-right: 30px; margin-top: -10px; min-width: 40px; padding: 4px; padding-right: 10px;" data-toggle="dropdown" aria-expanded="false" title="Grid-view"><i class="fa fa-th"></i></a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<!-- <a class="dropdown-item" href="{{url('/candidate_list')}}" ><i class="fa fa-eye m-r-5"></i>Candidates List</a> -->
 								<a class="dropdown-item" href="{{url('/screening_list')}}" ><i class="fa fa-eye m-r-5"></i>Screening List</a>

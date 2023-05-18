@@ -97,7 +97,7 @@
 								  <td style="text-transform: capitalize;font-size: 15px;text-align: right;border-left: 1px solid lightgray !important;border-right: 1px solid #fff;border-top: 1px solid lightgray;border-bottom: 1px solid lightgray;"><span>PKR </span><span>{{$closing}}</span></td>
 								  <td class="text-right d-flex justify-content-end" style="text-transform: capitalize;font-size: 18px;text-align: right;border-left: 1px solid lightgray !important;border-right: 1px solid #fff;border-top: 1px solid lightgray;border-bottom: 1px solid lightgray !important;">
 									<div class="dropdown dropdown-action">
-								  <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+								  <a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 								  <div class="dropdown-menu dropdown-menu-right">
 									<a class="dropdown-item" href="#" onclick="editexpense({{$val->expense_id}})"><i class="fa fa-pencil"></i> Edit</a>
 								  </div>

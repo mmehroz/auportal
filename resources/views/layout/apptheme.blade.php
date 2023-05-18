@@ -229,7 +229,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 											<li><a href="{{url('/candidate_list')}}">Fresh Candidate List</a></li>
 											<li><a href="{{url('/inprocesscandidates')}}">In Process Candidates </a></li>
 											<li><a href="{{url('/callforinterview')}}">Call For Interview </a></li>
-											<li><a href="{{url('/evalutioncandidate')}}"> Evalution Candidate</a></li>
+											<!-- <li><a href="{{url('/evalutioncandidate')}}"> Evalution Candidate</a></li> -->
 											<li><a href="{{url('/hiredcandidates')}}">Hired Candidates </a></li>
 											<li><a href="{{url('/allrequest')}}">All Request Status</a></li>
 											<li><a href="{{url('/rejandhol')}}">Reject and Hold</a></li>
@@ -245,7 +245,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 											<li class="submenu">
 												<a href="#"><span> COO</span> <span class="menu-arrow"></span></a>
 												<ul style="display: none;">
-													<li><a href="{{url('/cevalutioncandidate')}}">Evalution Candidate</a></li>
+													<!-- <li><a href="{{url('/cevalutioncandidate')}}">Evalution Candidate</a></li> -->
 													<li><a href="{{url('/approved')}}">Approved</a></li>
 													<li><a href="{{url('/declined')}}">Declined</a></li>
 													<li><a href="{{url('/candidatelistcoo')}}">Candidate List</a></li>
@@ -258,7 +258,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 											<ul style="display: none;">
 												<li><a href="{{url('/mcandidatelist')}}">Candidate List</a></li>
 												<!-- <li><a href="{{url('/mcallforinterview')}}">Call For Interview</a></li> -->
-												<li><a href="{{url('/mevalutioncandidate')}}"> Evalution Candidate</a></li>
+												<!-- <li><a href="{{url('/mevalutioncandidate')}}"> Evalution Candidate</a></li> -->
 												<!-- <li><a href="{{url('/mirrelevent')}}">Irrelevent</a></li> -->
 												<!-- <li><a href="{{url('/mreject')}}">Rejected</a></li> -->
 											</ul>
@@ -275,7 +275,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 											<!-- <li><a href="{{url('/screening')}}">Screening</a></li> -->
 											<li><a href="{{url('/inprocesscandidates')}}">In Process Candidates </a></li>
 											<li><a href="{{url('/callforinterview')}}">Call For Interview </a></li>
-											<li><a href="{{url('/evalutioncandidate')}}"> Evalution Candidate</a></li>
+											<!-- <li><a href="{{url('/evalutioncandidate')}}"> Evalution Candidate</a></li> -->
 											<li><a href="{{url('/hiredcandidates')}}">Hired Candidates </a></li>
 											<li><a href="{{url('/allrequest')}}">All Request Status</a></li>
 											<li><a href="{{url('/rejandhol')}}">Reject and Hold</a></li>
@@ -289,7 +289,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 										<ul style="display: none;">
 											<li><a href="{{url('/mcandidatelist')}}">Candidate List</a></li>
 											<!-- <li><a href="{{url('/mcallforinterview')}}">Call For Interview</a></li> -->
-											<li><a href="{{url('/mevalutioncandidate')}}"> Evalution Candidate</a></li>
+											<!-- <li><a href="{{url('/mevalutioncandidate')}}"> Evalution Candidate</a></li> -->
 											<!-- <li><a href="{{url('/mirrelevent')}}">Irrelevent</a></li> -->
 											<!-- <li><a href="{{url('/mreject')}}">Rejected</a></li> -->
 										</ul>
@@ -298,7 +298,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 									<li class="submenu">
 										<a href="#"><span> COO</span> <span class="menu-arrow"></span></a>
 										<ul style="display: none;">
-											<li><a href="{{url('/cevalutioncandidate')}}">Evalution Candidate</a></li>
+											<!-- <li><a href="{{url('/cevalutioncandidate')}}">Evalution Candidate</a></li> -->
 											<li><a href="{{url('/approved')}}">Approved</a></li>
 											<li><a href="{{url('/declined')}}">Declined</a></li>
 											<li><a href="{{url('/candidatelistcoo')}}">Candidate List</a></li>

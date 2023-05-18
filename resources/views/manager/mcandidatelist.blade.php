@@ -110,7 +110,7 @@
 										</td>-->
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a href="{{ URL::to('/modviewmng/')}}/{{$datas->jobapplicant_id}}" class="action-icon dropdown-toggle" >more</i></a>
+												<a href="{{ URL::to('/modviewmng/')}}/{{$datas->jobapplicant_id}}" class="fa fa-ellipsis-v dropdown-toggle" ></i></a>
 												<!--<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>--->
@@ -153,7 +153,7 @@
 									<tr style="text-align: center;">
 									<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a href="{{ URL::to('/modviewmng/')}}/{{$datas->jobapplicant_id}}" class="action-icon dropdown-toggle" >more</i></a>
+												<a href="{{ URL::to('/modviewmng/')}}/{{$datas->jobapplicant_id}}" class="fa fa-ellipsis-v dropdown-toggle" ></i></a>
 												<!--<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>--->
@@ -204,7 +204,7 @@
 										</td>-->
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a href="{{ URL::to('/modviewmng/')}}/{{$datas->jobapplicant_id}}" class="action-icon dropdown-toggle" >more</i></a>
+												<a href="{{ URL::to('/modviewmng/')}}/{{$datas->jobapplicant_id}}" class="fa fa-ellipsis-v dropdown-toggle" ></i></a>
 												<!--<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>-->
@@ -247,7 +247,7 @@
 									<tr style="text-align: center;">
 									<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a href="{{ URL::to('/modviewmng/')}}/{{$datas->jobapplicant_id}}" class="action-icon dropdown-toggle" >more</i></a>
+												<a href="{{ URL::to('/modviewmng/')}}/{{$datas->jobapplicant_id}}" class="fa fa-ellipsis-v dropdown-toggle" ></i></a>
 												<!--<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>--->

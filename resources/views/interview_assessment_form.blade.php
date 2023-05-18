@@ -264,13 +264,13 @@ input[type="file"] {
 					{{csrf_field()}}
 					<div class="row">
 						<div class="col-md-12">
-							<div class="card flex-fill">
-								<div class="card-header">
+							<input type="hidden" name="jobapplicant_id" value="{{ $data->jobapplicant_id }}" />
+							<!-- <div class="card flex-fill"> -->
+								<!-- <div class="card-header">
 									<h4 class="card-title mb-0">Candidate Personal Data</h4>
-								</div>
-									<div class="card-body">
+								</div> -->
+									<!-- <div class="card-body">
 										
-										<input type="hidden" name="can_job_id" value="{{ $data->jobapplicant_id }}" />
 										<input type="hidden" name="can_evu_id" value="{{ $data->can_evu_id }}" />
 										<div class="row">
 											<div class="col-md-4">
@@ -434,15 +434,15 @@ input[type="file"] {
 												</div>
 											</div>
 										</div>
-										</div>
-							</div>
+										</div> -->
+							<!-- </div> -->
 							<div class="card flex-fill">
 								<div class="card-header">
-									<h4 class="card-title mb-0">HR Department Assessment</h4>
+									<h4 class="card-title mb-0">Final Offer</h4>
 								</div>
 								<div class="card-body">
-									<p style="color:#f90202;">Filled by HR Department</p>
-									<div class="table-responsive">
+									<!-- <p style="color:#f90202;">Filled by HR Department</p> -->
+									<!-- <div class="table-responsive">
 							            <table class="table table-bordered">
 											<p class="tablep">Total Marks: Qualification=3  Professional Training=4  Computer Skill=5 <br> AVG Marks Obtained=3.13</p>
 							                <thead>
@@ -485,8 +485,8 @@ input[type="file"] {
 												<td><input class="form-control required_colom" type="number" id="total"  name="can_hr_obtai" value="{{old('can_hr_obtai', @$data->can_evu_hr_obtain ) }}" readonly ></td>
 							              	</tbody>
 							            </table>
-						            </div>
-									<div class="table-responsive mt-4">
+						            </div> -->
+									<!-- <div class="table-responsive mt-4">
 							            <table class="table table-bordered">
 												<p class="tablep">Total Marks: Presentation=3  Communication-Verbal=2  Behaviour/Body Language=5  Manner=2  Reasoning=1 <br> AVG Marks Obtained=3.13</p>
 							                <thead>
@@ -547,7 +547,7 @@ input[type="file"] {
 												<td><input class="form-control required_colom" type="number"  min='0' id="total2" name="can_hr_obtainedmarks" value="{{old('can_hr_obtainedmarks', @$data->can_evu_hr_obtain_mark ) }}" readonly  /></td>
 							              	</tbody>
 							            </table>
-						            </div>	
+						            </div>	 -->
 									<div class="row mt-4">
 									    <div class="col-md-4">
 											<div class="form-group">
@@ -558,13 +558,13 @@ input[type="file"] {
 									    <div class="col-md-4">
 											<div class="form-group">
 												<label class="col-form-label">Date</label>
-												<input type="date" class="form-control" name="can_hr_intdate" value="<?php echo date('Y-m-d'); ?>"  readonly />
+												<input type="date" class="form-control" name="can_hr_intdate" value="<?php echo date('Y-m-d'); ?>"  readonly required />
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="form-group">
 												<label class="col-form-label">Expected Date of Joining</label>
-												<input type="date" class="form-control" name="can_hr_expdate" value="{{old('can_hr_expdate', @$data->can_evu_hr_expdate ) }}"  required />
+												<input type="date" class="form-control" name="can_hr_expdate" value="{{old('can_hr_expdate', @$data->evu_canDate ) }}"  required />
 											</div>
 										</div>
 									</div>
@@ -572,13 +572,27 @@ input[type="file"] {
 									    <div class="col-md-12">
 											<div class="form-group">
 												<label class="col-form-label">HR Comments</label>
-												<textarea rows="2" cols="5" class="form-control" placeholder="Enter Your Comment" name="can_hr_commets" required >{{old('can_hr_commets', @$data->can_evu_hr_comments ) }}</textarea>
+												<textarea rows="2" cols="5" class="form-control" placeholder="Enter Your Comment" name="can_hr_commets" required >{{old('can_hr_commets', @$data->evu_cancomskl ) }}</textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+									    <div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Offered Designation</label>
+												<input type="text" class="form-control" placeholder="Enter Offered Designation" name="evu_cantechdesgdept" required value="{{old('evu_cantechdesgdept', @$data->evu_cantechdesgdept ) }}"  required/>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Offered Salary</label>
+												<input type="number" class="form-control" placeholder="Enter Offered Salary" name="evu_cansalary" required value="{{old('evu_cansalary', @$data->evu_cansalary ) }}" required/>
 											</div>
 										</div>
 									</div>
 									<br>
 									
-						            <div class="table-responsive">
+						            <!-- <div class="table-responsive">
 							            <table class="table table-bordered">
 												<p class="tablep">Piont from 0 to 1.5 = Unsatisfactory, 1.6 to 2.5 = Average, 2.6 to 3.5 = Satisfactory, 3.6 to 4.5 = Good, 4.6 to 5 = Excellent</p>
 							                <thead>
@@ -596,7 +610,7 @@ input[type="file"] {
 							                	<td><input class="form-control required_colom" type="text" name="can_hod_cand" value="{{old('can_hod_obtain', @$data->can_evu_hod_cand ) }}"  /></td>
 							              	</tbody>
 							            </table>
-						            </div>
+						            </div> -->
 									<br>
 						            <br>
 									<div class="">

@@ -86,7 +86,7 @@
     font-size: 12px !important;
     box-shadow: 0 2px 2px 0 hsla(0,0%,60%,.14), 0 3px 1px -2px hsla(0,0%,60%,.2), 0 1px 5px 0 hsla(0,0%,60%,.12);
 }
-.btn .material-icons{
+.btn .fa fa-ellipsis-v{
     position: relative;
     display: inline-block;
     top: 0;
@@ -209,7 +209,7 @@
     color: #dc3545 !important;
     box-shadow: none !important;
 }
-.btn.btn-just-icon .material-icons {
+.btn.btn-just-icon .fa fa-ellipsis-v {
     margin-top: 0;
     position: absolute;
     width: 100%;
@@ -221,7 +221,7 @@
     font-size: 20px;
 }
 
-.btn.btn-just-icon.btn-sm .material-icons {
+.btn.btn-just-icon.btn-sm .fa fa-ellipsis-v {
      font-size: 17px; 
      line-height: 29px; 
 }

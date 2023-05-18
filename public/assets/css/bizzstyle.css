@@ -128,7 +128,7 @@ background: #fff;box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px;
 padding-top: 30px;font-weight: bold;color: #000;text-align: center;
 }
 .announcementsection .div1{
-height: fit-content !important; overflow-y: scroll !important; background-color: white; margin-top: 15px; border-radius: 4px;
+height: 96% !important; overflow-y: scroll !important; background-color: white; margin-top: 15px; border-radius: 4px;
 }
 .dark-mode .announcementsection{
 background: #18191A;
@@ -504,7 +504,7 @@ border-radius: 10px;
 font-size:24px ;
 }
 .birthdaysectioninnerdiv{
-    height: 1080px !important;
+    height: 95% !important;
 overflow-y: scroll !important;
 background-color: white;
 margin-top: 15px;
@@ -910,8 +910,8 @@ margin-right: 50px;
 /* banner */
 
 .banner {
-    border: 2px solid white;
-    border-radius: 6px;
+    /* border: 2px solid white;
+    border-radius: 6px; */
     /* margin-top: 13px; */
     background: white;
     width: 100%;
@@ -2114,7 +2114,7 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(255, 255, 25
 
 .left-side {
     width: 100%;
-    height: 185px;
+    height: 195px;
     background: white;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;

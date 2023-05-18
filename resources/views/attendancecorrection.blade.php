@@ -57,7 +57,7 @@
 	        				@if(session()->get("role") <= 3)
 			                <td class="text-right">
 			                  <div class="dropdown dropdown-action">
-			                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+			                    <a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 			                    <div class="dropdown-menu dropdown-menu-right">
 			                    @if(session()->get("role") == 3 || session()->get("id") == 27)
 			                      <a class="dropdown-item" href="#" onclick="proceedcorrection({{$val->attendancecorrection_id}})"><i class="fa fa-check m-r-5"></i> Proceed</a>

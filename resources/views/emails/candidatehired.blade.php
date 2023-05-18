@@ -1,99 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-<!-- Mirrored from dreamguys.co.in/smarthr/maroon/forgot-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Mar 2020 18:49:56 GMT -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <meta name="description" content="Smarthr - Bootstrap Admin Template">
-		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
-        <meta name="author" content="Dreamguys - Bootstrap Admin Template">
-        <meta name="robots" content="noindex, nofollow">
-        <title>Interview Call - HRMS</title>
-		
-		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="{!! asset('public/assets/img/favicon.png') !!}" />
-		
-		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/bootstrap.min.css') !!}" />
-		
-		<!-- Fontawesome CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/font-awesome.min.css') !!}" />
-		
-		<!-- Main CSS -->
-        <link rel="stylesheet" href="{!! asset('public/assets/css/style.css') !!}" />
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-		<style type="text/css">
-			a:hover, a:active, a:focus {
-			    text-decoration: none;
-			    outline: none;
-			    color: #4a4a4a!important;
-			}
-		</style>
-    </head>
-    <!-- <body class="account-page"  style="background-color: #e9ecef;"> -->
-    <body class="account-page" >
+	<!--[if gte mso 9]>
+	<xml>
+		<o:OfficeDocumentSettings>
+		<o:AllowPNG/>
+		<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="date=no" />
+	<meta name="format-detection" content="address=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="x-apple-disable-message-reformatting" />
+    <!--[if !mso]><!-->
+   	<link href="https://fonts.googleapis.com/css?family=Kreon:400,700|Playfair+Display:400,400i,700,700i|Raleway:400,400i,700,700i|Roboto:400,400i,700,700i" rel="stylesheet" />
+    <!--<![endif]-->
+	<title>Interview Call - HRMS</title>
+	<!--[if gte mso 9]>
+	<style type="text/css" media="all">
+		sup { font-size: 100% !important; }
+	</style>
+	<![endif]-->
 	
-		<!-- Main Wrapper -->
-        <div class="main-wrapper">
+
+	<style type="text/css" media="screen">
+		/* Linked Styles */
+		body { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#5069e7; -webkit-text-size-adjust:none }
+		a { color:#000001; text-decoration:none }
+		p { padding:0 !important; margin:0 !important } 
+		img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
+		.mcnPreviewText { display: none !important; }
+		.text-footer2 a { color: #ffffff; } 
 		
-			<div class="account-content">
-				<div class="container">
-					<!-- <div class="account-box"> -->
-						<div class="account-wrapper">
-							<!-- start preheader -->
-							<div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-							Interview Invitation | AU Telecom 
-							</div>
-							<!-- end preheader -->
-							<table border="0" cellpadding="0" cellspacing="0" width="100%">
-								<!-- start logo -->
-							    <tr>
-						      		<td align="center" bgcolor="#e9ecef">
-							        	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-								          	<tr>
-								            	<td align="center" valign="top" style="padding: 20px 150px;position: absolute;">
-								            		<a href="https://autelecom.net/" target="_blank" style="display: inline-block;">
-								                		<img src="http://209.182.216.71/public/assets/img/logo22.png" alt="BWC" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
-								            		</a>
-								            	</td>
-								          	</tr>
-							        	</table>
-							    	</td>
-							    </tr>
-							    <!-- end logo -->
-							    <!-- start hero -->
-							    <tr>
-							      <td align="center" bgcolor="#e9ecef">
-							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+		/* Mobile styles */
+		@media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+			.mobile-shell { width: 100% !important; min-width: 100% !important; }
+			
+			.m-center { text-align: center !important; }
+			.m-left { text-align: left !important; margin-right: auto !important; }
+			
+			.center { margin: 0 auto !important; }
+			.content2 { padding: 8px 15px 12px !important; }
+			.t-left { float: left !important; margin-right: 30px !important; }
+			.t-left-2  { float: left !important; }
+			
+			.td { width: 100% !important; min-width: 100% !important; }
+
+			.content { padding: 30px 15px !important; }
+			.section { padding: 30px 15px 0px !important; }
+
+			.m-br-15 { height: 15px !important; }
+			.mpb5 { padding-bottom: 5px !important; }
+			.mpb15 { padding-bottom: 15px !important; }
+			.mpb20 { padding-bottom: 20px !important; }
+			.mpb30 { padding-bottom: 30px !important; }
+			.m-padder { padding: 0px 15px !important; }
+			.m-padder2 { padding-left: 15px !important; padding-right: 15px !important; }
+			.p70 { padding: 30px 0px !important; }
+			.pt70 { padding-top: 30px !important; }
+			.p0-15 { padding: 0px 15px !important; }
+			.p30-15 { padding: 30px 15px !important; }			
+			.p30-15-0 { padding: 30px 15px 0px 15px !important; }			
+			.p0-15-30 { padding: 0px 15px 30px 15px !important; }			
+
+
+			.text-footer { text-align: center !important; }
+
+			.m-td,
+			.m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
+
+			.m-block { display: block !important; }
+
+			.fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important; }
+
+			.column,
+			.column-dir,
+			.column-top,
+			.column-empty,
+			.column-top-30,
+			.column-top-60,
+			.column-empty2,
+			.column-bottom { float: left !important; width: 100% !important; display: block !important; }
+
+			.column-empty { padding-bottom: 15px !important; }
+			.column-empty2 { padding-bottom: 30px !important; }
+
+			.content-spacing { width: 15px !important; }
+		}
+	</style>
+</head>
+<body class="body"style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#5069e7; -webkit-text-size-adjust:none;">
+    <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
+        Interview Invitation | ARC Inventador
+    </div>
+	<table width="100%" border="0" cellspacing="0"  cellpadding="0" bgcolor="#5069e7">
+		<tr>
+			<td class="p30-15" style="padding: 40px 0px 20px 0px;">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tbody><tr>
+						<th class="column-top" width="200" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tbody><tr>
+									<td class="text-top m-center mpb5" style="color:#9babdb; font-family:'Times New Roman', Georgia, serif; font-size:11px; line-height:22px; text-align:left; text-transform:uppercase;"><multiline></multiline></td>
+								</tr>
+							</tbody></table>
+						</th>
+						<th class="column-top" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tbody><tr>
+									<td align="right">
+										<table class="center" border="0" cellspacing="0" cellpadding="0" style="text-align:center;">
+											<tbody><tr>
+												<td class="img" width="32" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+												<td class="img" width="32" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+												<td class="img" width="32" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+												<td class="img" width="32" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+												<td class="img" width="14" style="font-size:0pt; line-height:0pt; text-align:left;"></td>
+											</tr>
+										</tbody></table>
+									</td>
+								</tr>
+							</tbody></table>
+						</th>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" valign="top">
+				<!-- Main -->
+				<table width="650" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
+					<tr>
+						<td class="td" style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+							<!-- Header -->
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							
+								<!-- END Top bar -->
+								<!-- Logo -->
+								<tr>
+									<td bgcolor="#ffffff" class="p30-15 img-center" style="padding: 30px; border-radius: 20px 20px 0px 0px; font-size:0pt; line-height:0pt; text-align:left;"><a href="https://www.arcinventador.com/" target="_blank"><img src="https://avidhaus.com/images/arclogo.png" width="146" height="57" border="0" alt="" /></a></td>
+								</tr>
+								<!-- END Logo -->
+								<!-- Nav -->
+						
+								<!-- END Nav -->
+							</table>
+							<!-- END Header -->
+								
+							<!-- Section 1 -->
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ebebeb">
+							
+							
+							</table>
+							<!-- END Section 1 -->
+
+							<!-- Section 2 -->
+						
+							<!-- END Section 2 -->
+							
+							<!-- Section 3 -->
+						
+							<!-- END Section 3 -->
+
+							<!-- Section 4 -->
+						
+							<!-- END Section 4 -->
+							
+							<!-- Section 5 -->
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+								<tr>
+									<td class="p30-15-0" style="padding: 30px 30px 0px 30px;">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										
+											<tr>
+												<td class="h2-center"style="color:#000000; font-family:'Playfair Display', Times, 'Times New Roman', serif; font-size:32px; line-height:36px; text-align:left; padding-bottom:20px;"><multiline>Dear {{$datas['candidatedata']->jobapplicant_name }} {{$datas['candidatedata']->jobapplicant_fname}},</multiline></td>
+											</tr>
+											<!-- <tr>
+												<td class="h4-center"style="color:#000000; font-family:'Playfair Display', Times, 'Times New Roman', serif; font-size:16px; line-height:36px; text-align:left; padding-bottom:20px;font-weight:bold"><multiline>Thank You for Interviewing with Arc Inventador</multiline></td>
+											</tr> -->
+                                             <!-- start copy -->
 							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 120px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-							              <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Dear {{$datas['candidatedata']->jobapplicant_name }} {{$datas['candidatedata']->jobapplicant_fname}}</h1>
-							            </td>
-							          </tr>
-							        </table>
-							      </td>
-							    </tr>
-							    <!-- end hero -->
-							    <!-- start copy block -->
-							    <tr>
-							      <td align="center" bgcolor="#e9ecef">
-							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-							          <!-- start copy -->
-							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px;  padding-bottom:0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">With reference to our conversation, your video interview has been scheduled for <b>{{$datas['request']->interTime }}</b> for Position. We would like you to consider the following points before and during the interview:</p>
+									  <td class="text-left pb20"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:left; padding-bottom:20px;">
+  <p style="margin: 0; color: #000;">With reference to our conversation, your video interview has been scheduled for <b>{{$datas['request']->interTime }}</b> for Position. We would like you to consider the following points before and during the interview:</p>
 							            </td>
 							          </tr>
 							          <!-- end copy -->
 							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px; padding-top:20px;  padding-bottom:0px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">
+									  <td class="text-left pb20"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:left; padding-bottom:20px;">
+ <p style="margin: 0; color: #000;">
 							              	1. The video interview will last about 10-15 minutes.<br>
 							              	2. Kindly download Zoom App <a href="{{url('https://zoom.us/')}}" target="_blank" style="word-break: break-all;">(https://zoom.us/)</a><br>
 							              	3. The background should be plain and noise free.<br>
@@ -102,60 +200,119 @@
 							          </tr>
 							          <!-- start button -->
 							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px; padding-top:20px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-							              <p style="margin: 0; color: #000;">
+									  <td class="text-left pb20"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:left; padding-bottom:20px;">
+ <p style="margin: 0; color: #000;">
 							              	Please note that Zoom Meeting ID will be shared with you before the interview.<br>
 							            	Don’t miss this opportunity as <b>AU Telecom</b> gives candidates a platform to further discuss their background and expand on key aspects of their work experience that make them a great fit for the position and help find their dream job.<br>
 							          		Please share your updated resume and acknowledge when received.</p>
 							            </td>
 							          </tr>
-							          <!-- end button -->
-							          <!-- start copy -->
-							          <tr>
-							            <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; border-bottom: 3px solid #d4dadf">
-							              <p style="margin: 0;"><b>Thank you!</b><br> </p>
-							            </td>
-							          </tr>
-							          <!-- end copy -->
-							        </table>
-							      </td>
-							    </tr>
-							    <!-- end copy block -->
-							    <!-- start footer -->
-							    <tr>
-							      <td align="center" bgcolor="#e9ecef" style="padding: 24px;">
-							        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-							          <!-- start unsubscribe -->
-							          <tr>
-							            <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
-							              <!-- <p style="margin: 0;">To stop receiving these emails, you can <a href="https://sendgrid.com" target="_blank">unsubscribe</a> at any time.</p> -->
-							              <p style="margin: 0;">&copy; <b>AU Telecom</b> 2021. All Right Reserved. </p>
-							            </td>
-							          </tr>
-							          <!-- end unsubscribe -->
-							        </table>
-							      </td>
-							    </tr>
-							    <!-- end footer -->
+											<!-- <tr>
+												<td class="text-left pb20"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:14px; line-height:22px; text-align:left; padding-bottom:20px;">
+                                                    <multiline>We want to thank you for taking the time to submit your job application to Arc inventador. We appreciate your interest in our organization and the effort you put into completing the application process.
+                                                    <br>
+                                                    <br>
+                                                    We understand that waiting to hear back from potential employers can be challenging, but please know that we have received your application and will review it carefully. Our team of hiring managers will evaluate your qualifications, experience, and suitability for the role to determine if there is a fit for you at our organization.
+                                                    <br>
+                                                    <br>
+                                                    We encourage you to remain patient and positive during this waiting period. We will be in touch with you as soon as possible to inform you of the next steps in the hiring process. In the meantime, please feel free to explore our website to learn more about Arc Inventador and the work that we do. Here is your application step and it's future journey. 
+                                                    <br>
+                                                    <br>
+                                                    Again, thank you for considering Arc Inventador as your potential employer. We appreciate your interest in our organization and look forward to getting to know you better as we move forward in the hiring process.
+                                                    <br>
+                                                    <br>
+                                                    <br>
+													<strong style="color:#000">Best Regards,
+													<br>
+													Team Recruitment
+													<br>
+													Arc Inventador</strong></multiline></td>
+											</tr> -->
+											<!-- Button -->
+										
+											<!-- END Button -->
+										</table>
+									</td>
+								</tr>
 							</table>
-						</div>
-					<!-- </div> -->
-				</div>
-			</div>
-        </div>
-		<!-- /Main Wrapper -->
-		
-		<!-- jQuery -->
-        <script src="https://dreamguys.co.in/smarthr/maroon/assets/js/jquery-3.2.1.min.js"></script>
-		
-		<!-- Bootstrap Core JS -->
-        <script src="https://dreamguys.co.in/smarthr/maroon/assets/js/popper.min.js"></script>
-        <script src="https://dreamguys.co.in/smarthr/maroon/assets/js/bootstrap.min.js"></script>
-		
-		<!-- Custom JS -->
-		<script src="https://dreamguys.co.in/smarthr/maroon/assets/js/app.js"></script>
-		
-    </body>
+							<!-- END Section 5 -->
 
-<!-- Mirrored from dreamguys.co.in/smarthr/maroon/forgot-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Mar 2020 18:49:56 GMT -->
+							<!-- Section 6 -->
+						
+							<!-- END Section 6 -->
+
+							<!-- Section 7 -->
+						
+							<!-- END Section 7 -->
+							
+							<!-- Section 8 -->
+						
+							<!-- END Section 8 -->
+							
+							<!-- Footer -->
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="p30-15-0" bgcolor="#ffffff" style="border-radius: 0px 0px 20px 20px; padding: 30px 30px 0px 30px;">
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										
+											<tr>
+												<td align="center" class="p30-15" style="border-top: 1px solid #ebebeb; padding: 30px;">
+													<table class="center" border="0" cellspacing="0" cellpadding="0"style="text-align:center;">
+														<tr>
+															<th class="column-top" width="180"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+																<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td class="text-footer"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:22px; text-align:left;">
+																			<multiline>
+																				<strong>+92 336 6677766</strong>
+																				</multiline>
+																		</td>
+																	</tr>
+																</table>
+															</th>
+															<th class="column-empty" width="20"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;"></th>
+															<th class="column-top" width="180"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+																<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td class="text-footer"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:22px; text-align:left;">
+																			<multiline>
+																				<strong>info@arcinventador.com</strong></multiline>
+																		</td>
+																	</tr>
+																</table>
+															</th>
+															<th class="column-empty" width="20"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;"></th>
+															<th class="column-top" width="180"style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+																<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td class="text-footer"style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:22px; text-align:left;">
+																			<multiline>
+																				<strong>www.arcinventador.com</strong></multiline>
+																		</td>
+																	</tr>
+																</table>
+															</th>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="text-footer2 p30-15" style="padding: 30px 15px 50px 15px; color:#a9b6e0; font-family:'Raleway', Arial,sans-serif; font-size:12px; line-height:22px; text-align:center;"><multiline style="color: #fff;">3rd floor B&H house, B-75, Gulshan-e-Iqbal, karachi, pakistan , Karachi, Pakistan <br /><p style="color: #fff;">© 2023 Arc-Inventador . All Right Reserved.</p></multiline></td>
+								</tr>
+							</table>
+							<!-- END Footer -->
+						</td>
+					</tr>
+				</table>
+				<!-- END Main -->
+
+			</td>
+		</tr>
+	</table>
+</body>
 </html>

@@ -1,6 +1,7 @@
 @extends('layout.logintheme')
 @section('content')
-<link href="https://www.day2daywholesale.com/_next/static/css/b71d463df487ea9c.css" rel="stylesheet" />
+<link href="http://149.102.249.46/public/assets/css/login.css" rel="stylesheet" />
+
 
 <body>
 	<div class="w-screen h-screen overflow-y-scroll">

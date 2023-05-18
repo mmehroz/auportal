@@ -27,7 +27,7 @@
 									</a>
 								</div>
 								<!-- <div class="dropdown profile-action">
-									<a href="#" class="action-icon dropdown-toggle" title="View Details" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+									<a href="#" class="fa fa-ellipsis-v dropdown-toggle" title="View Details" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 									<div class="dropdown-menu dropdown-menu-right"style="position: absolute;will-change: transform;top: 0px;left: 0px;transform: translate3d(-98%, -10%, 0px);">
 										<p>Education: {{$val->jobapplicant_edu_cerdeg}}</p>
 										<p>Current Salary: {{$val->jobapplicant_currentsalary}}</p>
