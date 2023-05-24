@@ -336,7 +336,7 @@
 	
 </div>
 <!-- /Page Wrapper -->			
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 
 
@@ -344,40 +344,24 @@
 	  
 
 
-function getedit($value){
-		
-		// console.log($value);
-		
-		swal({
-                title: "Are you sure ?",
-                text: "Once Approved, you will not be able to change the status of this request!",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-              })
-              .then((willDelete) => {
-                if (willDelete) {
-		
-		
-		  $.get('{{ URL::to("/adamaction")}}/'+$value,function(data){
-				
-				console.log("true");
-				
-				location.reload();
-				// $('#cl').DataTable().ajax.reload();
-				 // $('#modals').empty();
-				 // $('#modals').append(data)
-				// $('#Editemployee').modal('show');
-				});
-                  swal("Your request successfully approved!", {
-                    icon: "success",
-                  });
-
-
-                } else {
-                  swal("Your request is unchanged!");
-                }
-              });
+function getedit($id){
+	Swal.fire({
+    title: "Are you sure?",
+	text: "Once Submited, you will not be able to request for a change",
+    input: 'text',
+    showCancelButton: true        
+	}).then((result) => {
+	    if (result.value) {
+	    	$comment = result.value;
+	        $.get('{{ URL::to("/adamaction")}}/'+$id+'/'+$comment);
+			// window.location.reload();
+	  		swal("Aww! Delivered Successfully!", {
+	   	   icon: "success",
+	   	   });
+	    }else{
+	    	swal("Canceled");
+	    }
+	});
 }
 
 </script>
