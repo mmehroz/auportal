@@ -821,7 +821,7 @@ class AdminController extends Controller
 						
 						// dd($manageremail);
 						
-						$managername = $manageremail->elsemployees_email;
+						// $managername = $manageremail->elsemployees_email;
 						
 						
 						$all=[
