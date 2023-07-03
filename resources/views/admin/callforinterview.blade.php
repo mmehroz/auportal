@@ -410,11 +410,18 @@ function getedit($value){
         data: frmData,
        })
         .done(function(data){
-        $("#modald #errors").show();
-        $("#modald #errors").empty().append('<li class="alert alert-success" >Task added successfully...!</li>');
-        setTimeout(function(){$("#view_inprocess").modal('hide')
-		location.reload();
-                 }, 2000);
+			if(data == "false"){
+				$("#modald #errors").show();
+				$("#modald #errors").empty().append('<li class="alert alert-danger" >Error! Email Not Sent</li>');
+				setTimeout(function(){$("#view_inprocess").modal('hide')
+				}, 2000);
+			}else{
+				$("#modald #errors").show();
+				$("#modald #errors").empty().append('<li class="alert alert-success" >Task Added And Email Sent Successfully...!</li>');
+				setTimeout(function(){$("#view_inprocess").modal('hide');
+				location.reload();
+				}, 2000);
+			}
       })
       .fail(function(error){
         var errors = error.responseJSON;

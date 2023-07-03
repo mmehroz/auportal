@@ -274,7 +274,26 @@ background-color:#000 !important;
         background-color: #f6fbfd;
         font-size: 12px;
     }
-    
+    .mess .tablediv table tr .firstd {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.mess .tablediv table {
+    width: 95%;
+    margin-left: 5px;
+}
+.mess .tablediv table tr {
+    border-top: 1px solid #dee2e6;
+}
+.mess .tablediv table td{
+    border-top: 1px solid #dee2e6;
+}
+.mess .tablediv table tr th{
+    padding: 0.5rem;
+}
+.mess .tablediv{
+    padding-top: 15px;
+}
     .dark-mode {
         background-color: black;
     }
@@ -621,14 +640,14 @@ width: 99%;
 .dark-mode .desc li{
     color: #fff;
 }
-
+hr{
+    width: 100%;
+    margin-top: 0.5rem !important;margin-bottom: 0.5rem !important;
+}
 @media screen and (min-width: 1600px){
 
 
-hr{
-    width: 81%;
-    margin-left: 50px;margin-top: 10px !important;margin-bottom: 0 !important;
-}
+
 table {
         border-collapse: separate;
         border-spacing: 0 1px;
@@ -824,7 +843,9 @@ top: 99% !important;
                         </div>
                         
                             <div class="mess">
-<div class="col-lg-12"> 
+                            
+                               
+ <div class="col-lg-12"> 
     <button class="w-100 mt-3 messbtn1" type="button" name="rd" id="rd" value="1" checked>Mission</button>
     </div>
 
@@ -853,7 +874,7 @@ top: 99% !important;
                                             <li>Deliver 100% client satisfaction.</li></span></p>
                                    
                                         
-                                    </div>
+                                    </div> 
                                 
                             </div>
                        
@@ -1164,31 +1185,6 @@ top: 99% !important;
                 <div class="col-lg-3">
                     <div class="statusection">
                     <h3 class="text-center statusectionheading1">Status</h3>
-                    <div class="row mt-4">
-                        <div class="col-lg-4"> 
-                            <p class="officeoptionsheading">Check In :</p>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="statussectioninnerdiv">
-                                    <a class="abc officeoptionheadingpara" href="#"><span class="statussectionpara"><i class=" abc fa fa-fingerprint"></i></span> <?php $year = date("Y");
-                                    $month = date("m"); $timein = DB::connection('sqlsrv')->table('Checkinout')
-                                    ->where('Checkinout.Userid','=',$data->elsemployees_batchid)
-                                    ->where('Checkinout.CheckType','!=','2')
-                                    ->where('Checkinout.CheckType','!=','1')
-                                    ->whereYear('Checkinout.CheckTime', $year)
-                                    ->whereMonth('Checkinout.CheckTime', $month)
-                                    ->select('Checkinout.*')
-                                    ->orderBy('Checkinout.CheckTime', 'DESC')
-                                    ->first();
-                                    if(isset($timein->CheckTime)){
-                                    $explodetime = explode(' ', $timein->CheckTime);
-                                    $fingertimein = date('h:i:s A', strtotime($explodetime[1]));
-                                    }else{
-                                    $fingertimein = "-";
-                                    }
-                                     echo($fingertimein)?></a></div>
-                            </div>
-                    </div>
                     <hr class="statussectionhr">
                     <div class="row" style="padding-top: 7px;">
                         <div class="col-lg-4"> 
@@ -1241,32 +1237,48 @@ top: 99% !important;
                                     <a class="abc officeoptionheadingpara" href="#"><span class="statussectionpara"><i class="abc msgs fas fa-mail-bulk "></i></span>Ticket To IT</a></div>
                             </div>
                     </div>
-                    <hr class="statussectionhr">
+                    
                     <div class="row" style="padding-top: 7px;">
-                        <div class="col-lg-4"> 
+                        <!-- <div class="col-lg-4"> 
                             <p class="officeoptionsheading">Compose :</p>
                             </div>
                             <div class="col-lg-8">
                                 <div class="statussectioninnerdiv" onclick="itticket()">
                                     <a class="abc officeoptionheadingpara" href="{{url('/composeemail')}}"><span class="statussectionpara"><i class="abc msgs fas fa-mail-bulk "></i></span>Compose Email</a></div>
                             </div>
-                    </div>
-                    <hr class="statussectionhr">
+                    </div> -->
+                    
 </div>
-<div class="btnsdiv">
-                        <div class="col-lg-12 mt-3" style="padding-left: 0px;padding-right: 0px;"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:5100/"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Email</a></div>
-                        <div class="col-lg-12 mt-3" style="padding-left: 0px;padding-right: 0px;"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:3000/"><span><i class="mainbtnsspan  fas fa-comment"></i></span>Chat</a></div>
-                        <div class="col-lg-12 mt-3" style="padding-left: 0px;padding-right: 0px;"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.7:4001"><span><i  class="mainbtnsspan fa fa fa-users"></i></span>CRM</a></div>
+
+               
+           
+              
+              
+                
+                </div>
+        
+                <div class="btnsdiv">
+                        <div class="col-lg-12 mt-3" style="padding-left: 0px;padding-right: 0px;"><a class="mainbtns" id="upload_link" target="_blank" href="#"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Email</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left: 0px;padding-right: 0px;"><a class="mainbtns" id="upload_link" target="_blank" href="http://employee.arcinventador.com:3000/"><span><i class="mainbtnsspan  fas fa-comment"></i></span>Chat</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left: 0px;padding-right: 0px;"><a class="mainbtns" id="upload_link" target="_blank" href="http://employee.arcinventador.com:4001/"><span><i  class="mainbtnsspan fa fa fa-users"></i></span>CRM</a></div>
                     </div>
                     <div class="activitiesection">
                     <h3 class="font-weight-bold text-center pt-4 pb-4">My Acitivities</h3>
                    <div class="row">
-                    <div class="col-lg-4"> 
+                    <!-- <div class="col-lg-4"> 
                         <div class="activitiesectiondivleft">
 
-<a href="{{URL::to('myforms')}}" target="_blank" class="activitiesectionanchor"><span> <i class="abc msgs fa fa-file-signature" ></i></span><br>My Forms</a>
-</div>
+                <a href="{{URL::to('myforms')}}" target="_blank" class="activitiesectionanchor"><span> <i class="abc msgs fa fa-file-signature" ></i></span><br>My Forms</a>
                 </div>
+                </div> -->
+                <div class="col-lg-4">
+    
+                <div class="activitiesectiondivleft">
+
+            <a href="{{URL::to('websites')}}" target="_blank" class="activitiesectionanchor"><span>
+            <i class="abc msgs fa fa-globe" ></i></span><br>Websites</a>
+            </div>
+            </div>
                     <div class="col-lg-4">
                         <div class="activitiesectiondivcenter">
 
@@ -1274,13 +1286,20 @@ top: 99% !important;
  <i class="abc msgs fa fa-file-invoice-dollar" ></i></span><br>Pay Slips</a>
 </div>
                     </div>
-                    <div class="col-lg-4">
+                    <!-- <div class="col-lg-4">
                         <div class="activitiesectiondivright">
 
-<a href="{{URL::to('restaurantlist')}}" target="_blank" class="activitiesectionanchor"><span> 
-<i class="abc msgs fa fa-drumstick-bite" ></i></span><br>Food Portal</a>
+                        <a href="{{URL::to('restaurantlist')}}" target="_blank" class="activitiesectionanchor"><span> 
+                        <i class="abc msgs fa fa-drumstick-bite" ></i></span><br>Food Portal</a>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-4">
+                        <div class="activitiesectiondivleft">
+
+<a href="{{URL::to('employee_list')}}" target="_blank" class="activitiesectionanchor"><span>
+<i class="abc msgs fa fa-address-book" ></i></span><br>Directory</a>
 </div>
-                    </div>
+                        </div>
                    </div>
                    <div class="row mt-2">
                     <div class="col-lg-4">
@@ -1299,90 +1318,19 @@ top: 99% !important;
 </div>
 </div>
 <div class="col-lg-4">
-    
-    <div class="activitiesectiondivright">
+                        <div class="activitiesectiondivcenter">
 
-<a href="{{URL::to('websites')}}" target="_blank" class="activitiesectionanchor"><span>
-<i class="abc msgs fa fa-globe" ></i></span><br>Websites</a>
+<a href="{{URL::to('mydocument')}}" target="_blank" class="activitiesectionanchor"><span>
+<i class="abc msgs fa fa-book-reader" ></i></span><br>Documents</a>
 </div>
 </div>
                    </div>
+                   
                    <div class="row mt-2">
-                    <div class="col-lg-4">
-                        <div class="activitiesectiondivleft">
-
-<a href="{{URL::to('employee_list')}}" target="_blank" class="activitiesectionanchor"><span>
-<i class="abc msgs fa fa-address-book" ></i></span><br>Directory</a>
-</div>
-                        </div>
+                  
                     </div>
                 </div>
-            <div class="attendancediv">
-                        <h3>My Attendance</h3>
-                      <div class="tablediv">
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col" class="firstd">Date</th>
-                                <th scope="col">Time-In</th>
-                                <th scope="col">Time-Out</th>
-                                <th scope="col" class="lastd">Result</th>
-                              </tr>
-                            </thead>
-                            <tbody style="white-space: nowrap;">
-                                @if($attendancedata != null)
-                                @foreach($attendancedata as $attdata)
-                                <tr>
-                                    <?php $splitattendancedate = explode("-",$attdata['emp_date']);?>
-                                   <td >{{$splitattendancedate[1]}}-{{$splitattendancedate[2]}}</td>
-                                   <td>{{$attdata['emp_checkin']}}</td>
-                                   <td>{{$attdata['emp_checkout']}}</td>
-                                   <?php
-                                    $cout_date = date('Y-m-d', strtotime($attdata['emp_date'] . ' +1 day'));
-                                    if($data->elsemployees_batchid == 1218 && $attdata['emp_checkin'] != "MissIn" && $attdata['emp_checkout'] != "MissOut"){
-                                    $time1 = strtotime($attdata['emp_date'].' '.$attdata['emp_checkin']);
-                                    $time2 = strtotime($cout_date.' '.$attdata['emp_checkout']);
-                                    $gettime = sprintf($hour = abs($time1 - $time2)/(60*60));
-                                    }else{
-                                    $time1 = strtotime($attdata['emp_date'].' '.$attdata['emp_checkin']);
-                                    $time2 = strtotime($attdata['emp_date'].' '.$attdata['emp_checkout']);
-                                    $gettime = sprintf(round($hour = abs($time1 - $time2)/(60*60)));
-                                    }
-                                    ?>
-                                   @if($attdata['emp_checkin'] == "MissIn" || $attdata['emp_checkout'] == "MissOut")
-                                   <?php $attresult = "Absent"?>
-                                   <td class="attt absentd">Absent</td>
-                                    @elseif($gettime < 7.56)
-                                    <?php $attresult = "Late"?>
-                                    <td class="attt latetd">Late</td>
-                                    @elseif($gettime < 4)
-                                    <?php $attresult = "Half Day"?>
-                                    <td class="attt halfdaytd">Half Day</td>
-                                    @else
-                                    <?php $attresult = "Present"?>
-                                    <td class="attt presentd">Present</td>
-                                   @endif
-                                <!--    @if($attdata['emp_checkin'] == "MissIn" || $attdata['emp_checkout'] == "MissOut")
-                                   <td>0</td>
-                                   @else
-                                   <td>{{$gettime}}</td>
-                                   @endif -->
-                                   <!-- <td><a href="#" title="Add Correction Request" id="{{$attdata['emp_date']}}~{{$attresult}}" onclick="addcorrection(this.id)" data-toggle="modal" data-target="#add_correction"><i class="fa fa-plus"></i></a></td> -->
-                                </tr>
-                                @endforeach
-                                @endif
-                            </tbody>
-                          </table>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <a href="{{URL::to('dailyattendance')}}" class="attendancebtn">View All Attendance</a>
-                            </div>
-                            </div>
-                       
-                        
-                    </div>
-                    <div class="trainingmanual">
+                <div class="trainingmanual">
                     <h3>Training Manual</h3>
                    <div class="row mt-3">
                     <div class="col-lg-4"> 
@@ -1411,6 +1359,69 @@ top: 99% !important;
                    </div>
               
                 </div>
+                <div class="mess" style="margin-left:0px;height:540px">
+                             <h3 style="padding-top: 20px; font-weight: bold; color: #000; text-align: center; font-size: 24px;">Reminders</h3>
+                                <div class="tablediv" style="overflow-y: scroll;height: 81%;">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 70%;text-align:left">Reminder Notes</th>
+                                                <th style="width: 30%;text-align:left">Reminder Date</th>
+                                            </tr>
+                                        </thead>
+                                        <?php
+                                            $tomorrow = date("Y-m-d", strtotime("- 1 day"));
+                                            $reminderdata = DB::connection('mysql')->table('reminder')
+                                            ->where('elsemployees_batchid','=',session()->get('batchid'))
+                                            ->where('reminder_date','>=',date('Y-m-d'))
+                                            ->select('reminder_note','reminder_id','reminder_date')
+                                            ->orderByDesc( 'reminder_id' )
+                                            ->get();
+                                        ?>
+                                        <tbody>
+                                        
+                                            @if($reminderdata != null)
+                                            @foreach($reminderdata as $reminderdatas)
+                                            <tr>
+                                            <td style="text-align:left;padding:0.5rem"><p style="text-align: justify;">{{$reminderdatas->reminder_note}}</p></td>
+                                            <td>{{$reminderdatas->reminder_date}}</td>
+                                            @endforeach
+                                            @endif
+                                        </tbody>
+                                    </table>
+                                </div>
+<!-- <div class="col-lg-12"> 
+    <button class="w-100 mt-3 messbtn1" type="button" name="rd" id="rd" value="1" checked>Mission</button>
+    </div>
+
+                                   
+<div class="col-lg-12 col-md-12 col-sm-12 desc" id="div1">
+                                        <br>
+<p style="text-align: justify;">At Arc Inventador, Every person in our company is a member of the team and a team player with the expectation and need that they perform their duties to their fullest capacity and potential.Our objective is a commitment to the highest quality customer service. The client satisfaction is our main focus, reached through innovative and cost effective services. We focus on creating the economic and social values for your business on global scale by providing a trustable workplace where you can connect, collaborate and attain the success.</span></p>
+                                    </div>
+                                    <div class="col-lg-12 mt-2">
+                                        <button class="w-100 messbtn2" type="button" name="rd" id="rd" value="2"> Vision</button>
+                                    </div>
+                                    <div class="col-lg-12 desc" id="div2" style="display: none;">
+                                        <br>
+                                        <p style="text-align: justify;">Arc Inventador is an extremely innovative company that is always open to unique ideas. We are always looking at new ways to improve our operations and the process of customer services.Arc Inventador difference is in the details. We take the time to understand the challenges that our clients are facing and then we assist them in developing a solution program that works for their unique needs that fits in their budget.</span></p>
+                   
+                                  
+                                        
+                                    </div>
+                                    <div class="col-lg-12 mt-2 pb-2"><button class="w-100 messbtn3" type="button" name="rd" id="rd" value="3">Value</button></div>
+                                    <div class="col-lg-12 desc" id="div3" style="display: none;">
+                                        <br>
+                                        <p style="text-align: justify;"><li>Honesty, Integrity & Fairness in all dealings 'Be passionate & determined</li>
+                                            <li>Following the Highest Standard of Professionalism.</li>
+                                            <li>Contributing to society and demonstrating corporate responsibility.</li>
+                                            <li>Relentlessly strive to get better.</li>
+                                            <li>Deliver 100% client satisfaction.</li></span></p>
+                                   
+                                        
+                                    </div> -->
+                                
+                            </div>
                 <div class="gallerydiv">
                     <h3>My Gallery</h3>
                             
@@ -1456,18 +1467,14 @@ top: 99% !important;
                             </div>
                             <a href="{{URL::to('albumlist')}}" class="gallerybtn">View Gallery</a>
                         </div>
-                        
-           
-                        
-
+                                                
                 </div>
-                </div>
-        
             
-   
-            
+</div>
+         
+    </div>
 
-     
+    </div>
         
         
      

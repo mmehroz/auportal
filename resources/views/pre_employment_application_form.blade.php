@@ -210,7 +210,7 @@ input[type="file"] {
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-3 col-12">
-						<a href="{{url('/canLogin')}}" class="logo">
+						<a href="#" class="logo">
 							<img src="{!! asset('public/images/logo.svg') !!}">
 						</a>
 					</div>
@@ -218,7 +218,7 @@ input[type="file"] {
 						<h3 class="headerheading">PRE EMPLOYMENT APPLICATION FORM</h3>
 					</div>
 					<!-- <div class="col-lg-3 text-right col-3 pt-1 logoutcolum">
-						<a class="text-white logouttext" href="{{url('/canLogin')}}">Logout</a>
+						<a class="text-white logouttext" href="#">Logout</a>
 					</div> -->
 				</div>
 				
@@ -272,6 +272,7 @@ input[type="file"] {
 			<form action="{{ URL::to('/submitjobapplicant')}}" method="POST" class="form-horizontal"
 				enctype="multipart/form-data">
 				@csrf
+				<input type="hidden" name="jobpost_token" value="{{$data->jobpost_token}}"/>
 				<div class="row">
 					<div class="col-md-12">
 						<div class="card flex-fill">
@@ -288,20 +289,8 @@ input[type="file"] {
 											<!-- <input type="text" class="form-control" 
 												name="can_postionapppliedform"
 												value="{{old('can_postionapppliedform')  }}" /> -->
-											<select class="form-control selectpicker form-control" required placeholder="Select Store Name" data-live-search ="true" id name="can_postionapppliedform"   >
-												<option value="" >Please Select</option>
-											   <option value="Human Resource Executive"  >Human Resource Executive</option>
-											   <option value="Financial Accountant" >Financial Accountant</option>
-											   <option value="Receptionist"  >Receptionist</option>
-											   <option value="General Sales Help Desk"  >General Sales Help Desk</option>
-											   <option value="Network Support Engineer"  >Network Support Engineer</option>
-											   <option value="Backend Developer"  >Backend Developer</option>
-											   <option value="UI/UX Designer" >UI/UX Designer</option>
-											   <option value="Social Media Account Manager"  >Social Media Account Manager </option>
-											   <option value="Opensips Developer"  >Opensips Developer </option>
-											   <option value="VOIP Engineer"  >VOIP Engineer</option>
-											   <option value="DevOps Engineer"  >DevOps Engineer</option>
-											   <option value="Data Scientist (Streaming Data Visualization)"  >Data Scientist (Streaming Data Visualization)</option>
+											<select class="form-control selectpicker form-control" readonly required placeholder="Select Store Name" data-live-search ="true" id name="can_postionapppliedform"   >
+												<option value="{{$data->jobpost_title}}" selected  >{{$data->jobpost_title}}</option>
 											</select> 
 										</div>
 									</div>

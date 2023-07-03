@@ -47,7 +47,7 @@
             <div class="header">			
 				<!-- Logo -->
                 <div class="header-left">
-                    <a href="{{url('/canLogin')}}"class="logo">
+                    <a href="#"class="logo">
 						<img src="{!! asset('public/assets/img/final-logo.png') !!}" width="120" height="60" alt="">
 					</a>
                 </div>

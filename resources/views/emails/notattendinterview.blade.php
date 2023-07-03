@@ -384,59 +384,7 @@
                                             <tr>
                                                 <td align="center" class="p30-15"
                                                     style="border-top: 1px solid #ebebeb; padding: 30px;">
-                                                    <table class="center" border="0" cellspacing="0" cellpadding="0"
-                                                        style="text-align:center;">
-                                                        <tr>
-                                                            <th class="column-top" width="180"
-                                                                style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                                                <table width="100%" border="0" cellspacing="0"
-                                                                    cellpadding="0">
-                                                                    <tr>
-                                                                        <td class="text-footer"
-                                                                            style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:22px; text-align:left;">
-                                                                            <multiline>
-                                                                                <strong>+92 336 6677766</strong>
-                                                                            </multiline>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </th>
-                                                            <th class="column-empty" width="20"
-                                                                style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;">
-                                                            </th>
-                                                            <th class="column-top" width="180"
-                                                                style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                                                <table width="100%" border="0" cellspacing="0"
-                                                                    cellpadding="0">
-                                                                    <tr>
-                                                                        <td class="text-footer"
-                                                                            style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:22px; text-align:left;">
-                                                                            <multiline>
-                                                                                <strong>info@arcinventador.com</strong>
-                                                                            </multiline>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </th>
-                                                            <th class="column-empty" width="20"
-                                                                style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr;">
-                                                            </th>
-                                                            <th class="column-top" width="180"
-                                                                style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
-                                                                <table width="100%" border="0" cellspacing="0"
-                                                                    cellpadding="0">
-                                                                    <tr>
-                                                                        <td class="text-footer"
-                                                                            style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:22px; text-align:left;">
-                                                                            <multiline>
-                                                                                <strong>www.arcinventador.com</strong>
-                                                                            </multiline>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </th>
-                                                        </tr>
-                                                    </table>
+                                               
                                                 </td>
                                             </tr>
                                         </table>

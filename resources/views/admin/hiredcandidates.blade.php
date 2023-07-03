@@ -13,7 +13,12 @@
 
 	<!-- Page Content -->
     <div class="content container-fluid">
-	
+		@if(session('message'))
+			<!-- <div class="account-title">{{session('message')}}</div> -->
+			<div class="account-title">   <p class="alert alert-success" >{{session('message')}}</p>
+			
+			</div>
+		@endif
 		<!-- Page Header -->
 		<div class="page-header">
 			<div class="row align-items-center">
@@ -109,6 +114,7 @@
 									<th>Pre Employeement</th>
 									<!-- <th>Evaluation</th> -->
 									<th>Offer Letter</th>
+									<th>Add Employee</th>
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
@@ -121,6 +127,7 @@
 									<td><a href="{{ URL::to('/modalademployeeviewol')}}/{{$datas->jobapplicant_id}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 									<!-- <td><a href="{{ URL::to('/evalution_formpdf')}}/{{$datas->jobapplicant_id}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td> -->
 									<td><a href="{{ URL::to('/generatepdf/')}}/{{$datas->can_email}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
+									<td><a href="{{ URL::to('/addtoemployee/')}}/{{$datas->jobapplicant_id}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-add"></i> Add</a></td>
 									<td>{{$datas->jobapplicant_name}}</td>
 									<td>{{$datas->can_email}}</td>
 									<td>{{$datas->jobapplicant_contact}}</td>

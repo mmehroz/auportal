@@ -56,7 +56,7 @@ Thank you for considering <b>Arc Inventador</b> as your potential employer. We l
 
 
 				
-				<div class=" sm:w-[50%] 2xl:w-[40%] flex mt-10 justify-between items-center">				<a style="text-decoration:none;" href="{{URL('jobform')}}"><button
+				<div class=" sm:w-[50%] 2xl:w-[40%] flex mt-10 justify-between items-center">				<a style="text-decoration:none;" href="{{URL('jobform/')}}/{{$data}}"><button
 							class="w-44 h-12 disabled:cursor-not-allowed submit disabled:shadow-none flex items-center justify-center rounded-md  transition duration-100  text-sx font-primary font-semibold hover:shadow-lg  select-none"
 							style="color: white; transform: none;    background-image: linear-gradient(to right bottom, #6416ec, #33e0e0);" type="submit" ><span>Apply Now</span></button></a>
 					

@@ -53,7 +53,7 @@
 						<button id="btnsubmit" class="btn btn-primary submit-btn">Submit</button>
 					</div>
 				</form><br>
-				<table class="table table-striped custom-table mb-0 datatable dataTable no-footer" id="announcement">
+				<!-- <table class="table table-striped custom-table mb-0 datatable dataTable no-footer" id="announcement">
 						<thead>
 							<tr>
                 				<th>Reminder Notes</th>
@@ -68,7 +68,7 @@
 							</tr>
 							@endforeach
 						</tbody>
-					</table>
+					</table> -->
 			</div>
 		</div>
 	</div>

@@ -72,7 +72,7 @@
 								<th>Batch Id</th>
 								<th>Name</th>
 								<th>Father Name</th>
-								<th>Login Status</th>
+								<!-- <th>Login Status</th> -->
 								<th style="display: none;">Email</th>
 								<th>CNIC No.</th>
 								<th>Role</th>
@@ -105,11 +105,11 @@
 										</h2>
 										</td>
 									<td>{{$val->elsemployees_fname}}</td>
-									@if($val->user_loginstatus == "Online")
+									<!-- @if($val->user_loginstatus == "Online")
 									<td style="text-align: center;"><span class="status online"></span></td>
 									@else
 									<td style="text-align: center;"><span class="status online" style="background-color: red !important"></span></td>
-									@endif
+									@endif -->
 									<td style="display: none;">{{$val->elsemployees_email}}</td>
 									<td>{{$val->elsemployees_cnic}}</td>
 									<td>{{$val->rolename}}</td>

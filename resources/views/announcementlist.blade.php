@@ -53,9 +53,9 @@
           <table class="table table-striped custom-table mb-0 datatable dataTable no-footer" id="announcement">
             <thead>
               <tr>
-                        @if(session()->get("role") <= 2)
-                        <th class="text-right;" style="width: 10%!important;padding-left: 4%!important;">Action</th>
-                        @endif
+                  @if(session()->get("role") <= 2)
+                  <th class="text-right;" style="width: 10%!important;padding-left: 4%!important;">Action</th>
+                  @endif
                 <th>Image</th>
                 <th style="width: 30px;">Announcement Title </th>
                 <th>Description</th>
@@ -68,7 +68,7 @@
                 @if(session()->get("role") <= 2)
                 <td class="text-right">
                   <div class="dropdown dropdown-action">
-                    <a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
+                    <a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                     <div class="dropdown-menu dropdown-menu-right">
                       <a class="dropdown-item" href="#" onclick="editannouncement({{$val->announcement_id}})"><i class="fa fa-pencil m-r-5"></i> Edit</a>
                       <a class="dropdown-item" href="{{url('/delete_announcement')}}/{{$val->announcement_id}}"><i class="fa fa-trash-o m-r-5"></i> Delete</a>

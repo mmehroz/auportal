@@ -209,7 +209,7 @@ input[type="file"] {
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-lg-3 col-12">
-							<a href="{{url('/canLogin')}}" class="logo">
+							<a href="#" class="logo">
 								<img src="{!! asset('public/images/logo.svg') !!}">
 							</a>
 						</div>
@@ -217,7 +217,7 @@ input[type="file"] {
 							<h3 class="headerheading">PRE EMPLOYMENT APPLICATION FORM</h3>
 						</div>
 						<!-- <div class="col-lg-3 text-right col-3 pt-1 logoutcolum">
-							<a class="text-white logouttext" href="{{url('/canLogin')}}">Logout</a>
+							<a class="text-white logouttext" href="#">Logout</a>
 						</div> -->
 					</div>
 					

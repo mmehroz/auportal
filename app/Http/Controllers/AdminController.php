@@ -13,6 +13,15 @@ use Image;
 class AdminController extends Controller
 {
     public function admindashboard(){
+		// Mail::send('emails.done_employee',[
+		// 	'can_name' => "Mehroz",
+		// 	],
+		// function ($message) {
+		// $message->from('recruitment@arcinventador.com', 'Arc');
+		// $message->to('avidhaus.mehroz@gmail.com');
+		// // $message->cc('recruitment@bizzworldcommunications.com');
+		// $message->subject('Application Received for Job');
+		// });
 		$task = DB::connection('mysql')->table('elsemployees')
 		->join('role','role.roleid', '=','elsemployees.elsemployees_roleid')
 		->where('elsemployees.elsemployees_batchid','=',session()->get("batchid"))
@@ -924,14 +933,28 @@ class AdminController extends Controller
 			'request'=>$request,
 			];
 			$emailcandi = $all['candidatedata']->can_email;
-			try{
-				Mail::send('emails.interview-call',[
+			// try{
+				if($Callforin->jobpost_company == "Arc Inventador"){
+					$fromemail = "recruitment@arcinventador.com";
+					$fromname = "Arc Inventador";
+					$emailtemplate = "emails.interview-call";
+				}elseif($Callforin->jobpost_company == "AU Telecom"){
+					$fromemail = "recruitment@autelecom.net";
+					$fromname = "Autelecom";
+					$emailtemplate = "emails.au.interview-call";
+				}else{
+					$fromemail = "recruitment@cyberxify.com";
+					$fromname = "Cyberxify";
+					$emailtemplate = "emails.cyber.interview-call";
+				}
+				Mail::send($emailtemplate,[
 					'datas' =>$all,
 					],
-				function ($message) use ($emailcandi) {
+				function ($message) use ($emailcandi,$fromemail,$fromname) {
+					$message->from($fromemail, $fromname);
 					$message->to($emailcandi);
 					$message->cc('recruitment@arcinventador.com');
-					$message->subject('Invitation to Interview - Arc Inventador');
+					$message->subject('Invitation to Interview');
 				});
 				$updated = DB::connection('mysql')->table('jobapplicant')
 				->where('jobapplicant_id','=',$request->editempid)
@@ -941,9 +964,10 @@ class AdminController extends Controller
 					'updated_at' => date('Y-m-d H:i:s'),
 					'jobapplicant_ChangeBy' => session()->get("name"),
 				]);
-			}catch ( \Exception $e ) {
-				echo json_encode(false);
-			}
+				echo json_encode(true);
+			// }catch ( \Exception $e ) {
+			// 	echo json_encode(false);
+			// }
 		}
 	
 
@@ -1172,22 +1196,40 @@ class AdminController extends Controller
 					$all=[
 						'candidatedata'=>$task,
 					];
-					Mail::send('emails.offerlettermail',[
-						'datas' =>$all,
-					],
-					function ($message) use ($candiname,$task) {
-						$message->to($candiname);
-						$message->cc('recruitment@arcinventador.com');
-						$message->subject('Offer Letter for '.$task->evu_cantechdesgdept.' Arc Inventador');
-					});
-					$update = DB::connection('mysql')->table('jobapplicant')
-					->where('jobapplicant_id','=',$request->jobapplicant_id)
-					->update([
-					'jobapplicant_status' => "hired",
-					'updated_at' => date('Y-m-d H:i:s'),
-					'jobapplicant_ChangeBy' => session()->get("name"),
-					]);
-					return redirect('/hiredcandidates');
+					try{
+						if($task->jobpost_company == "Arc Inventador"){
+							$fromemail = "recruitment@arcinventador.com";
+							$fromname = "Arc Inventador";
+							$emailtemplate = "emails.offerlettermail";
+						}elseif($task->jobpost_company == "AU Telecom"){
+							$fromemail = "recruitment@autelecom.net";
+							$fromname = "Autelecom";
+							$emailtemplate = "emails.au.offerlettermail";
+						}else{
+							$fromemail = "recruitment@cyberxify.com";
+							$fromname = "Cyberxify";
+							$emailtemplate = "emails.cyber.offerlettermail";
+						}
+						Mail::send($emailtemplate,[
+							'datas' =>$all,
+						],
+						function ($message) use ($candiname,$task,$fromemail,$fromname) {
+							$message->from($fromemail, $fromname);
+							$message->to($candiname);
+							$message->cc('recruitment@arcinventador.com');
+							$message->subject('Offer Letter for '.$task->evu_cantechdesgdept);
+						});
+						$update = DB::connection('mysql')->table('jobapplicant')
+						->where('jobapplicant_id','=',$request->jobapplicant_id)
+						->update([
+						'jobapplicant_status' => "hired",
+						'updated_at' => date('Y-m-d H:i:s'),
+						'jobapplicant_ChangeBy' => session()->get("name"),
+						]);
+						return redirect('/hiredcandidates')->with('message','Successfully Updated And Email Sent');
+					}catch ( \Exception $e ) {
+						return redirect('/hiredcandidates')->with('message','Successfully Updated Without Email');
+					}
 			// }catch ( \Exception $e ) {
 			// 	return redirect('/callforinterview');
 			// }
@@ -1363,13 +1405,31 @@ class AdminController extends Controller
 			
 			if($action[0] == "attend"){
 				try{
-					Mail::send('emails.managerattendcanemail',[
+					$task = DB::connection('mysql')->table('jobapplicant')
+					->where('jobapplicant.jobapplicant_id','=',$action[1] )
+					->select('jobapplicant.*')
+					->first();
+					if($task->jobpost_company == "Arc Inventador"){
+						$fromemail = "recruitment@arcinventador.com";
+						$fromname = "Arc Inventador";
+						$emailtemplate = "emails.managerattendcanemail";
+					}elseif($task->jobpost_company == "AU Telecom"){
+						$fromemail = "recruitment@autelecom.net";
+						$fromname = "Autelecom";
+						$emailtemplate = "emails.au.managerattendcanemail";
+					}else{
+						$fromemail = "recruitment@cyberxify.com";
+						$fromname = "Cyberxify";
+						$emailtemplate = "emails.cyber.managerattendcanemail";
+					}
+					Mail::send($emailtemplate,[
 						'datas' =>$all,
 						],
-					function ($message) use ($candidateemail) {
+					function ($message) use ($candidateemail,$fromemail,$fromname) {
+					$message->from($fromemail, $fromname);
 					$message->to($candidateemail);
 					$message->cc('recruitment@arcinventador.com');
-					$message->subject('Thank You for Interviewing with Arc Inventador');
+					$message->subject('Thank You for Interviewing');
 					});
 				}catch ( \Exception $e ) {
 					echo json_encode(true);
@@ -1910,4 +1970,46 @@ class AdminController extends Controller
 			}
 	}
 	// Bizz Album End
+	public function cyberapply($id){
+		return view('cyberhirring.apply', ['data' => $id]);
+	}
+	public function cyberjobform($id){
+		$jobcount = DB::connection('mysql')->table( 'jobpost' )
+		->select( 'jobpost_title' )
+		->where( 'jobpost_token', '=', $id )
+		->where( 'status_id', '=', 2)
+		->count();
+		if($jobcount != 0){
+			$job = DB::connection('mysql')->table( 'jobpost' )
+			->select( 'jobpost_title','jobpost_token' )
+			->where( 'jobpost_token', '=', $id )
+			->where( 'status_id', '=', 2)
+			->first();
+			return view('cyberhirring.jobform', ['data' => $job]);
+		}else{
+			return redirect()->away('https://www.google.com');
+		}
+		
+	}
+	public function auapply($id){
+		return view('auhirring.apply', ['data' => $id]);
+	}
+	public function aujobform($id){
+		$jobcount = DB::connection('mysql')->table( 'jobpost' )
+		->select( 'jobpost_title' )
+		->where( 'jobpost_token', '=', $id )
+		->where( 'status_id', '=', 2)
+		->count();
+		if($jobcount != 0){
+			$job = DB::connection('mysql')->table( 'jobpost' )
+			->select( 'jobpost_title','jobpost_token' )
+			->where( 'jobpost_token', '=', $id )
+			->where( 'status_id', '=', 2)
+			->first();
+			return view('auhirring.jobform', ['data' => $job]);
+		}else{
+			return redirect()->away('https://www.google.com');
+		}
+		
+	}
 }

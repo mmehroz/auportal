@@ -221,6 +221,12 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 							@if( session()->get("role") < 4 )
 								<a href="#"><i class="fa-solid fa-cube"></i> <span> Recruiting</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
+								<li class="submenu">
+									<a href="#"><span> Post Job </span> <span class="menu-arrow"></span></a>
+									<ul style="display: none;">
+										<li><a href="{{url('/jobpost_list')}}">List</a></li>
+									</ul>
+								</li>
 								@if( session()->get("role") == 2 )
 									<li class="submenu">
 										<a href="#"><span> HR </span> <span class="menu-arrow"></span></a>
@@ -325,7 +331,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 								<ul style="display: none;">
 									<li><a href="{{url('/employeelist')}}">Employee List</a></li>
 									<li><a href="{{url('/notactiveemployeelist')}}">Not Active Employee List</a></li>
-									<li><a href="{{url('/selecttargetmonth')}}">Employee Target</a></li>
+									<!-- <li><a href="{{url('/selecttargetmonth')}}">Employee Target</a></li> -->
 								</ul>
 							</li>
 							@endif
@@ -530,14 +536,14 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 								</ul>	
 							</li>
 
-							<li class="submenu">
+							<!-- <li class="submenu">
 								<a href="#"><i class="fas fa-sign-out"></i> <span> Resignation</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">	
 									<li class="submenu">
 										<li><a href="{{url('/resignationlist')}}">Resignation List</a></li>
 									</li>
 								</ul>	
-							</li>
+							</li> -->
 
 							<!--<li class="submenu">
 								<a href="#"><i class="la la-external-link-square"></i> <span> Resignation</span> <span class="menu-arrow"></span></a>
@@ -566,7 +572,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 							@endif
 
 							
-							<li class="submenu">
+							<!-- <li class="submenu">
 								<a href="#"><i class="fa-solid fa-receipt"></i> <span>Probationary Form</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/probationaryformlist')}}">Probationary Form List</a></li>
@@ -574,7 +580,7 @@ background-image: linear-gradient(to bottom, #5069e7 0%, #5069e7 100%);
 									<li><a href="{{url('/probationaryreport')}}">Probationary Report</a></li>
 									@endif
 								</ul>
-							</li>
+							</li> -->
 							<!--<li class="submenu">
 								<a href="#"><i class="la la-object-group"></i> <span> Forms</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">

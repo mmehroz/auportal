@@ -144,7 +144,7 @@ th, td {
         </div>
         
         <div>
-            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration: underline;">EMAIL:</label><span> -<label></label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration: underline;">EMAIL:</label><span> <label>{{ $datas->can_email }}</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
             <label style="color: #000; font-weight: bold; text-decoration: underline;">Gender:</label><span> <label>{{ $datas->jobapplicant_gender }}</label></span>

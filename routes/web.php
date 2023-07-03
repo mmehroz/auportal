@@ -43,7 +43,20 @@ Route::get('/uploadsheet', function () {
 Route::get('/uploadsheetdata', function () {
     return view('uploaddatasheet');
 });
+// mohsin cyber and au
 
+Route::get('/cyberapply/{id}','AdminController@cyberapply');
+Route::get('/cyberjobform/{id}','AdminController@cyberjobform');
+Route::get('/cyberthank', function () {
+    return view('cyberhirring.thankyou');
+});
+
+Route::get('/auapply/{id}','AdminController@auapply');
+Route::get('/aujobform/{id}','AdminController@aujobform');
+Route::get('/authank', function () {
+    return view('auhirring.thankyou');
+});
+// mohsin cyber and au
 Route::get('/','MyController@logout');
 
 Route::get('/vendorlist','vendorController@vendorlist');
@@ -131,11 +144,11 @@ Route::any('submitmarkattendance','attendanceController@submitmarkattendance');
 
 
 Route::any('/mylogin','hrmcontroller@hrmlogin');
-Route::get('/careers','hrmcontroller@canlopage');
+Route::get('/careers/{id}','hrmcontroller@canlopage');
 Route::any('/candidatelogin','hrmcontroller@hrmcandatelogin');
 Route::get('/newempform','hrmcontroller@newpreemployeeform');
 Route::any('/submitjobapplicant','hrmcontroller@submitjobapplicant');
-Route::get('/jobform','hrmcontroller@jobforminput');
+Route::get('/jobform/{id}','hrmcontroller@jobforminput');
 Route::get('/subdept/{id}','hrmcontroller@subd');
 Route::any('/saveJobee','hrmcontroller@savecandi');
 Route::get('/candidatelist','AdminController@candidatelist');
@@ -144,6 +157,11 @@ Route::get('/candidate_listdata','AdminController@candidate_listdata');
 
 Route::get('/searchcan/{id}','AdminController@searchcandidate_list');
 Route::middleware('email.admin.check')->group(function(){
+	Route::get('/jobpost_list','JobpostController@jobpost_list');
+	Route::get('/addjobpost','JobpostController@addjobpost');
+	Route::post('/submitaddjobpost','JobpostController@submitaddjobpost');
+	Route::any('/closejob/{id}','JobpostController@closejob');
+
 	Route::get('/filteradminDashboard/{filter}','AdminController@filteradminDashboard');
 	Route::get('/adminDashboard','AdminController@admindashboard');
 	Route::get('/allrequest','AdminController@alllist');
@@ -320,6 +338,7 @@ Route::any('/deletedepartment/{id}', 'elscontroller@deletedepartment');
 Route::get('/designationlist','elscontroller@designationlist');
 Route::get('/adddesignationmodal','elscontroller@adddesignationmodal');
 Route::get('/editdesignationmodal/{id}','elscontroller@editdesignationmodal');
+Route::get('/deletedesignation/{id}','elscontroller@deletedesignation');
 Route::any('/adddesignation', 'elscontroller@adddesignation');
 Route::any('/editsubmitdesignation', 'elscontroller@editsubmitdesignation');
 Route::get('/holidayslist','elscontroller@holidayslist');
@@ -343,10 +362,11 @@ Route::get('/editannouncementmodal/{id}','elscontroller@editannouncementmodal');
 Route::any('/addannouncement', 'elscontroller@addannouncement');
 Route::any('/editsubmitannouncement', 'elscontroller@editsubmitannouncement');
 Route::get('delete_announcement/{id}','elscontroller@destroy');
-Route::get('/hrmform', 'elscontroller@departmentpictures');
+Route::get('/mydocument', 'elscontroller@mydocument');
 Route::any('/savepictures', 'elscontroller@savepictures');
 Route::get('/hrmreport','elscontroller@hrmreport');
 Route::get('/viewpicture/{id}','elscontroller@viewpicture');
+Route::get('/addtoemployee/{id}','elscontroller@addtoemployee');
 
 Route::get('/dailyattendance','payrollController@dailyattendancesearch');
 Route::get('/attendancedashboarddata','payrollController@attendancedatumdashboard');

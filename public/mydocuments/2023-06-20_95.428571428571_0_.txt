@@ -1,0 +1,2 @@
+"Action","Batch Id","Name","Father Name","Login Status","Email","CNIC No.","Role","Department","Designation","Reporting To","Sick Leaves","Annual Leaves","Status"
+" ","1","Admin","Admin","","admin@autelecom.net","11111-1111111-1","Super Admin","Admin","Executive","Admin","6","12","Active"

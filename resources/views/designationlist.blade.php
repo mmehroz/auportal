@@ -24,6 +24,7 @@
 						<li class="breadcrumb-item active">Designations List</li>
 					</ul>
 				</div>
+     
         @if(session()->get("role") <= 2)
 				<div class="col-auto float-right ml-auto">
 					<a href="#" class="btn add-btn" onclick="adddesignation()" data-toggle="modal" data-target="#add_designation"><i class="fa fa-plus"></i> Add Designation</a>
@@ -34,6 +35,9 @@
 		<!-- /Page Header -->	
 		<div class="row">
 			<div class="col-md-12">
+      @if(session('message'))
+          <div><p class="alert alert-success mt-3" >{{session('message')}}</p> </div>
+        @endif
 				<div class="table-responsive">
 					<table class="table table-striped custom-table mb-0 datatable" id="desl">
 						<thead>
@@ -51,6 +55,7 @@
                 @if(session()->get("role") <= 2)
 								<td class="text-center" >
               <a href="#" onclick="editdesignation({{$val->DESG_ID}})"> <i class="fa fa-pencil"></i></a>
+              <a href="{{ URL::to("/deletedesignation")}}/{{$val->DESG_ID}}"> <i class="fa fa-trash"></i></a>
                 </td>
                 @endif
 									<td class="text-center">{{$val->DESG_ID}}</td>

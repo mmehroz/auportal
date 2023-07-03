@@ -210,7 +210,7 @@ input[type="file"] {
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-3 col-12">
-						<a href="{{url('/canLogin')}}" class="logo">
+						<a href="#" class="logo">
 							<img src="{!! asset('public/images/logo.svg') !!}">
 						</a>
 					</div>
@@ -218,7 +218,7 @@ input[type="file"] {
 						<h3 class="headerheading">Human Resource Management</h3>
 					</div>
 					<!-- <div class="col-lg-3 text-right col-3 pt-1 logoutcolum">
-						<a class="text-white logouttext" href="{{url('/canLogin')}}">Logout</a>
+						<a class="text-white logouttext" href="#">Logout</a>
 					</div> -->
 				</div>
 				
@@ -551,8 +551,8 @@ input[type="file"] {
 									<div class="row mt-4">
 									    <div class="col-md-4">
 											<div class="form-group">
-												<label class="col-form-label">Interviewer Name</label>
-												<input type="text" class="form-control" name="can_hr_intname" value="{{ session()->get('name') }}" readonly />
+												<label class="col-form-label">Candidate Name</label>
+												<input type="text" class="form-control" name="can_hr_intname" value="{{$data->jobapplicant_name}}"  />
 											</div>
 										</div>
 									    <div class="col-md-4">

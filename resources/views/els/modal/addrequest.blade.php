@@ -107,20 +107,20 @@
 									<p class="text-bold">Leave Type:</p>
 										 	@if($exp[0] <  $date)
 										 		<label class="btn btn-warning" style="width :260px; margin-left:-10px;">
-													<input type="radio" id="mar_unpaidType" value="3"  class="mar_LType" name="leaveType" >&nbsp;Correction Request
+													<input type="radio" id="mar_unpaidType" value="3"  class="mar_LType" name="leaveType" required >&nbsp;Correction Request
 												</label>
 											@else
 								    			<label class="btn btn-primary" style="width :260px; margin-left:-10px;" >
-													<input type="radio" id="mar_annualType" value="1" checked="checked" class="mar_LType" name="leaveType" >&nbsp;Annual Leave
+													<input type="radio" id="mar_annualType" value="1" checked="checked" class="mar_LType" name="leaveType" required >&nbsp;Annual Leave
 												</label>
 												 <br />
 												<label class="btn bg-success" style="width :260px; margin-left:-10px;">
-													<input type="radio" id="mar_sickType"   value="2" class="mar_LType" name="leaveType" >&nbsp;Sick Leave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													<input type="radio" id="mar_sickType"   value="2" class="mar_LType" name="leaveType" required >&nbsp;Sick Leave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 												</label>
 												<br />
 												@if($exp[1] <= 1)
 												<label class="btn btn-warning" style="width :260px; margin-left:-10px;">
-													<input type="radio" id="mar_unpaidType" value="3"  class="mar_LType" name="leaveType" >&nbsp;Correction Request
+													<input type="radio" id="mar_unpaidType" value="3"  class="mar_LType" name="leaveType" required >&nbsp;Correction Request
 												</label>
 												@endif
 											@endif

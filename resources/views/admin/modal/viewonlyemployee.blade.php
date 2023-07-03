@@ -209,7 +209,7 @@ input[type="file"] {
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-lg-3 col-12">
-							<a href="{{url('/canLogin')}}" class="logo">
+							<a href="#" class="logo">
 								<img src="{!! asset('public/images/logo.svg') !!}">
 							</a>
 						</div>
@@ -217,7 +217,7 @@ input[type="file"] {
 							<h3 class="headerheading">Human Resource Management</h3>
 						</div>
 						<!-- <div class="col-lg-3 text-right col-3 pt-1 logoutcolum">
-							<a class="text-white logouttext" href="{{url('/canLogin')}}">Logout</a>
+							<a class="text-white logouttext" href="#">Logout</a>
 						</div> -->
 					</div>
 					
@@ -675,7 +675,7 @@ input[type="file"] {
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">EMAIL</label>
-											<input class="form-control " type="email"  value="{{old('can_email', @$data['userdata']->log_email ) }}" readonly   >
+											<input class="form-control " type="email"  value="{{old('can_email', @$data['userdata']->can_email ) }}" readonly   >
 										</div>
 									</div>
 									<div class="col-md-4">

@@ -274,11 +274,13 @@ class elscontroller extends Controller
 		if(session()->get("email")){
 		
 		$desg = DB::connection('mysql')->table('designation')
+		->where('status_id', '=', 2)
 		->select('designation.*')
 		->get();
 				
 		$depart = DB::connection('mysql')->table('hrm_Department')
 		->select('hrm_Department.*')
+		->where('status_id', '=', 2)
 		->get();
 		
 		$manager = DB::connection('mysql')->table('elsemployees')
@@ -349,10 +351,11 @@ class elscontroller extends Controller
 			$post->elsemployees_name = $request->emp_name ;
 			$post->elsemployees_fname = $request->emp_fname;
 			$post->elsemployees_image = "no_image.jpg";
+			$post->elsemployees_coverimage = "defaultcover.jpg";
 			$post->elsemployees_cnic = $request->emp_cnic ;
 			$post->elsemployees_cno = $request->emp_contactno ;
 			$post->elsemployees_email = $request->emp_com_email ;
-			$post->elsemployees_password = "autelecom@2023" ;
+			$post->elsemployees_password = "arc@2023" ;
 			$post->elsemployees_dofbirth = $request->emp_dob ;
 			$post->elsemployees_dofjoining = $request->emp_doj ;
 			$post->elsemployees_address = $request->emp_address ;
@@ -381,7 +384,6 @@ class elscontroller extends Controller
 			$post->elsemployees_addby = session()->get("name") ;
 			$post->created_at = date('Y-m-d H:i:s');
 			$post->save();
-
 			// dd($post);
 
 			$created = $post->save();
@@ -444,8 +446,21 @@ class elscontroller extends Controller
 				// ->bcc('muhammad.mehroz@bizzworld.com')
 				// ->subject('Employee Credentials Assigned By: ' . 'Bizz World Web Team');
 				// });
-			
-				return redirect('/employeelist')->with('message','Employee Add Successfully ');
+				try{
+					$empemail = $request->emp_com_email;
+					$empdata = $request;
+					Mail::send('emails.credentials',[
+						'empdata' =>$empdata,
+						],
+					function ($message) use ($empemail) {
+						$message->to($empemail);
+						$message->cc('recruitment@arcinventador.com');
+						$message->subject('Credentials - Arc Inventador');
+					});
+					return redirect('/employeelist')->with('message','Employee Added And Email Sent Successfully ');
+				}catch ( \Exception $e ) {
+					return redirect('/employeelist')->with('message','Employee Added Without Email');
+				}
 			}else{
 				return redirect('/addemployeenos')->with('message','Oops something wrong ');
 			}
@@ -1038,10 +1053,12 @@ class elscontroller extends Controller
 						
 						$desg = DB::connection('mysql')->table('designation')
 						->select('designation.*')
+						->where('status_id', '=', 2)
 						->get();
 						
 						$depart = DB::connection('mysql')->table('hrm_Department')
 						->select('hrm_Department.*')
+						->where('status_id', '=', 2)
 						->get();
 						
 						$manager = DB::connection('mysql')->table('elsemployees')
@@ -2929,6 +2946,7 @@ class elscontroller extends Controller
 						
 						$task = DB::connection('mysql')->table('designation')
 						->select('designation.*')
+						->where('status_id', '=', 2)
 						->get();
 						// dd($task);
 						
@@ -3003,7 +3021,25 @@ class elscontroller extends Controller
 				}
 			
 			}
+			public function deletedesignation($id){
+				if(session()->get("email")){
+					
+					if(session()->get("role") <= 2){
+						
+						$update =   DB::connection('mysql')->table('designation')
+						->where('designation.DESG_ID', '=', $id)
+						->update(['status_id' => 1]);
+						// dd($task);
+						return redirect('/designationlist')->with('message','Successfully Deleted');
+					}else{
+					
+					}
+							return view('designationlist',['data'=>$task]);
+				}else{
+						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
+				}
 
+			}
 			public function editsubmitdesignation(Request $request){
 
 				if(session()->get("email")){
@@ -3388,6 +3424,7 @@ class elscontroller extends Controller
 				
 				if(session()->get("role") <= 2){
 					$depart = DB::connection('mysql')->table('hrm_Department')
+					->where('status_id','=',2)
 					->select('hrm_Department.*')
 					->get();
 				}else{
@@ -3567,129 +3604,71 @@ class elscontroller extends Controller
 
 				//HRM Form
 
-				public	function departmentpictures(){
+				public	function mydocument(){
 			    	if (session()->get("email")) {
-						$task =  DB::connection('mysql')->table('elsemployees')
-						->join('hrm_Department', 'hrm_Department.dept_id', '=', 'elsemployees.elsemployees_departid')
-					  	->where('elsemployees.elsemployees_name','=',session()->get('name'))
-					  	->where('elsemployees.elsemployees_status','=',2)
-					  	->select('elsemployees.*','hrm_Department.*')
-					  	->first();
-					return view('hrmform',['data'=> $task,]);
+						if(session()->get("role") <= 2){
+							$task =  DB::connection('mysql')->table('deptpictures')
+							->join('elsemployees', 'elsemployees.elsemployees_batchid', '=', 'deptpictures.elsemployees_name')
+							->select('deptpictures.*','elsemployees.elsemployees_name as name')
+							->orderBy( 'deptpic_id', 'DESC' )
+							->get();
+						}else{
+							$task =  DB::connection('mysql')->table('deptpictures')
+							->join('elsemployees', 'elsemployees.elsemployees_batchid', '=', 'deptpictures.elsemployees_name')
+							->where('deptpictures.elsemployees_name','=',session()->get('batchid'))
+							->select('deptpictures.*','elsemployees.elsemployees_name as name')
+							->orderBy( 'deptpic_id', 'DESC' )
+							->get();
+						}
+						$data = DB::connection('mysql')->table('elsemployees')
+						->select('elsemployees_name','elsemployees_batchid')
+						->where('elsemployees_status','=',2)
+						->get();
+						// dd($task);
+						return view('hrmform',['data'=> $task, 'emp' => $data]);
 			        } else {
 						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 					}
 				}
 
-
 				public function savepictures(Request $request){
-					
 					if(session()->get("name")){
-					$empEmail = session()->get("name");
-				
-						if ($empEmail != null) {
-					
-					//start image validation
 						$this->validate($request,[
-							'dept_picture.*' => 'mimes:jpeg,bmp,png|max:3120',
-							'dept_video' => 'mimes:mp4,wmv,3gp|max:3420',
-							'deptid' => 'required',
-							'description' => 'required',
-							 ]);
-							 
-							 
-						// dd($request);	 
-							 //end image validation
-						 $images = $request->dept_picture;
-						 
-						 // dd($images[1]);
+							'dept_picture.*' 	=> 'max:3120',
+							'description' 		=> 'required',
+							'empbatch_id' 		=> 'required',
+						]);
+						$images = $request->dept_picture;
 						$index = 0 ;
-						
-							$filename = array();
-							// dd("1");
-							$mehimg = array();
-						   
-								
+						$filename = array();
+						$mehimg = array();
 						if(!empty($images)){
-						foreach($images as $ima){
-														
-							
-							$number = rand(1,999);
-		
-							$numb = $number / 7 ;
-		
-		
-							$extension = $request->dept_picture[$index]->extension();
-							
-							$filename[$index]  = date('Y-m-d')."_".$numb."_".$index."_.".$extension;
-							$filename[$index] = $request->dept_picture[$index]->move(public_path('img'),$filename[$index]);
-		
-							$img = Image::make($filename[$index])->resize(800,800, function($constraint) {
-	                        $constraint->aspectRatio();
-	                    });
-
-							$img->save($filename[$index]);
-
-							$filename[$index] = date('Y-m-d')."_".$numb."_".$index."_.".$extension;
-
-							array_push($mehimg,$filename[$index]);
-
-							$index++;
-
-						}
-						
-						}
-						if($filename){
-							$filename = implode("|",$mehimg);
-							
+							foreach($images as $ima){
+								$number = rand(1,999);
+								$numb = $number / 7 ;
+								$extension = $request->dept_picture[$index]->extension();
+								$filename  = date('Y-m-d')."_".$numb."_".$index."_.".$extension;
+								$filename  = $request->dept_picture[$index]->move(public_path('mydocuments'),$filename);
+								$filename  = date('Y-m-d')."_".$numb."_".$index."_.".$extension;
+								$adds = array(
+									'dept_description' => $request->description,
+									'elsemployees_name' => $request->empbatch_id,
+									'created_at' => date('Y-m-d H:i:s'),
+									'dept_date' => date('Y-m-d'),
+									'dept_picture' => $filename,
+								);
+								DB::connection('mysql')->table('deptpictures')->insert($adds);
+								$index++;
+							}
 						}else{
-							$filename = 'no_image.jpg';
+							return redirect('/mydocument')->with('message','Add File To Upload');
 						}
-						
-						if($request->hasFile('dept_video') && $request->dept_video->isValid()){
-							
-							$number = rand(1,999);
-							$numb = $number / 7 ;
-
-							$extension = $request->dept_video->extension();
-							$filename2  = $request->deptid."_".date('Y-m-d')."_.".$numb."_.".$extension;
-							$filename2 = $request->dept_video->move(public_path('video'),$filename2);
-							$filename2 = $request->deptid."_".date('Y-m-d')."_.".$numb."_.".$extension;
-
-
-						}else{
-							$filename2 = 'novideo.png';
-						}
-
-						$adds[] = array(
-							'dept_name' => $request->deptid,
-							'dept_description' => $request->description,
-							'elsemployees_name' => session()->get("name"),
-							'created_at' => date('Y-m-d H:i:s'),
-							'updated_at' => date('Y-m-d H:i:s'),
-							'dept_date' => date('Y-m-d'),
-							'dept_picture' => $filename,
-							'dept_video' =>  $filename2,
-						);
-						// dd($adds);
-						DB::connection('mysql')->table('deptpictures')->insert($adds);
-						// dd($adds);
-						 // DB::table('stores')
-			    //              ->where('store_uid', $request->storeuid)
-			    //              ->update(['covidsubmited' => "Yes"]); 
-						// return redirect()->back()->withSuccess('Successfull');
-							return redirect('/hrmform')->with('message','Successfull Uploaded');
+						return redirect('/mydocument')->with('message','Successfull Uploaded');
 					} else {
 						return redirect('/')->with('message','Please login');
 				
 					}	
-					} else {
-						return redirect('/')->with('message','Please login');
-				
-					}
 				}
-
-
 				public function hrmreport() {
 						if(session()->get("role") <= 2 || session()->get('email') == "salman.khairi@bizzworld.com"){
 						$task = DB::connection('mysql')->table('elsemployees')
@@ -4432,5 +4411,54 @@ class elscontroller extends Controller
           }else{
               return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
           } 
+	}
+	public function addtoemployee($id){
+		
+		if(session()->get("email")){
+		
+		$desg = DB::connection('mysql')->table('designation')
+		->select('designation.*')
+		->where('status_id', '=', 2)
+		->get();
+				
+		$depart = DB::connection('mysql')->table('hrm_Department')
+		->select('hrm_Department.*')
+		->where('status_id', '=', 2)
+		->get();
+		
+		$manager = DB::connection('mysql')->table('elsemployees')
+		->where('elsemployees.elsemployees_roleid','=','3')
+		->where('elsemployees.elsemployees_status','=',2)
+		->select('elsemployees.*')
+		->get();
+		
+		
+		$role = DB::connection('mysql')->table('role')
+		->orderBy('role.roleid', 'desc')
+		->select('role.*')
+		->get();
+		
+		$getcar = DB::connection('mysql')->table('car')
+		->where('status_id','=',2)
+		->select('car_id','car_name')
+		->get();
+		
+		$jobapplicant = DB::connection('mysql')->table('jobapplicant')
+		->where('jobapplicant_id','=',$id)
+		->select('jobapplicant_name','jobapplicant_fname','can_email','jobapplicant_cnic','jobapplicant_address','jobapplicant_contact')
+		->first();
+		
+		$allData = array("depart" => $depart, "desg" => $desg, "role" => $role, "manager" => $manager, 'car' => $getcar, 'jobapplicant' => $jobapplicant);
+		
+		// dd($allData);
+		
+			return view('addtoemployee' , ['data' => $allData]);
+		
+		
+				}
+			else{
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
+				}	
+			
 	}
 }

@@ -172,7 +172,7 @@ class hrmcontroller extends Controller
 
 						$empEmailMobile = explode("@",$empEmail);
 
-						if($empEmailMobile[1] == "autelecom.net"){
+						// if($empEmailMobile[1] == "autelecom.net"){
 														
 							if($task->elsemployees_roleid == "1"){
 
@@ -424,9 +424,9 @@ class hrmcontroller extends Controller
 							}else{
 								return redirect('/')->with('message', 'Kindly Reach Web Depart For Credential');
 							}
-						}else{
-							return redirect('/')->with('message','Kindly reach IT Department Or Create Your Account.');
-						}
+						// }else{
+						// 	return redirect('/')->with('message','Kindly reach IT Department Or Create Your Account.');
+						// }
 						 
 					}else{
 						return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
@@ -445,7 +445,7 @@ class hrmcontroller extends Controller
 		}	
 	}
 	
-	public function jobforminput(){
+	public function jobforminput($id){
 		// if(session()->get("emailocand")){
 			
 			// $emailadd = session()->get("emailocand");
@@ -477,8 +477,22 @@ class hrmcontroller extends Controller
 				// ];
 
 				// dd($all);
-		 
-				return view('pre_employment_application_form');
+				$jobcount = DB::connection('mysql')->table( 'jobpost' )
+				->select( 'jobpost_title')
+				->where( 'jobpost_token', '=', $id )
+				->where( 'status_id', '=', 2)
+				->count();
+				if($jobcount != 0){
+					$job = DB::connection('mysql')->table( 'jobpost' )
+					->select( 'jobpost_title','jobpost_token','jobpost_company' )
+					->where( 'jobpost_token', '=', $id )
+					->where( 'status_id', '=', 2)
+					->first();
+					return view('pre_employment_application_form',['data' => $job]);
+				}else{
+					return redirect()->away('https://www.google.com');
+				}
+				
 		// }else{
 		// 	return redirect('/canLogin')->with('message','Kindly Do Login For Access');
 		// }	
@@ -539,8 +553,9 @@ class hrmcontroller extends Controller
 					// 'can_empreport_grossalarylast.*' =>'regex:/^[1-9]\d*$/|not_in:0',
 					// 'can_empreport_reasoleave.*' =>'required',
 				]);
-				
-				
+				$this->validate($request, [
+					'can_email' 	=> 'unique:mysql.jobapplicant,can_email',
+				]);
 				$edu_sno = "";
 				
 				$edu_edu_cerdeg = implode("~",$request->can_edu_cerdeg);
@@ -643,12 +658,16 @@ class hrmcontroller extends Controller
 				// $delete = DB::table('jobapplicant')
 						// ->where('jobapplicant_email', '=', session()->get("emailocand"))
 						// ->delete();
-				
+				$company = DB::connection('mysql')->table('jobpost')
+				->select('jobpost_company')
+				->where('jobpost_token', '=', $request->jobpost_token)
+				->first();
 				 $insert[] = [
-					 'jobapplicant_name' => $request->can_name,
-					 'jobapplicant_fname' => $request->can_fathername,
-					 'can_email' => $request->can_email,
-					 'jobapplicant_cnic' => $request->can_nic,
+					'jobpost_company' => $company->jobpost_company,
+					'jobapplicant_name' => $request->can_name,
+					'jobapplicant_fname' => $request->can_fathername,
+					'can_email' => $request->can_email,
+					'jobapplicant_cnic' => $request->can_nic,
 				   'jobapplicant_address' => $request->can_address,
 				   'jobapplicant_log_id' => $request->can_log_id,
 				   'jobapplicant_password' => $request->can_pass,
@@ -708,11 +727,32 @@ class hrmcontroller extends Controller
 						// ->delete();
 				
 					$created = DB::connection('mysql')->table('jobapplicant')->insert($insert);
+					$company = DB::connection('mysql')->table('jobpost')
+					->select('jobpost_company')
+					->where('jobpost_token', '=', $request->jobpost_token)
+					->first();
+					if($company->jobpost_company == "Arc Inventador"){
+						$fromemail = "recruitment@arcinventador.com";
+						$fromname = "Arc Inventador";
+						$emailtemplate = "emails.done_employee";
+						$redirectto = "/thankyou";
+					}elseif($company->jobpost_company == "AU Telecom"){
+						$fromemail = "recruitment@autelecom.net";
+						$fromname = "Autelecom";
+						$emailtemplate = "emails.au.done_employee";
+						$redirectto = "/authank";
+					}else{
+						$fromemail = "recruitment@cyberxify.com";
+						$fromname = "Cyberxify";
+						$emailtemplate = "emails.cyber.done_employee";
+						$redirectto = "/cyberthank";
+					}
 					try{
-						Mail::send('emails.done_employee',[
+						Mail::send($emailtemplate,[
 							'can_name' => $request->can_name,
 							],
-						function ($message) use ($request){
+						function ($message) use ($request,$fromemail,$fromname){
+						$message->from($fromemail, $fromname);
 						$message->to($request->can_email);
 						$message->cc('recruitment@arcinventador.com');
 						$message->subject('Application Received for Job');
@@ -722,12 +762,12 @@ class hrmcontroller extends Controller
 						'can_name' => $request->can_name,
 						
 						]);
-						return redirect('/thankyou');
+						return redirect($redirectto);
 					}catch ( \Exception $e ) {
 						session()->put([
 							'can_name' => "User",
 						]);
-						return redirect('/thankyou');
+						return redirect($redirectto);
 					}
 					
 				
@@ -1057,11 +1097,11 @@ class hrmcontroller extends Controller
 		}	
 	}
 	
-	public function canlopage() {
+	public function canlopage($id) {
 	
 		session()->forget('emailocand');
 		
-		return view('candidatelogin');
+		return view('candidatelogin', ['data' => $id]);
 	}
 	
 	public function subd($id) {
